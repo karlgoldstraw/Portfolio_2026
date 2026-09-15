@@ -1,4 +1,4 @@
-# theturning.co.uk
+# karlgoldstraw.com
 
 Karl Goldstraw's personal website and blog, built with [Eleventy (11ty)](https://www.11ty.dev/). Styles are ported from the old Jekyll site ([jfolio](https://github.com/karlgoldstraw/jfolio)).
 
@@ -69,4 +69,4 @@ eleventyNavigation:
 
 `.github/workflows/deploy.yml` builds the site and publishes it to GitHub Pages on every push to `master`. You can also run it by hand from the **Actions** tab.
 
-The custom domain (`theturning.co.uk`) is set in the repo's **Settings → Pages**, with **Source** set to **GitHub Actions**. GitHub ignores the `CNAME` file for sites deployed by Actions, so that setting is what counts.
+The custom domain (`karlgoldstraw.com`) is set in the repo's **Settings → Pages**, with **Source** set to **GitHub Actions**. GitHub ignores the `CNAME` file for sites deployed by Actions, so that setting is what counts.
