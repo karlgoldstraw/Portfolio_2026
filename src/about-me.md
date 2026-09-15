@@ -7,8 +7,8 @@ eleventyNavigation:
   order: 1
 ---
 
-<p class="lede">Hi, my name is Karl Goldstraw. I'm a senior product designer and design system lead with a passion for accessibility and user centred design.</p>
+<p class="lede">I am an Accessibility specialist with over 15 years in user-centred design, the last decade of it spent delivering design systems, the processes, assets and teams around them accessible.</p>
 
-I like to work with people who care about accessibility and inclusive design. I have a passion for designing for everyone, no matter their ability.
+I work at component level with designers and engineers, define the accessibility requirements a system needs before anything ships, and write the guidance that keeps it that way. I'm a designer who knows front end technologies, so I can hold both the design conversation and the code implementation one.
 
-I'm an avid member of our ability network and accessibility working group as well as a volunteer for a charity who help people living with visual impairment.
+I've built accessibility strategies, governance and training in organisations with low maturity, and I've done the hands-on work in enterprise design systems in my time at JPMorganChase, Hargreaves Lansdown, Elekta and others.
