@@ -1,0 +1,25 @@
+---
+layout: layouts/home.njk
+title: My work
+introName: Hi my name is Karl,
+introRole: I'm a design system lead
+eleventyNavigation:
+  key: My work
+  order: 0
+---
+<ul class="cards">
+  {%- for project in collections.projects %}
+  <li>
+    <img src="{{ project.data.cardImage }}" alt="{{ project.data.cardAlt }}">
+    <div class="text">
+      <h2><a href="{{ project.url }}">{{ project.data.cardTitle }}</a></h2>
+    </div>
+  </li>
+  {%- endfor %}
+  <li>
+    <img src="/assets/img/Snippets.svg" alt="Design snippets icon">
+    <div class="text">
+      <h2><a href="/design-snippets/">Design snippets: blog posts of little things</a></h2>
+    </div>
+  </li>
+</ul>

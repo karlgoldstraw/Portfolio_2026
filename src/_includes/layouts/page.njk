@@ -1,0 +1,17 @@
+{% extends "layouts/base.njk" %}
+
+{% block header %}
+<h1 id="page-h1">{{ intro or title }}</h1>
+{%- if lead %}
+<p class="date">{{ lead }}</p>
+{%- endif %}
+<hr>
+{% endblock %}
+
+{% block mainAttrs %} aria-labelledby="page-h1"{% endblock %}
+
+{% block main %}
+<article class="prose{% if articleClass %} {{ articleClass }}{% endif %}">
+  {{ content | safe }}
+</article>
+{% endblock %}

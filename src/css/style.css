@@ -1,0 +1,418 @@
+/*********************
+  Styles ported from the jfolio Jekyll site (theturning.co.uk).
+  The old Sass variables are now CSS custom properties.
+**********************/
+
+:root {
+  --bg-color: #f5f5f5;
+  --grey: #444444;
+  --light-grey: #dddddd;
+  --black: #000;
+  --highlight: #ffeb9d;
+  --yellow: #ffb81c;
+  --yellow-tint: #fbf7ec;
+  --yellow-dark: #eee2c0;
+
+  --font-body: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  background: var(--bg-color);
+  border: var(--light-grey) 1em solid;
+  color: var(--black);
+  font-family: var(--font-body);
+  min-height: 100%;
+  position: relative;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5em;
+}
+
+iframe {
+  display: block;
+  border: 0;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+strong {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 3.75em;
+  margin-top: 1.5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 1.3em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-top: 1.1em;
+}
+
+/* Lists with a class (cards, post list, tags) have their own styles */
+p,
+.prose ul:not([class]),
+.prose ol:not([class]) {
+  line-height: 1.5em;
+  margin-top: 1em;
+  font-size: 1.3em;
+}
+
+.prose li p {
+  font-size: 1em;
+}
+
+p.lede {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  color: var(--black);
+}
+
+a:hover {
+  text-decoration-thickness: 4px;
+}
+
+a:focus {
+  background-color: var(--yellow);
+  color: var(--black);
+  outline: none;
+  text-decoration: none;
+  box-shadow: 0 -2px var(--yellow), 0 4px #0b0c0c;
+}
+
+a.active {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+}
+
+.prose ul:not([class]),
+.prose ol:not([class]) {
+  margin-left: 1em;
+}
+
+span.highlight {
+  background: var(--highlight);
+}
+
+/* Skip link */
+.skiplinks {
+  left: -9999px;
+  top: -9999px;
+  position: absolute;
+}
+
+.skiplinks:active,
+.skiplinks:focus {
+  left: 0.5em;
+  top: 0.5em;
+  z-index: 99;
+}
+
+/* Structure */
+.wrapper {
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 2em;
+  display: grid;
+}
+
+header {
+  margin: 0 0 2em 0;
+}
+
+header h1 {
+  max-width: 30ch;
+  margin-top: 0;
+}
+
+header h1 span {
+  color: var(--grey);
+  font-weight: 400;
+}
+
+/* Navigation */
+nav.navigation ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 6em;
+  margin-top: 1em;
+  font-size: 1.3em;
+}
+
+nav.navigation li:first-child a {
+  margin-left: -0.75em;
+}
+
+nav.navigation li a {
+  display: block;
+  padding: 1em;
+}
+
+/* Page / post content */
+.prose {
+  padding: 2em 0 4em 0;
+}
+
+/* Text is kept to a readable measure; figures can go full width */
+.prose > :not(figure) {
+  max-width: 42em;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose figure {
+  margin: 2em 0 0 0;
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--highlight);
+  color: var(--black);
+  padding: 0 0.25em;
+}
+
+.prose blockquote,
+.inset-text {
+  padding: 1em 1em 1em 2em;
+  border-left: var(--light-grey) 1em solid;
+  margin: 2em 0 2em 0;
+}
+
+.prose blockquote p,
+.inset-text p {
+  margin: 0;
+}
+
+figcaption {
+  padding: 1em;
+  background: var(--bg-color);
+  line-height: 1.5em;
+}
+
+a.back-arrow {
+  position: relative;
+  display: inline-block;
+  margin-top: 2em;
+  font-size: 1.3em;
+}
+
+a.back-arrow .icon {
+  position: absolute;
+  top: -0.4em;
+  width: 2em;
+  fill: var(--grey);
+}
+
+a.back-arrow .arrow-text {
+  padding-left: 2em;
+}
+
+/* Home page cards */
+ul.cards {
+  list-style: none;
+  margin: 4em 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+  column-gap: 1.5em;
+  row-gap: 2.5em;
+}
+
+ul.cards li {
+  border: 0;
+  position: relative;
+}
+
+ul.cards li h2 {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.5em;
+  max-width: 60ch;
+}
+
+ul.cards li .text {
+  padding: 0.5em 0 0 0;
+}
+
+ul.cards li a {
+  color: var(--grey);
+}
+
+/* Makes the whole card clickable */
+ul.cards li a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+ul.cards li a:hover {
+  text-decoration-thickness: 2px;
+}
+
+ul.cards li a:focus {
+  outline: none;
+  text-decoration: underline;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+ul.cards li:focus-within,
+ul.cards li:hover {
+  box-shadow: 0 0 0 4px var(--yellow);
+  border-radius: 0.5em;
+}
+
+ul.cards li:focus-within a:focus {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+/* Posts */
+hr {
+  width: 11em;
+  margin: 2em 0 0 0;
+  border: 0;
+  border-top: var(--light-grey) 8px solid;
+}
+
+.post hr {
+  border-top: var(--yellow-dark) 1px solid;
+}
+
+.date {
+  color: var(--grey);
+}
+
+.post-list {
+  list-style: none;
+}
+
+.post-list > li {
+  padding: 1em 0 1em 0;
+}
+
+.post-list > li h2 {
+  margin: 0;
+}
+
+.post-list .date {
+  font-size: 1.1em;
+  margin-top: 0.5em;
+}
+
+.tag_list {
+  list-style: none;
+  margin-top: 0.75em;
+}
+
+.tag_list li {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin-right: 0.2em;
+  display: inline-block;
+  color: var(--grey);
+  border: var(--light-grey) 1px solid;
+  font-size: 1em;
+}
+
+/* CV */
+article.cv section {
+  background-color: white;
+  margin-bottom: 80px;
+  margin-top: 50px;
+  padding: 60px 30px 30px 30px;
+  position: relative;
+}
+
+article.cv section h2 {
+  display: inline-block;
+  position: absolute;
+  padding: 10px 70px 10px 20px;
+  background: var(--highlight);
+  margin: -90px 0 0 -30px;
+}
+
+article.cv ul {
+  margin-left: 40px;
+}
+
+article.cv h3 {
+  margin-top: 40px;
+}
+
+article.cv h3.first {
+  margin-top: 0;
+}
+
+article.cv .lede {
+  margin: 0;
+}
+
+/* Footer */
+footer {
+  border-top: var(--light-grey) 1px solid;
+  padding: 2em 0 2em 0;
+  margin-top: 5em;
+}
+
+footer ul {
+  list-style: none;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+footer li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+/* Small screens */
+@media screen and (max-width: 631px) {
+  .prose { padding: 2em 0 2em 0; }
+  h1 { font-size: 2em; }
+  nav.navigation ul { margin-bottom: 2em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.2em; }
+  p, .prose ul, .prose ol, a.back-arrow, nav.navigation ul { font-size: 1.125em; }
+  header { margin: 0; }
+  body { border: 0; }
+  .wrapper { padding: 1em; }
+  .prose blockquote, .inset-text { padding-left: 1em; }
+  footer li { display: block; }
+}

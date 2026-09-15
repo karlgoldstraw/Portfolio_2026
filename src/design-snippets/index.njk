@@ -1,0 +1,31 @@
+---
+layout: layouts/page.njk
+title: Writing
+intro: Design snippets
+lead: A collection of little posts I've written
+eleventyNavigation:
+  key: Writing
+  order: 2
+---
+{%- set posts = collections.posts | reverse %}
+{%- if posts.length %}
+<ul class="post-list">
+  {%- for post in posts %}
+  <li>
+    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    <p class="date"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>{% if post.data.draft %} (draft){% endif %}</p>
+    {%- set tags = post.data.tags | filterTagList %}
+    {%- if tags.length %}
+    <ul class="tag_list">
+      {%- for tag in tags %}
+      <li>{{ tag }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+    <hr>
+  </li>
+  {%- endfor %}
+</ul>
+{%- else %}
+<p>No posts yet. Check back soon.</p>
+{%- endif %}
