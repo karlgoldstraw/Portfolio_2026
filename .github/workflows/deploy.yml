@@ -1,10 +1,8 @@
 name: Deploy to GitHub Pages
 
-# Manual for now, so this repo doesn't take theturning.co.uk from jfolio.
-# When ready to go live, add back:
-#   push:
-#     branches: [master]
 on:
+  push:
+    branches: [master]
   workflow_dispatch:
 
 permissions:
