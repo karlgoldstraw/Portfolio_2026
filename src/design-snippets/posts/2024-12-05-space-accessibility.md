@@ -11,7 +11,7 @@ I've long had this idea about a learning utopia for people who can't afford acce
 
 (yeah I know, the name could be better but I literally just made it up)
 
-It's a product where someone could take a wonderful questionnaire type experience like Ashley Peacock recently created, and make an open-source certification, membership and open learning pathway with mentorship at every stage.
+It's a product where someone could take a wonderful [questionnaire type experience](https://a11yconsultant.com/) like Ashley Peacock recently created, and make an open-source certification, membership and open learning pathway with mentorship at every stage.
 
 It would be something created, maintained and moderated by all, like people already with the certification mentor you and then you take the tests in your own time and at your own pace. Your score and thus certification comes from how well you do, bit like at university, with first class honours, 2nd class etc (maybe).
 
@@ -19,7 +19,7 @@ Here's the details spilling out of my tiny brain:
 
 ## It's open source
 
-Accessibility learning should be a right, not a privilege. Free, open-source learning resources would ensure less barriers to entry, things like resources, study guides hosted and community contributed to by members from a group such as CAN members.
+Accessibility learning should be a right, not a privilege. Free, open-source learning resources would ensure less barriers to entry, things like resources, study guides hosted and community contributed to by members from a group such as [CAN members](https://www.skyscanner.net/company-news/introducing-the-champions-of-accessibility-network).
 
 (ps — I've not spoken to anyone at CAN about this, I'm just freestyling on my keyboard whilst watching I'm a Celebrity).
 
@@ -41,7 +41,7 @@ We'd reinforce the ethos that this is about self-improvement rather than just cr
 
 ## Karl, this is well flawed
 
-Probably but you know what, we shouldn't stifle optimism with barriers said a great man.
+Probably but you know what, [we shouldn't stifle optimism with barriers](https://deanvipond.medium.com/casting-out-the-devils-advocate-ac11271415d1) said a great man.
 
 Problems I could potentially foresee:
 

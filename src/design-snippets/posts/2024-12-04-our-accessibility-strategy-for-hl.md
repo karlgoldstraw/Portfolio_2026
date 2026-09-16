@@ -3,15 +3,15 @@ title: Our Accessibility Strategy for HL
 tags: [Accessibility, Strategy]
 ---
 
-<p class="lede">The point of this article is to tell you how we, the accessibility team at Hargreaves Lansdown, made our accessibility strategy, and hopefully it's helpful to you, the reader, in helping you to define your own accessibility strategy.</p>
+<p class="lede">The point of this article is to tell you how we, the accessibility team at <a href="https://uk.linkedin.com/company/hargreaves-lansdown">Hargreaves Lansdown</a>, made our accessibility strategy, and hopefully it's helpful to you, the reader, in helping you to define your own accessibility strategy.</p>
 
-Zoe Coles (Portlock) and I make up the centralised accessibility team, and we have a wonderful group of people around us working side-of-desk, including our AWG (Accessibility Working Group) and our Accessibility Ambassadors network.
+[Zoe Coles (Portlock)](https://uk.linkedin.com/in/zoemportlock) and I make up the centralised accessibility team, and we have a wonderful group of people around us working side-of-desk, including our AWG (Accessibility Working Group) and our Accessibility Ambassadors network.
 
 This strategy is a culmination of everyone's hard work towards making our services work better for not just disabled people, but for everyone. This is for everyone.
 
 ## First, some context
 
-At HL you might have heard in the news we're going through some change, we're being bought by some different folk who will take us into being a privately owned company.
+At HL you might have heard in the news we're going through [some change](https://www.theguardian.com/business/article/2024/aug/09/investment-platform-hargreaves-lansdown-agrees-takeover), we're being bought by some different folk who will take us into being a privately owned company.
 
 It's really exciting to think what awesome things might be ahead. But we all know change can be uncertain and take a long time and new priorities might be either around the corner or down the road.
 
@@ -25,9 +25,9 @@ Before we got into this, we really had to do some self reflection.
 
 We'd done some accessibility maturity modelling previously to this. I can't speak highly enough for baselining your efforts with a maturity model. There's lots of ones out there:
 
-- AbilityNet have an easy to understand DAMM (Digital Accessibility Maturity Model)
-- Business Disability Forum have a great Self Assessment tool
-- W3C accessibility maturity model is probably the most open-source, but it's complex
+- [AbilityNet](https://abilitynet.org.uk/accessibility-services/DAMM) have an easy to understand DAMM (Digital Accessibility Maturity Model)
+- [Business Disability Forum](https://businessdisabilityforum.org.uk/resource/technology-toolkit/tech-taskforce-accessibility-maturity-model/) have a great Self Assessment tool
+- [W3C accessibility maturity model](https://www.w3.org/TR/maturity-model/) is probably the most open-source, but it's complex
 
 > Knowing where you are means you know where you're going
 
@@ -94,7 +94,7 @@ We think a vision statement should:
 
 ### The Three C's of Accessibility
 
-If you've not seen Craig Abbott's *Defining a strategy for accessibility*, then you're missing out. We used this as a basis for our own (thanks Craig). As with all things Craig writes, it's a very good read. He sets out his 3 pillars as:
+If you've not seen [Craig Abbott](https://uk.linkedin.com/in/abbott567)'s [Defining a strategy for accessibility](https://www.craigabbott.co.uk/blog/defining-a-strategy-for-accessibility/), then you're missing out. We used this as a basis for our own (thanks Craig). As with all things Craig writes, it's a very good read. He sets out his 3 pillars as:
 
 - Compliance
 - Culture
@@ -102,13 +102,13 @@ If you've not seen Craig Abbott's *Defining a strategy for accessibility*, then 
 
 But we like alliterations, and so we changed Education to Capability.
 
-This probably sounds like a shallow decision, but in all honesty we felt that Capability had wider meaning and was more reflective in performance of more things than just people learning things. For example, measuring the Capability of a team. Kudos to Tom Carrington for this suggestion.
+This probably sounds like a shallow decision, but in all honesty we felt that Capability had wider meaning and was more reflective in performance of more things than just people learning things. For example, measuring the Capability of a team. Kudos to [Tom Carrington](https://uk.linkedin.com/in/tcarrington) for this suggestion.
 
-**Compliance** focuses on ensuring that all products, services, and environments meet relevant accessibility standards and regulations such as WCAG 2.2, the Equality Act and Consumer Duty. It involves conducting audits, wide scale testing, and remediation to address accessibility barriers that people face.
+**Compliance** focuses on ensuring that all products, services, and environments meet relevant accessibility standards and regulations such as [WCAG 2.2](https://www.w3.org/TR/WCAG22/), the [Equality Act](https://www.gov.uk/guidance/equality-act-2010-guidance) and [Consumer Duty](https://www.fca.org.uk/firms/consumer-duty). It involves conducting audits, wide scale testing, and remediation to address accessibility barriers that people face.
 
 **Capability** emphasises raising awareness and building knowledge about accessibility throughout the organisation. It includes role specific training, providing resources, and promoting inclusive design principles for client work.
 
-**Culture** aims to create organisational culture that embraces accessibility in our day to day. Events with guest speakers, mentoring, disability language and etiquette. These all help to create a mindset where responsibility for accessibility is shared and it is considered an integral part of our processes. We already captured hearts and minds this year, with a guest talk from Gareth Ford Williams for GAAD (Global Accessibility Awareness Day) Foundation.
+**Culture** aims to create organisational culture that embraces accessibility in our day to day. Events with guest speakers, mentoring, disability language and etiquette. These all help to create a mindset where responsibility for accessibility is shared and it is considered an integral part of our processes. We already captured hearts and minds this year, with a guest talk from [Gareth Ford Williams](https://uk.linkedin.com/in/garethfordwilliams) for [GAAD (Global Accessibility Awareness Day) Foundation](https://www.linkedin.com/company/gaad-foundation).
 
 ### One for all and all for one
 
@@ -134,13 +134,13 @@ But it's stuff like:
 
 Within these objectives and their initiatives we've detailed measurements, because without ways to measure how will we know how we did? Some are meticulous numbers and some are very simple, for example: Number of colleagues trained in [X, Y and Z] went up by...
 
-For KPI's (Key Performance Indicators) and ways to measure your progress I highly recommend you speak to your product folk, we have some great product people who are keen Accessibility Ambassadors, shout outs to Luke Albest and Claire Barry for this help.
+For KPI's (Key Performance Indicators) and ways to measure your progress I highly recommend you speak to your product folk, we have some great product people who are keen Accessibility Ambassadors, shout outs to [Luke Albest](https://uk.linkedin.com/in/lukealbest) and [Claire Barry](https://uk.linkedin.com/in/claire-barry-325234181) for this help.
 
 ## Expected outcomes
 
 We thought long and hard about the outcomes we expected from our work over the next two years. Not only does this need to link to client needs but also business needs and we think we've hypothesised some pretty good outcomes that are a mix of both.
 
-We work remotely, so we can't stick them up as posters around the office, you can call me a hippy, but these are flash cards I actually have on my desk. They're key reminders to keep going for those days when burnout is looming.
+We work remotely, so we can't stick them up as posters around the office, you can call me a hippy, but these are flash cards I actually have on my desk. They're key reminders to keep going for those days when [burnout is looming](https://sconner.net/blog/five-things-ive-learned-working-in-accessibility/#burnout-is-real).
 
 **We will see improved ownership and responsibility.** Accessibility will become integral, not an afterthought or a burden. We will have a proactive and sustainable approach to accessible products and services.
 
@@ -181,11 +181,11 @@ To try and summarise my points, it's probably best that I frame it in a way that
 - Remind yourself (and your audience: organisation, stakeholders) why accessibility is important
 - Frame where you are in your accessibility journey. Be honest about it, even if you're an established team. Just because there's loads to do just means there's loads to do, not that you're not doing well enough. And there is always loads to do.
 - Tell your organisation how your strategy will benefit them. Tell them about the people it serves and the impact for users. Work out the ROI (return on investment) and the business case for accessibility. User needs are ultimately key, but users spend money (and businesses like money!).
-- Look at strategies out there that already exist. Ask around, DuckDuckGo it — there's a lot of resources out there. Remember we started with Craig Abbott's take on it.
+- Look at strategies out there that already exist. Ask around, [DuckDuckGo it](https://duckduckgo.com/?t=h_&q=accessibility+strategy&ia=web) — there's a lot of resources out there. Remember we started with [Craig Abbott](https://uk.linkedin.com/in/abbott567)'s take on it.
 - Speak to your users and colleagues, speak to disabled people. Find out what you know you don't know. Don't ever use a robot, regardless of what these AI companies are telling/selling you.
 - Hypothesise your outcomes, and then fill in the gaps of how you'll get there. Get the post it notes out and stick them on a wall (like every UX designer's website ever, lol). Jake Knapp's Day 1 Sprint planning is a good illustration of this.
 - Have fun with it. We had so much fun with this work, we went on a real self-discovery journey and the benefits of that are untold.
 
-Good luck, and if you fancy a chat I'm on ADPList. I'm always happy to have a virtual coffee.
+Good luck, and if you fancy a chat [I'm on ADPList](https://adplist.org/mentors/karl-goldstraw). I'm always happy to have a virtual coffee.
 
 *This was first published as [an article on LinkedIn](https://www.linkedin.com/pulse/our-accessibility-strategy-hl-karl-goldstraw-twaye/).*
