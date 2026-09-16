@@ -3,6 +3,8 @@ title: "This is just an idea: SPACE Accessibility"
 tags: [Accessibility, Learning]
 ---
 
+{% figure "/assets/img/space-cover.jpg", "Title card reading: SPACE, because we all love acronyms (that's sarcasm)" %}
+
 I love writing posts on LinkedIn about ideas that pop into my head, but this one got a bit long and needed some formatting so I wrote a page. Lucky you, more drivel, but this time long drivel.
 
 I've long had this idea about a learning utopia for people who can't afford accessibility courses or certification. I know there's people out there doing it, so this is an addition to that thinking — I know it's not ground breaking.

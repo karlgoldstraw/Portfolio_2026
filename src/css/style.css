@@ -91,7 +91,7 @@ p,
 
 p.lede,
 /* the first paragraph of a blog post is always the lede */
-.prose.post > p:first-child {
+.prose.post > p:first-of-type {
   font-size: 1.5em;
 }
 

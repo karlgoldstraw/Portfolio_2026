@@ -3,6 +3,8 @@ title: Our Accessibility Strategy for HL
 tags: [Accessibility, Strategy]
 ---
 
+{% figure "/assets/img/hl-cover.jpg", "Title card reading: Accessibility but with three c's" %}
+
 The point of this article is to tell you how we, the accessibility team at [Hargreaves Lansdown](https://uk.linkedin.com/company/hargreaves-lansdown), made our accessibility strategy, and hopefully it's helpful to you, the reader, in helping you to define your own accessibility strategy.
 
 [Zoe Coles (Portlock)](https://uk.linkedin.com/in/zoemportlock) and I make up the centralised accessibility team, and we have a wonderful group of people around us working side-of-desk, including our AWG (Accessibility Working Group) and our Accessibility Ambassadors network.
@@ -92,6 +94,8 @@ We think a vision statement should:
 - Be easy to understand and communicate
 - Focus on the desired future state, not the current reality
 
+{% figure "/assets/img/hl-vision-statement.jpg", "Our vision statement: Create an inclusive digital experience for all clients and colleagues across HL by embedding accessibility into every stage of every process. Deliver products and processes that are accessible and compliant by default, building a stronger and more resilient culture where accessibility is a shared responsibility.", "Our vision statement" %}
+
 ### The Three C's of Accessibility
 
 If you've not seen [Craig Abbott](https://uk.linkedin.com/in/abbott567)'s [Defining a strategy for accessibility](https://www.craigabbott.co.uk/blog/defining-a-strategy-for-accessibility/), then you're missing out. We used this as a basis for our own (thanks Craig). As with all things Craig writes, it's a very good read. He sets out his 3 pillars as:
@@ -104,6 +108,8 @@ But we like alliterations, and so we changed Education to Capability.
 
 This probably sounds like a shallow decision, but in all honesty we felt that Capability had wider meaning and was more reflective in performance of more things than just people learning things. For example, measuring the Capability of a team. Kudos to [Tom Carrington](https://uk.linkedin.com/in/tcarrington) for this suggestion.
 
+{% figure "/assets/img/hl-three-cs-venn.jpg", "Three overlapping circles forming a Venn diagram, each labelled with one of the three C's: Compliance, Capability and Culture.", "Compliance, Capability and Culture as a Venn diagram" %}
+
 **Compliance** focuses on ensuring that all products, services, and environments meet relevant accessibility standards and regulations such as [WCAG 2.2](https://www.w3.org/TR/WCAG22/), the [Equality Act](https://www.gov.uk/guidance/equality-act-2010-guidance) and [Consumer Duty](https://www.fca.org.uk/firms/consumer-duty). It involves conducting audits, wide scale testing, and remediation to address accessibility barriers that people face.
 
 **Capability** emphasises raising awareness and building knowledge about accessibility throughout the organisation. It includes role specific training, providing resources, and promoting inclusive design principles for client work.
@@ -115,6 +121,8 @@ This probably sounds like a shallow decision, but in all honesty we felt that Ca
 All three C's are important individually yet rely on each other to deliver a sustained and resilient strategy over time that puts the needs of our clients and colleagues first.
 
 Each one has an important role to play, I'll explain what happens when we remove one of the C's. Spoiler alert: It's not good.
+
+{% figure "/assets/img/hl-three-cs-without.jpg", "The same Venn diagram with an arrow pointing at each overlap, labelled Inconsistency, Inaction and Ineffectiveness: what is left when one of the three C's is missing.", "The three C's showing the negative that happens when the third isn't present" %}
 
 **Without compliance we become ineffective.** Good intentions and awareness alone aren't enough. Without adhering to WCAG standards and legal requirements, we won't truly address accessibility barriers, and we may even create new ones.
 
