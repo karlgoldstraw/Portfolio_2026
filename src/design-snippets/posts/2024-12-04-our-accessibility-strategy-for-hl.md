@@ -3,7 +3,7 @@ title: Our Accessibility Strategy for HL
 tags: [Accessibility, Strategy]
 ---
 
-<p class="lede">The point of this article is to tell you how we, the accessibility team at <a href="https://uk.linkedin.com/company/hargreaves-lansdown">Hargreaves Lansdown</a>, made our accessibility strategy, and hopefully it's helpful to you, the reader, in helping you to define your own accessibility strategy.</p>
+The point of this article is to tell you how we, the accessibility team at [Hargreaves Lansdown](https://uk.linkedin.com/company/hargreaves-lansdown), made our accessibility strategy, and hopefully it's helpful to you, the reader, in helping you to define your own accessibility strategy.
 
 [Zoe Coles (Portlock)](https://uk.linkedin.com/in/zoemportlock) and I make up the centralised accessibility team, and we have a wonderful group of people around us working side-of-desk, including our AWG (Accessibility Working Group) and our Accessibility Ambassadors network.
 

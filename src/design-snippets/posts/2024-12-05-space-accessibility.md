@@ -7,7 +7,7 @@ I love writing posts on LinkedIn about ideas that pop into my head, but this one
 
 I've long had this idea about a learning utopia for people who can't afford accessibility courses or certification. I know there's people out there doing it, so this is an addition to that thinking — I know it's not ground breaking.
 
-<p class="lede">Self-paced, Accessibility Capability Evaluation Model: or SPACE model.</p>
+Self-paced, Accessibility Capability Evaluation Model: or SPACE model.
 
 (yeah I know, the name could be better but I literally just made it up)
 
