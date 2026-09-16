@@ -60,14 +60,22 @@ export default function (eleventyConfig) {
   );
 
   // Shortcodes (the 11ty versions of the old Jekyll includes)
+  // Quotes and angle brackets in alt text would otherwise break the markup
+  const attr = (value) =>
+    String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/"/g, "&quot;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+
   eleventyConfig.addShortcode("figure", (src, alt = "", caption = "") => {
     const figcaption = caption ? `<figcaption>${caption}</figcaption>` : "";
-    return `<figure><img src="${src}" alt="${alt}" loading="lazy">${figcaption}</figure>`;
+    return `<figure><img src="${attr(src)}" alt="${attr(alt)}" loading="lazy">${figcaption}</figure>`;
   });
 
   eleventyConfig.addShortcode("youtube", (id, caption = "") => {
     const figcaption = caption ? `<figcaption>${caption}</figcaption>` : "";
-    return `<figure><iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/${id}" title="${caption || "YouTube video"}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>${figcaption}</figure>`;
+    return `<figure><iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/${id}" title="${attr(caption || "YouTube video")}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>${figcaption}</figure>`;
   });
 
   return {
