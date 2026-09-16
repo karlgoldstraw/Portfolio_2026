@@ -6,6 +6,14 @@ bodyClass: post
 {% block header %}
 <h1 id="page-h1">{{ title }}.</h1>
 <p class="date"><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>{% if draft %} (draft){% endif %}</p>
+{%- set postTags = tags | filterTagList %}
+{%- if postTags.length %}
+<ul class="tag_list">
+  {%- for tag in postTags %}
+  <li>{{ tag }}</li>
+  {%- endfor %}
+</ul>
+{%- endif %}
 <hr>
 {% endblock %}
 

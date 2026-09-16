@@ -14,14 +14,6 @@ eleventyNavigation:
   <li>
     <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
     <p class="date"><time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>{% if post.data.draft %} (draft){% endif %}</p>
-    {%- set tags = post.data.tags | filterTagList %}
-    {%- if tags.length %}
-    <ul class="tag_list">
-      {%- for tag in tags %}
-      <li>{{ tag }}</li>
-      {%- endfor %}
-    </ul>
-    {%- endif %}
     <hr>
   </li>
   {%- endfor %}

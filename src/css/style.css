@@ -396,6 +396,10 @@ hr {
   font-size: 1em;
 }
 
+header .tag_list li {
+  font-size: 0.875em;
+}
+
 /* CV */
 article.cv section {
   background-color: var(--surface);
