@@ -188,7 +188,7 @@ nav.navigation li a {
 
 /* Text is kept to a readable measure; figures can go full width */
 .prose > :not(figure) {
-  max-width: 30em;
+  max-width: 32em;
 }
 
 .prose > :first-child {
