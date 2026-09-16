@@ -321,6 +321,11 @@ hr {
   color: var(--grey);
 }
 
+/* The Writing list isn't body copy, so it isn't held to the prose measure */
+.prose > .post-list {
+  max-width: none;
+}
+
 .post-list {
   list-style: none;
 }
