@@ -433,12 +433,13 @@ article.cv .lede {
 /* Dark mode toggle: a button group of radios, shown only when JS runs */
 .theme-toggle {
   border: 0;
-  margin-top: 1.5em;
+  margin: 0;
 }
 
+/* Floated so the legend shares the line with the buttons */
 .theme-toggle legend {
-  padding: 0;
-  margin-bottom: 0.5em;
+  float: left;
+  padding: 0.5em 0.75em 0.5em 0;
   color: var(--grey);
 }
 
@@ -489,6 +490,11 @@ footer {
   border-top: var(--light-grey) 1px solid;
   padding: 2em 0 2em 0;
   margin-top: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em 2em;
 }
 
 footer ul {
@@ -515,5 +521,7 @@ footer li {
   body { border: 0; }
   .wrapper { padding: 1em; }
   .prose blockquote, .inset-text { padding-left: 1em; }
+  footer { display: block; }
   footer li { display: block; }
+  .theme-toggle { margin-top: 1.5em; }
 }
