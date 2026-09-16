@@ -6,6 +6,7 @@ export default function (eleventyConfig) {
   // Files copied straight to the output
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/CNAME");
 
   eleventyConfig.addWatchTarget("src/css/");

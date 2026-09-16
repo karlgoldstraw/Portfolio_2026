@@ -3,18 +3,56 @@
   The old Sass variables are now CSS custom properties.
 **********************/
 
+/* Light palette. Dark overrides live in the two blocks below. */
 :root {
+  color-scheme: light;
+
   --bg-color: #f5f5f5;
+  --text: #0b0c0c;
   --grey: #444444;
   --light-grey: #dddddd;
-  --black: #000;
+  --surface: #ffffff;
+  --code-bg: #ffeb9d;
+  --code-text: #0b0c0c;
   --highlight: #ffeb9d;
+  --highlight-text: #0b0c0c;
   --yellow: #ffb81c;
-  --yellow-tint: #fbf7ec;
   --yellow-dark: #eee2c0;
+  --focus-text: #0b0c0c;
+  --focus-underline: #0b0c0c;
 
   --font-body: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Auto: follow the system, unless the reader has chosen light */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --bg-color: #1b1b1b;
+    --text: #ededed;
+    --grey: #b8b8b8;
+    --light-grey: #3a3a3a;
+    --surface: #262626;
+    --code-bg: #3a3a3a;
+    --code-text: #ffffff;
+    --yellow-dark: #4a4432;
+  }
+}
+
+/* The reader has chosen dark */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-color: #1b1b1b;
+  --text: #ededed;
+  --grey: #b8b8b8;
+  --light-grey: #3a3a3a;
+  --surface: #262626;
+  --code-bg: #3a3a3a;
+  --code-text: #ffffff;
+  --yellow-dark: #4a4432;
 }
 
 /* Reset */
@@ -33,7 +71,7 @@ html {
 body {
   background: var(--bg-color);
   border: var(--light-grey) 1em solid;
-  color: var(--black);
+  color: var(--text);
   font-family: var(--font-body);
   min-height: 100%;
   position: relative;
@@ -98,7 +136,7 @@ p.lede,
 a {
   text-decoration: underline;
   text-underline-offset: 0.2em;
-  color: var(--black);
+  color: var(--text);
 }
 
 a:hover {
@@ -107,10 +145,10 @@ a:hover {
 
 a:focus {
   background-color: var(--yellow);
-  color: var(--black);
+  color: var(--focus-text);
   outline: none;
   text-decoration: none;
-  box-shadow: 0 -2px var(--yellow), 0 4px #0b0c0c;
+  box-shadow: 0 -2px var(--yellow), 0 4px var(--focus-underline);
 }
 
 a.active {
@@ -126,6 +164,7 @@ a.active {
 
 span.highlight {
   background: var(--highlight);
+  color: var(--highlight-text);
 }
 
 /* Skip link */
@@ -204,8 +243,8 @@ nav.navigation li a {
 .prose code {
   font-family: var(--font-mono);
   font-size: 0.9em;
-  background: var(--highlight);
-  color: var(--black);
+  background: var(--code-bg);
+  color: var(--code-text);
   padding: 0 0.25em;
 }
 
@@ -359,7 +398,7 @@ hr {
 
 /* CV */
 article.cv section {
-  background-color: white;
+  background-color: var(--surface);
   margin-bottom: 80px;
   margin-top: 50px;
   padding: 60px 30px 30px 30px;
@@ -371,6 +410,7 @@ article.cv section h2 {
   position: absolute;
   padding: 10px 70px 10px 20px;
   background: var(--highlight);
+  color: var(--highlight-text);
   margin: -90px 0 0 -30px;
 }
 
@@ -388,6 +428,60 @@ article.cv h3.first {
 
 article.cv .lede {
   margin: 0;
+}
+
+/* Dark mode toggle: a button group of radios, shown only when JS runs */
+.theme-toggle {
+  border: 0;
+  margin-top: 1.5em;
+}
+
+.theme-toggle legend {
+  padding: 0;
+  margin-bottom: 0.5em;
+  color: var(--grey);
+}
+
+.theme-toggle__options {
+  display: inline-flex;
+  border: 1px solid var(--light-grey);
+  border-radius: 0.3em;
+  overflow: hidden;
+}
+
+/* Visually hidden, but still focusable and announced */
+.theme-toggle input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.theme-toggle label {
+  display: block;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-right: 1px solid var(--light-grey);
+}
+
+.theme-toggle label:last-of-type {
+  border-right: 0;
+}
+
+.theme-toggle input:checked + label {
+  background: var(--text);
+  color: var(--bg-color);
+  font-weight: 500;
+}
+
+.theme-toggle input:focus-visible + label {
+  background: var(--yellow);
+  color: var(--focus-text);
+  box-shadow: inset 0 -4px var(--focus-underline);
 }
 
 /* Footer */

@@ -5,4 +5,17 @@
     <li>Follow me on twitter <a href="https://twitter.com/{{ site.twitterUsername }}" rel="noreferrer">@{{ site.twitterUsername }}</a></li>
     <li><a href="/feed.xml">RSS feed</a></li>
   </ul>
+
+  <fieldset class="theme-toggle" id="theme-toggle" hidden>
+    <legend>Dark mode</legend>
+    <div class="theme-toggle__options">
+      <input type="radio" name="theme" id="theme-dark" value="dark">
+      <label for="theme-dark">On</label>
+      <input type="radio" name="theme" id="theme-light" value="light">
+      <label for="theme-light">Off</label>
+      <input type="radio" name="theme" id="theme-auto" value="auto" checked>
+      <label for="theme-auto">Auto</label>
+    </div>
+  </fieldset>
+  <script src="/js/theme.js" defer></script>
 </footer>
