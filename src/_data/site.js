@@ -7,5 +7,4 @@ export default {
   author: "Karl Goldstraw",
   email: "karlgoldstraw@gmail.com",
   linkedinUrl: "https://www.linkedin.com/in/karlgoldstraw/",
-  twitterUsername: "karlgoldstraw",
 };
