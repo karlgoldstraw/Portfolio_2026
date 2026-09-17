@@ -400,7 +400,11 @@ header .tag_list li {
   font-size: 0.875em;
 }
 
-/* CV */
+/* CV: match the measure used by blog body copy (32em of 1.3em text) */
+.prose > article.cv {
+  max-width: 41.6rem;
+}
+
 article.cv section {
   background-color: var(--surface);
   margin-bottom: 80px;
