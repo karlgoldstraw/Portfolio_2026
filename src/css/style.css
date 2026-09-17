@@ -400,9 +400,10 @@ header .tag_list li {
   font-size: 0.875em;
 }
 
-/* CV: match the measure used by blog body copy (32em of 1.3em text) */
+/* CV: text inside the panels matches the blog measure (32em of 1.3em text),
+   so the panel itself is that plus its own 30px side padding */
 .prose > article.cv {
-  max-width: 41.6rem;
+  max-width: calc(41.6rem + 60px);
 }
 
 article.cv section {
