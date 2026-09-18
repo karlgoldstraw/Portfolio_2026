@@ -1,4 +1,5 @@
 <nav class="navigation" aria-label="Main">
+  <p class="site-name">{{ site.author }}</p>
   <ul>
     {%- for entry in collections.all | eleventyNavigation %}
     {%- if entry.url == page.url %}
