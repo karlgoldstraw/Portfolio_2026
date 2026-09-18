@@ -3,5 +3,5 @@
 export default {
   layout: "layouts/post.njk",
   tags: ["posts"],
-  permalink: "/design-snippets/{{ page.fileSlug | slugify }}/",
+  permalink: "/blog/{{ page.fileSlug | slugify }}/",
 };

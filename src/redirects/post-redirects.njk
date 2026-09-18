@@ -1,0 +1,21 @@
+---
+pagination:
+  data: collections.posts
+  size: 1
+  alias: post
+permalink: "/design-snippets/{{ post.fileSlug | slugify }}/index.html"
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>This post has moved</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ site.url }}{{ post.url }}">
+  <meta http-equiv="refresh" content="0; url={{ post.url }}">
+</head>
+<body>
+  <p>This post has moved to <a href="{{ post.url }}">{{ site.url }}{{ post.url }}</a>.</p>
+</body>
+</html>

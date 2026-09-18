@@ -19,17 +19,17 @@ src/
   _includes/partials/        nav.njk and footer.njk
   css/style.css              All styles (colours are CSS variables at the top)
   assets/img/                Images
-  index.njk                  Home page ("My work"), cards come from the projects
+  index.njk                  Home page, cards come from the projects
   about-me.md                About me
-  design-snippets/index.njk  Blog listing ("Writing")
-  design-snippets/posts/     Blog posts
+  blog/index.njk             Blog listing
+  blog/posts/                Blog posts
   projects/                  Project pages (one card each on the home page)
   cv.njk                     CV (hidden from nav and search engines)
 ```
 
 ## Writing a blog post
 
-Create `src/design-snippets/posts/YYYY-MM-DD-your-post-title.md`:
+Create `src/blog/posts/YYYY-MM-DD-your-post-title.md`:
 
 ```markdown
 ---
@@ -47,7 +47,7 @@ Write in Markdown. HTML works too.
 > Blockquotes are styled as inset text.
 ```
 
-- The date comes from the filename and the URL becomes `/design-snippets/your-post-title/`.
+- The date comes from the filename and the URL becomes `/blog/your-post-title/`.
 - `draft: true` posts only appear with `npm start`. Remove it (or set `false`) to publish.
 - Posts are included in the Atom feed at `/feed.xml`.
 
