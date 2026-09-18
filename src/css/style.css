@@ -208,7 +208,7 @@ nav.navigation {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  column-gap: 4em;
+  column-gap: 8em;
 }
 
 .site-name {
