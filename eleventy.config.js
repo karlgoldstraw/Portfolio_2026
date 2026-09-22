@@ -41,6 +41,15 @@ export default function (eleventyConfig) {
       .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99))
   );
 
+  // The hub page and the facilitator guide live in the same folder, so they
+  // pick up its `exercises` tag. Only the numbered pages are exercises.
+  eleventyConfig.addCollection("exercises", (collectionApi) =>
+    collectionApi
+      .getFilteredByTag("exercises")
+      .filter((item) => typeof item.data.order === "number")
+      .sort((a, b) => a.data.order - b.data.order)
+  );
+
   // Filters
   eleventyConfig.addFilter("readableDate", (date) =>
     new Intl.DateTimeFormat("en-GB", {

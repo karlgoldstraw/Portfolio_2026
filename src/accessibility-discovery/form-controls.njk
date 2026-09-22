@@ -1,0 +1,189 @@
+---
+title: Tell us you have moved
+order: 2
+summary: A form with no labels, no hints and an error message that tells you nothing. Then the same form, done properly.
+scenario: You work on a support desk. Margaret has phoned in to change her address and you are filling the form in for her while she waits on the line. She is 63, she has moved to Swansea, and she has already been passed between two departments.
+tasks:
+  - Fill the form in with Margaret's details exactly as she gives them to you.
+  - Submit it. Keep going until it is accepted, and count how many attempts it takes.
+  - Now switch to the accessible version and do exactly the same thing.
+time: 10 minutes
+barrier: Unlabelled controls and unusable error messages
+criterion: WCAG 2.2 &mdash; <a href="https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html">3.3.2 Labels or Instructions</a> and <a href="https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html">3.3.3 Error Suggestion</a>
+script: forms.js
+---
+
+<aside class="callout">
+  <h2>Margaret's details</h2>
+  <p>Read these out as she would say them. Do not tidy them up.</p>
+  <ul>
+    <li><strong>Name:</strong> Margaret Okonkwo-Bell</li>
+    <li><strong>Date of birth:</strong> 3rd of July, 1962</li>
+    <li><strong>New address:</strong> 14 Brynmill Terrace, Swansea</li>
+    <li><strong>Postcode:</strong> &ldquo;S A 1, 5 L N&rdquo;</li>
+  </ul>
+</aside>
+
+<section class="activity" aria-labelledby="activity-heading">
+  <div class="activity__bar">
+    <h2 id="activity-heading">Change of address</h2>
+    <fieldset class="mode-toggle" data-mode-toggle="form-mode">
+      <legend>Version</legend>
+      <div class="mode-toggle__options">
+        <input type="radio" name="form-mode" id="form-mode-broken" value="broken" checked>
+        <label for="form-mode-broken">With the barrier</label>
+        <input type="radio" name="form-mode" id="form-mode-fixed" value="fixed">
+        <label for="form-mode-fixed">Accessible</label>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="activity__body">
+    <p class="visually-hidden" data-mode-status role="status"></p>
+
+    <!-- Deliberately inaccessible. Announced as such so that anyone using a
+         screen reader knows the barriers below are the exercise, not a bug. -->
+    <div data-mode="broken" data-barrier role="group" aria-label="Version with the barrier. This form is deliberately inaccessible.">
+      <div class="demo demo--form-broken">
+        <h3>Update your details</h3>
+        <form id="broken-form" novalidate>
+          <input type="text" id="bf-name" placeholder="Full name *" maxlength="15">
+
+          <p class="bf-dob-text">DOB *</p>
+          <div class="bf-dob">
+            <input type="text" id="bf-day" maxlength="2">
+            <input type="text" id="bf-month" maxlength="2">
+            <input type="text" id="bf-year" maxlength="4">
+          </div>
+
+          <input type="text" id="bf-address" placeholder="Address *">
+          <input type="text" id="bf-postcode" placeholder="Postcode *">
+          <input type="text" id="bf-phone" placeholder="Contact number">
+
+          <p class="bf-error" id="bf-error" hidden>Sorry, there was a problem with your form. Please check your answers and try again.</p>
+
+          <div class="bf-actions">
+            <button type="reset" class="bf-btn">Clear</button>
+            <button type="submit" class="bf-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+      <p class="tally">Attempts: <strong id="broken-attempts">0</strong></p>
+    </div>
+
+    <div data-mode="fixed" hidden>
+      <div class="demo demo--form-fixed">
+        <h3>Update your details</h3>
+
+        <div id="ff-summary" class="error-summary" tabindex="-1" hidden
+             role="alert" aria-labelledby="ff-summary-title">
+          <h4 id="ff-summary-title">There is a problem</h4>
+          <ul id="ff-summary-list"></ul>
+        </div>
+
+        <form id="fixed-form" novalidate>
+          <p class="form-intro">All questions are required unless marked optional.</p>
+
+          <div class="field">
+            <label for="ff-name">Full name</label>
+            <span class="hint" id="ff-name-hint">Including any hyphens or apostrophes, as it appears on your bank card.</span>
+            <p class="field-error" id="ff-name-error" hidden></p>
+            <input type="text" id="ff-name" name="name" autocomplete="name"
+                   aria-describedby="ff-name-hint">
+          </div>
+
+          <fieldset class="field field--fieldset">
+            <legend>Date of birth</legend>
+            <span class="hint" id="ff-dob-hint">For example, 3 7 1962</span>
+            <p class="field-error" id="ff-dob-error" hidden></p>
+            <div class="ff-dob">
+              <span class="date-part">
+                <label for="ff-day">Day</label>
+                <input type="text" inputmode="numeric" id="ff-day" name="day"
+                       autocomplete="bday-day" aria-describedby="ff-dob-hint">
+              </span>
+              <span class="date-part">
+                <label for="ff-month">Month</label>
+                <input type="text" inputmode="numeric" id="ff-month" name="month"
+                       autocomplete="bday-month" aria-describedby="ff-dob-hint">
+              </span>
+              <span class="date-part date-part--year">
+                <label for="ff-year">Year</label>
+                <input type="text" inputmode="numeric" id="ff-year" name="year"
+                       autocomplete="bday-year" aria-describedby="ff-dob-hint">
+              </span>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="ff-address">Address</label>
+            <span class="hint" id="ff-address-hint">House number or name, street and town.</span>
+            <p class="field-error" id="ff-address-error" hidden></p>
+            <input type="text" id="ff-address" name="address" autocomplete="street-address"
+                   aria-describedby="ff-address-hint">
+          </div>
+
+          <div class="field">
+            <label for="ff-postcode">Postcode</label>
+            <span class="hint" id="ff-postcode-hint">With or without a space, for example SA1 5LN.</span>
+            <p class="field-error" id="ff-postcode-error" hidden></p>
+            <input type="text" id="ff-postcode" name="postcode" autocomplete="postal-code"
+                   aria-describedby="ff-postcode-hint" class="input--short">
+          </div>
+
+          <div class="field">
+            <label for="ff-phone">Contact number (optional)</label>
+            <span class="hint" id="ff-phone-hint">We will only use this if we have a question about your move.</span>
+            <input type="tel" id="ff-phone" name="phone" autocomplete="tel"
+                   aria-describedby="ff-phone-hint">
+          </div>
+
+          <p>
+            <button type="submit" class="btn">Submit</button>
+          </p>
+        </form>
+      </div>
+      <p class="tally">Attempts: <strong id="fixed-attempts">0</strong></p>
+    </div>
+
+    <div class="result" id="form-result" role="status" aria-live="polite"></div>
+  </div>
+
+  <div class="activity__footer">
+    <p><strong>Before you switch versions:</strong> without scrolling back up, what did the second box in the date row want &mdash; the month or the day? Now imagine being told the answer by a screen reader, which reads it as &ldquo;edit, blank&rdquo;.</p>
+  </div>
+</section>
+
+<details class="debrief">
+  <summary>What this exercise is showing</summary>
+
+  <p>Nine things are wrong with the first form, and none of them are obvious to somebody who already knows the answers:</p>
+
+  <ul>
+    <li><strong>No labels.</strong> Placeholder text vanishes the moment you type, so the only description of the field disappears exactly when you need to check it. A screen reader announces most of these as &ldquo;edit, blank&rdquo;.</li>
+    <li><strong>A silent character limit.</strong> The name field stops at 15 characters, so Margaret Okonkwo-Bell becomes &ldquo;Margaret Okonkw&rdquo; and nothing tells you.</li>
+    <li><strong>Three unlabelled date boxes</strong> with no hint about order or format.</li>
+    <li><strong>Hidden format rules.</strong> The postcode is rejected if it contains a space. Nothing says so, before or after.</li>
+    <li><strong>Required marked with an asterisk only</strong>, in pale grey, with no key explaining it.</li>
+    <li><strong>No autocomplete</strong>, so nothing can be filled in from the browser or a password manager.</li>
+    <li><strong>An error message that names no field</strong> and is not announced, because it is not a live region and focus never moves to it.</li>
+    <li><strong>Errors shown with a red border alone</strong>, which anyone who cannot see colour will miss entirely.</li>
+    <li><strong>Clear sits next to Submit</strong>, the same size and colour, first in the tab order.</li>
+  </ul>
+
+  <h3>Questions for the group</h3>
+  <ul>
+    <li>How many attempts did the room take on each version? Say the numbers out loud.</li>
+    <li>What did it feel like to be told &ldquo;there was a problem&rdquo; and nothing else, with Margaret still on the line?</li>
+    <li>Now picture this form as a benefits claim, a hospital appointment, or the last step before a payment fails.</li>
+  </ul>
+
+  <h3>What good looks like</h3>
+  <ul>
+    <li>Every control has a visible label that stays visible. Placeholders are decoration, never instruction.</li>
+    <li>Formats and rules are stated <em>before</em> the field, not discovered through failure.</li>
+    <li>Errors appear in a summary at the top that takes focus, each one linking to its field, and again next to the field itself in words.</li>
+    <li>The form takes what people type and normalises it. Spaces in a postcode are the form's problem, not the user's.</li>
+    <li>Autocomplete attributes are filled in, which is <a href="https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html">1.3.5 Identify Input Purpose</a> and a genuine kindness to anyone typing with one finger.</li>
+  </ul>
+</details>

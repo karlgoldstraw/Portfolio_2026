@@ -1,0 +1,91 @@
+---
+layout: layouts/page.njk
+title: Facilitator guide
+intro: Facilitator guide
+lead: How to run an accessibility discovery session
+permalink: /accessibility-discovery/facilitator-guide/
+description: How to run an accessibility discovery session using the exercises, including timings, framing, debrief questions and what to do afterwards.
+---
+
+<p class="lede">The exercises are the easy part. What decides whether a session changes anything is how you open it, and what you do in the ten minutes after it.</p>
+
+<h2>What this is for</h2>
+
+<p>An accessibility discovery session is not training. Nobody leaves knowing how to write an accessible autocomplete. What they leave with is a felt sense that the barriers are real, specific and fixable &mdash; and, if it goes well, two or three things written down that they want to change in their own product.</p>
+
+<p>It works best with a whole product team together: designers, engineers, a product manager, a content designer, a tester. Six to twelve people. Mixed disciplines matter, because half the value is a designer and an engineer disagreeing out loud about whose problem the error summary is.</p>
+
+<h2>A 60 minute shape</h2>
+
+<ol>
+  <li><strong>Frame it, 5 minutes.</strong> Say what the session is and, just as importantly, what it is not. See the script below.</li>
+  <li><strong>Three exercises, 30 minutes.</strong> Ten minutes each: five doing, five talking. Do not try to fit all six in; three done properly beats six rushed.</li>
+  <li><strong>Debrief, 15 minutes.</strong> Move from the exercises to your own product. This is the part people cut when time runs short, and it is the part that does the work.</li>
+  <li><strong>Commitments, 10 minutes.</strong> Everyone names one thing they will look at in your product this month. Write them down where the team will see them again.</li>
+</ol>
+
+<h3>Picking three</h3>
+
+<ul>
+  <li><strong>Design-heavy team:</strong> low contrast, colour alone, target size.</li>
+  <li><strong>Engineering-heavy team:</strong> keyboard only, form controls, screen reader.</li>
+  <li><strong>A team that has never thought about this:</strong> form controls, keyboard only, screen reader. These three land hardest.</li>
+  <li><strong>A design system team:</strong> form controls and target size, then ask which of these could only be fixed once, centrally.</li>
+</ul>
+
+<h2>What to say at the start</h2>
+
+<blockquote>
+  <p>Everything you are about to use is deliberately broken. None of it is a trick and none of it is a test &mdash; if you get stuck, that is the exercise working.</p>
+  <p>We are not simulating disability today. I am not asking anyone to imagine what it is like to be blind, and none of these exercises would tell you that anyway. What they do is put a barrier between you and something you are trying to finish. The thing worth noticing is the barrier, not the feeling.</p>
+  <p>If anyone in the room has a disability, please say as much or as little as you want. You are not the exhibit, and you do not have to answer questions about how you use a computer.</p>
+</blockquote>
+
+<p>That last point matters more than it looks. There is very likely a disabled person in the room, and they may not have told you. Do not put anyone in the position of being the live demonstration.</p>
+
+<h2>Running it well</h2>
+
+<ul>
+  <li><strong>Everyone does it on their own device.</strong> Watching the facilitator do it is not the same experience.</li>
+  <li><strong>Do the target size exercise on phones.</strong> It barely registers on a laptop with a trackpad.</li>
+  <li><strong>Make people say their numbers out loud</strong> &mdash; the contrast ratio they stopped at, the number of attempts, the mis-tap count. The spread across the room is the interesting bit.</li>
+  <li><strong>Do not rescue people.</strong> The silence while somebody hunts for a keyboard-reachable control is doing the teaching. Let it run.</li>
+  <li><strong>Always switch to the accessible version.</strong> Ending on the broken one leaves people with a feeling. Ending on the fixed one leaves them with a solution.</li>
+  <li><strong>Watch the language.</strong> Redirect &ldquo;how do they cope?&rdquo; to &ldquo;what would we have to change?&rdquo; every single time. It takes a couple of goes and then the room does it for you.</li>
+</ul>
+
+<h2>Debrief questions that work</h2>
+
+<ol>
+  <li>Which exercise made you think of something in our own product? Be specific &mdash; name the screen.</li>
+  <li>Which of these would we only have to fix once, in the design system, and which would we have to fix on every screen?</li>
+  <li>Which of these would our current process have caught? At what point &mdash; design review, pull request, QA, never?</li>
+  <li>What is the thing we already knew was wrong and have not fixed? Why not?</li>
+  <li>If one of these barriers was in our checkout tomorrow, who would find out, and how?</li>
+</ol>
+
+<p>Question four is usually the one that changes the conversation. Most teams already know about at least one barrier. The interesting question is not awareness, it is what is stopping the fix.</p>
+
+<h2>Afterwards</h2>
+
+<p>Within a day, send round three things:</p>
+
+<ul>
+  <li>The list of commitments people made, with names against them.</li>
+  <li>A link back to these exercises, so people can show somebody else.</li>
+  <li>One concrete next step that is yours, not theirs &mdash; a ticket you raised, a component you are fixing, a check you are adding to the definition of done.</li>
+</ul>
+
+<p>A discovery session on its own is a nice hour. A discovery session followed by a visible change is how a team starts to believe the subject is real.</p>
+
+<h2>Running it remotely</h2>
+
+<p>It works on a call, with two adjustments. Put people in breakout rooms of three so nobody does the exercise in silence with their camera off, and ask one person per room to narrate what they are doing. Come back together for the debrief and keep the exercise pages open so you can share your screen and point at things.</p>
+
+<h2>If you want more</h2>
+
+<ul>
+  <li>Ask a colleague who uses assistive technology every day whether they would be willing to demonstrate their setup, paid and on their terms. Fifteen minutes of that is worth more than everything here. It is their expertise, so treat it that way.</li>
+  <li>Book real usability sessions with disabled participants. Empathy exercises tell you that barriers exist. Only research tells you which ones are hurting your users.</li>
+  <li>Read the <a href="https://www.w3.org/WAI/WCAG22/Understanding/">WCAG 2.2 Understanding documents</a>. They are far more readable than the standard itself, and every exercise here links to the relevant one.</li>
+</ul>

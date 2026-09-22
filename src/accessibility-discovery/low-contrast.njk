@@ -1,0 +1,93 @@
+---
+title: Read the reference number
+order: 1
+summary: Text that a designer signed off on a big bright monitor, read the way most people actually read it.
+scenario: You have just bought a train ticket on your phone. The ticket office wants the booking reference before they will help you. You are standing outside, it is bright, and your screen brightness is turned down to save battery.
+tasks:
+  - Without changing anything, read the booking reference out loud and type it in.
+  - Then drag the contrast slider up until the text feels comfortable, not just possible.
+  - Note the ratio you stopped at, and compare it with the rest of the group.
+time: 5 minutes
+barrier: Low contrast text
+criterion: WCAG 2.2 &mdash; <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">1.4.3 Contrast (Minimum)</a>, level AA
+script: contrast.js
+---
+
+<section class="activity" aria-labelledby="activity-heading">
+  <div class="activity__bar">
+    <h2 id="activity-heading">Your booking confirmation</h2>
+    <p class="demo-note">Fixed to a light background so the ratio is the same for everyone.</p>
+  </div>
+
+  <div class="activity__body">
+    <div class="demo demo--contrast" id="contrast-demo" data-barrier>
+      <p class="demo--contrast__kicker">Booking confirmed</p>
+      <h3>London Paddington to Swansea</h3>
+      <p>Saturday 4 October, departing 09:48. Quote your booking reference at the ticket office.</p>
+      <p class="demo--contrast__code" id="contrast-code">&nbsp;</p>
+      <p><a href="#contrast-demo" class="demo--contrast__link">Change or cancel this booking</a></p>
+      <p class="demo--contrast__small">Tickets are non-refundable within 24 hours of departure.</p>
+    </div>
+
+    <div class="contrast-controls">
+      <div class="field">
+        <label for="contrast-range">Text contrast</label>
+        <input type="range" id="contrast-range" min="0" max="100" step="1" value="6"
+               aria-describedby="contrast-readout">
+      </div>
+
+      <p class="contrast-readout" id="contrast-readout" role="status">
+        <span class="contrast-readout__ratio" id="contrast-ratio">&mdash;</span>
+        <span class="contrast-readout__verdict" id="contrast-verdict"></span>
+      </p>
+
+      <p>
+        <button type="button" class="btn btn--secondary" id="contrast-aa">Jump to the AA minimum</button>
+        <button type="button" class="btn btn--secondary" id="contrast-reset">Back to the original</button>
+      </p>
+    </div>
+
+    <form id="contrast-form" novalidate>
+      <div class="field">
+        <label for="contrast-answer">Type the booking reference you can see</label>
+        <span class="hint" id="contrast-answer-hint">Six characters, for example K4X92T. Case does not matter.</span>
+        <input type="text" id="contrast-answer" name="answer" autocomplete="off"
+               spellcheck="false" aria-describedby="contrast-answer-hint">
+      </div>
+      <p>
+        <button type="submit" class="btn">Check my answer</button>
+        <button type="button" class="btn btn--secondary" id="contrast-new">Give me a new reference</button>
+      </p>
+    </form>
+
+    <div class="result" id="contrast-result" role="status" aria-live="polite"></div>
+  </div>
+
+  <div class="activity__footer">
+    <p><strong>Watch out for this one:</strong> the slider only changes the text colour. Everything else on the card &mdash; the link, the small print, the disabled button greys you will meet later &mdash; usually fails for the same reason.</p>
+  </div>
+</section>
+
+<details class="debrief">
+  <summary>What this exercise is showing</summary>
+
+  <p>The original text sits at roughly <strong>2:1</strong>. It is not invisible, which is exactly why it survives design review: on a large calibrated monitor, indoors, with young eyes, it reads as &ldquo;subtle&rdquo; rather than &ldquo;broken&rdquo;.</p>
+
+  <p>WCAG asks for <strong>4.5:1</strong> for body text and <strong>3:1</strong> for large text (24px, or 19px bold) and for the visual boundary of controls. Most people in the room will stop somewhere between 6:1 and 10:1 when asked what is <em>comfortable</em> rather than what is <em>possible</em>, which is a useful thing to notice: the standard is a floor, not a target.</p>
+
+  <p>This affects far more people than most teams assume. Around 2 million people in the UK live with sight loss, roughly 1 in 12 men has a colour vision deficiency, and everybody's contrast sensitivity drops with age. Add sunlight, a cracked screen, a cheap laptop panel or night-shift eyes and the group in the room becomes most of your users.</p>
+
+  <h3>Questions for the group</h3>
+  <ul>
+    <li>Who stopped at a different ratio to the person next to them, and why?</li>
+    <li>Where in our own product do we use grey text on grey backgrounds? Placeholder text? Disabled states? Timestamps? Footer links?</li>
+    <li>Who currently decides that a colour pair is acceptable, and what do they check it with?</li>
+  </ul>
+
+  <h3>What good looks like</h3>
+  <ul>
+    <li>Contrast pairs are decided once, in the design system's colour tokens, not per screen.</li>
+    <li>Body text meets 4.5:1 and non-text elements such as input borders and icons meet 3:1.</li>
+    <li>Placeholder text is never the only label, so it never has to carry contrast on its own.</li>
+  </ul>
+</details>

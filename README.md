@@ -8,6 +8,7 @@ Karl Goldstraw's personal website and blog, built with [Eleventy (11ty)](https:/
 npm install
 npm start        # dev server at http://localhost:8080, with live reload (shows drafts)
 npm run build    # production build into _site/ (drafts left out)
+npm test         # builds, then checks the accessibility discovery exercises
 ```
 
 ## Where things live
@@ -24,6 +25,7 @@ src/
   blog/index.njk             Blog listing
   blog/posts/                Blog posts
   projects/                  Project pages (one card each on the home page)
+  accessibility-discovery/   The accessibility discovery exercises
   cv.njk                     CV (hidden from nav and search engines)
 ```
 
@@ -54,6 +56,70 @@ Write in Markdown. HTML works too.
 ## Adding a project
 
 Create `src/projects/project-name.md` with `title`, `intro`, `order`, `cardTitle`, `cardImage` and `cardAlt` in the front matter. It shows up as a card on the home page, sorted by `order`.
+
+## Accessibility discovery exercises
+
+`/accessibility-discovery/` is a set of hands-on exercises for running accessibility
+discovery sessions with a team. It has a card on the home page but is left out of the
+main navigation; add `eleventyNavigation` to `src/accessibility-discovery/index.njk`
+if you ever want it there too.
+
+```
+src/accessibility-discovery/
+  index.njk                  The hub page, lists the exercises
+  facilitator-guide.njk      How to run a session
+  low-contrast.njk           One file per exercise, ordered by `order`
+  ...
+src/js/discovery/            common.js plus one script per exercise
+```
+
+To add an exercise, create a file in `src/accessibility-discovery/` with `title`,
+`order`, `summary`, `scenario`, `tasks`, `time`, `barrier`, `criterion` and `script`
+in the front matter. The `order` value is what puts it in the list, so the hub page
+and the facilitator guide (which have no `order`) stay out of it.
+
+The styles live in `src/css/style.css` with the rest of the site, under their own
+heading at the bottom, so the exercises share the site's colour tokens, typography and
+focus styles.
+
+Each exercise shows a barrier and a working version side by side. The switch between
+them is a `fieldset.mode-toggle` with `data-mode-toggle`, and the two versions are
+elements with `data-mode="broken"` and `data-mode="fixed"`. `common.js` wires that up
+and fires a `modechange` event on the surrounding `.activity`.
+
+**The broken demos fail WCAG on purpose.** Each one sits in a container labelled as
+such so that anyone using a screen reader knows the barriers are the exercise. Keep
+that labelling on anything new, keep the failures inside the demo, and never build a
+real keyboard trap.
+
+## Tests
+
+`npm test` builds the site and runs three suites against `_site/` in a headless
+browser. They cover the accessibility discovery exercises, which are the only part
+of the site with enough behaviour to be worth testing.
+
+```
+test/run.mjs               Serves _site, runs the suites, exits non-zero on failure
+test/axe.test.mjs          axe-core over every exercise page
+test/exercises.test.mjs    Works each exercise the way somebody in a session would
+test/keyboard.test.mjs     Tabs through every page looking for keyboard traps
+```
+
+The axe suite is the important one. Because the exercises break WCAG on purpose, it
+checks two separate things: that **nothing outside a `data-barrier` container has any
+violation**, so the page around the exercise stays exemplary; and that the barriers
+axe can detect are **still** detectable, so tidying up never quietly removes the
+point of an exercise. Colour used as the only cue and a div standing in for a button
+are invisible to axe, which is why `exercises.test.mjs` checks those by hand.
+
+Chromium comes from Playwright. If it has not been downloaded yet:
+
+```bash
+npx playwright install chromium
+```
+
+If that is not possible (a locked-down CI image, say), the tests fall back to any
+Chromium already on the machine, including one under `PLAYWRIGHT_BROWSERS_PATH`.
 
 ## Adding a page to the navigation
 

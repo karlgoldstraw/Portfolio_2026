@@ -1,0 +1,151 @@
+---
+title: Book it without a mouse
+order: 3
+summary: Push the mouse away. Find out how much of an interface simply is not there when you can only use a keyboard.
+scenario: You have your arm in a sling for six weeks. You can type, slowly, with one hand. You cannot hold a mouse. You need to book a meeting room for tomorrow morning before somebody else takes it.
+tasks:
+  - Move your mouse and trackpad out of reach. No touching, no cheating.
+  - Using Tab, Shift and Tab, Enter and the space bar only, book the Ceredigion room at 10:00 and ask for the video kit.
+  - When you get stuck, press the button that counts what a keyboard can actually reach.
+time: 10 minutes
+barrier: Controls that are not controls, and focus you cannot see
+criterion: WCAG 2.2 &mdash; <a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html">2.1.1 Keyboard</a> and <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html">2.4.7 Focus Visible</a>
+script: keyboard.js
+---
+
+<section class="activity" aria-labelledby="activity-heading">
+  <div class="activity__bar">
+    <h2 id="activity-heading">Room booking</h2>
+    <fieldset class="mode-toggle" data-mode-toggle="kb-mode">
+      <legend>Version</legend>
+      <div class="mode-toggle__options">
+        <input type="radio" name="kb-mode" id="kb-mode-broken" value="broken" checked>
+        <label for="kb-mode-broken">With the barrier</label>
+        <input type="radio" name="kb-mode" id="kb-mode-fixed" value="fixed">
+        <label for="kb-mode-fixed">Accessible</label>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="activity__body">
+    <p class="visually-hidden" data-mode-status role="status"></p>
+
+    <div data-mode="broken" data-barrier role="group" aria-label="Version with the barrier. Most of the controls below cannot be reached by keyboard, on purpose.">
+      <div class="demo demo--keyboard demo--keyboard-broken" id="kb-broken">
+        <h3>Book a room</h3>
+
+        <p class="kb-label">Room</p>
+        <div class="kb-rooms">
+          <div class="kb-card" data-room="Ceredigion" data-control="Room: Ceredigion">
+            <span class="kb-card__name">Ceredigion</span>
+            <span class="kb-card__meta">Seats 8 &middot; Second floor</span>
+          </div>
+          <div class="kb-card" data-room="Gower" data-control="Room: Gower">
+            <span class="kb-card__name">Gower</span>
+            <span class="kb-card__meta">Seats 4 &middot; Ground floor</span>
+          </div>
+        </div>
+
+        <p class="kb-label">Time</p>
+        <div class="kb-select" data-control="Time dropdown">
+          <span class="kb-select__value">Choose a time</span>
+          <span class="kb-select__arrow" aria-hidden="true">&#9662;</span>
+        </div>
+        <div class="kb-options" hidden>
+          <div class="kb-option" data-time="09:00">09:00</div>
+          <div class="kb-option" data-time="10:00">10:00</div>
+          <div class="kb-option" data-time="11:00">11:00</div>
+        </div>
+
+        <p class="kb-label">Extras</p>
+        <div class="kb-check" data-control="Video kit tick box">
+          <span class="kb-check__box" aria-hidden="true"></span>
+          <span>Video conference kit</span>
+        </div>
+
+        <button type="button" class="kb-submit" id="kb-broken-submit" data-control="Book the room button">Book the room</button>
+      </div>
+      <p class="tally" id="kb-broken-state">Nothing selected yet.</p>
+    </div>
+
+    <div data-mode="fixed" hidden>
+      <div class="demo demo--keyboard" id="kb-fixed">
+        <h3>Book a room</h3>
+        <form id="kb-fixed-form" novalidate>
+          <fieldset class="field field--fieldset">
+            <legend>Room</legend>
+            <div class="kb-radio">
+              <input type="radio" name="kb-room" id="kb-room-ceredigion" value="Ceredigion" data-control="Room: Ceredigion">
+              <label for="kb-room-ceredigion">Ceredigion <span class="kb-card__meta">Seats 8, second floor</span></label>
+            </div>
+            <div class="kb-radio">
+              <input type="radio" name="kb-room" id="kb-room-gower" value="Gower" data-control="Room: Gower">
+              <label for="kb-room-gower">Gower <span class="kb-card__meta">Seats 4, ground floor</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="kb-time">Time</label>
+            <select id="kb-time" name="time" class="input--short" data-control="Time">
+              <option value="">Choose a time</option>
+              <option value="09:00">09:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+            </select>
+          </div>
+
+          <fieldset class="field field--fieldset">
+            <legend>Extras</legend>
+            <div class="kb-radio">
+              <input type="checkbox" id="kb-video" name="video" data-control="Video kit tick box">
+              <label for="kb-video">Video conference kit</label>
+            </div>
+          </fieldset>
+
+          <p>
+            <button type="submit" class="btn" data-control="Book the room button">Book the room</button>
+          </p>
+        </form>
+      </div>
+      <p class="tally" id="kb-fixed-state">Nothing selected yet.</p>
+    </div>
+
+    <div class="kb-tools">
+      <p class="kb-focus" id="kb-focus">Focus is on: <strong>nothing in the booking form yet</strong></p>
+      <p>
+        <button type="button" class="btn btn--secondary" id="kb-count">Count what a keyboard can reach</button>
+      </p>
+    </div>
+
+    <div class="result" id="kb-result" role="status" aria-live="polite"></div>
+  </div>
+
+  <div class="activity__footer">
+    <p><strong>A note on safety:</strong> nothing on this page traps your keyboard. Real interfaces do, and when they do there is no way out except closing the tab. If you build a custom dialog, that is the failure to test for first.</p>
+  </div>
+</section>
+
+<details class="debrief">
+  <summary>What this exercise is showing</summary>
+
+  <p>Nothing in the first version is broken in a way a mouse would notice. Every control responds to a click. The problem is what the controls <em>are</em>: a <code>div</code> with a click handler is a rectangle that happens to react. It is not in the tab order, it does not respond to Enter or the space bar, and a screen reader announces it as nothing at all.</p>
+
+  <p>There is a second failure layered underneath. The one control you <em>can</em> reach, the booking button, has its focus outline removed, so even a keyboard user who gets there cannot see where they are.</p>
+
+  <p>This is not a small audience. Keyboard-only use covers people with motor conditions such as Parkinson's, tremor or RSI, people using switch access, eye tracking or voice control, screen reader users, and anybody whose trackpad has died. It also covers the developer in your team who navigates by keyboard because it is faster.</p>
+
+  <h3>Questions for the group</h3>
+  <ul>
+    <li>How far did you get before you reached for the mouse? Be honest.</li>
+    <li>Where in our product do we use a <code>div</code> or a styled <code>span</code> as a button, a tab, a card or a menu?</li>
+    <li>Has anyone here removed a focus outline because it looked untidy? What did we replace it with?</li>
+  </ul>
+
+  <h3>What good looks like</h3>
+  <ul>
+    <li>Use the native element. A <code>button</code> is focusable, operable by Enter and space, and announced as a button, for free.</li>
+    <li>If you must build a custom control, it needs a role, a tab stop, keyboard handlers and a focus state &mdash; all four, every time.</li>
+    <li>Never remove a focus indicator without designing a better one. WCAG 2.2 also adds <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html">2.4.11 Focus Not Obscured</a>, so sticky headers and cookie banners must not cover the focused control either.</li>
+    <li>Tab through every new screen before it ships. It takes a minute and it catches most of this.</li>
+  </ul>
+</details>
