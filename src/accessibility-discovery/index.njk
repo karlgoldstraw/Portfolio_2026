@@ -1,0 +1,35 @@
+---
+layout: layouts/discovery-page.njk
+title: Accessibility discovery
+intro: Accessibility discovery
+lead: Six short exercises that put you on the wrong side of a design decision
+permalink: /accessibility-discovery/
+description: A set of hands-on exercises for running accessibility discovery sessions, covering contrast, forms, keyboard access, colour, screen readers and target size.
+---
+
+<p class="lede">Telling a team that low contrast is a problem changes very little. Handing them a booking reference they cannot read, and asking them to say it out loud, changes quite a lot.</p>
+
+<p>These are the exercises I use in <strong>accessibility discovery sessions</strong>: an hour or so with a product team, where everyone does the task rather than watches a slide about it. Each one has a scenario, a task, a deliberately broken interface, and a switch to the version that works. They run in a browser, they need no software and no setup, and they work just as well on a call as in a room.</p>
+
+<p>Take what is useful. Run them in any order, or pick the two that match the thing your team is arguing about this week.</p>
+
+<h2>The exercises</h2>
+
+<ul class="exercise-list">
+  {%- for item in collections.exercises %}
+  <li>
+    <p class="exercise-number">Exercise {{ loop.index }} &middot; {{ item.data.time }}</p>
+    <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+    <p>{{ item.data.summary }}</p>
+    <p class="exercise-barrier">{{ item.data.barrier }}</p>
+  </li>
+  {%- endfor %}
+</ul>
+
+<h2>Before you run one</h2>
+
+<p>There is a real criticism of this kind of exercise, and it is worth taking seriously. Disability simulations can leave people feeling sorry for disabled users rather than annoyed at bad design. They can turn somebody's ordinary daily life into a party game, and they tend to produce &ldquo;that was awful, how do they cope?&rdquo; rather than &ldquo;we should fix that select element&rdquo;.</p>
+
+<p>So these exercises are not built as simulations of disability. None of them ask you to pretend to be a disabled person. Every one of them puts a <em>barrier</em> in front of you and then takes it away again, so the thing you come away talking about is the interface, not the person. Keep the debrief pointed at the design, and you will get the useful version of this conversation.</p>
+
+<p><a href="/accessibility-discovery/facilitator-guide/">Read the facilitator guide</a> for how to structure the session, what to say at the start, and the questions that get a team from &ldquo;that was interesting&rdquo; to something on the backlog.</p>

@@ -24,6 +24,7 @@ src/
   blog/index.njk             Blog listing
   blog/posts/                Blog posts
   projects/                  Project pages (one card each on the home page)
+  accessibility-discovery/   The accessibility discovery exercises
   cv.njk                     CV (hidden from nav and search engines)
 ```
 
@@ -54,6 +55,38 @@ Write in Markdown. HTML works too.
 ## Adding a project
 
 Create `src/projects/project-name.md` with `title`, `intro`, `order`, `cardTitle`, `cardImage` and `cardAlt` in the front matter. It shows up as a card on the home page, sorted by `order`.
+
+## Accessibility discovery exercises
+
+`/accessibility-discovery/` is a set of hands-on exercises for running accessibility
+discovery sessions with a team. It is deliberately left out of the main navigation so
+it can be linked to from a blog post; add `eleventyNavigation` to
+`src/accessibility-discovery/index.njk` if you ever want it in the nav.
+
+```
+src/accessibility-discovery/
+  index.njk                  The hub page, lists the exercises
+  facilitator-guide.njk      How to run a session
+  low-contrast.njk           One file per exercise, ordered by `order`
+  ...
+src/css/discovery.css        Styles, loaded only on these pages
+src/js/discovery/            common.js plus one script per exercise
+```
+
+To add an exercise, create a file in `src/accessibility-discovery/` with `title`,
+`order`, `summary`, `scenario`, `tasks`, `time`, `barrier`, `criterion` and `script`
+in the front matter. The `order` value is what puts it in the list, so the hub page
+and the facilitator guide (which have no `order`) stay out of it.
+
+Each exercise shows a barrier and a working version side by side. The switch between
+them is a `fieldset.mode-toggle` with `data-mode-toggle`, and the two versions are
+elements with `data-mode="broken"` and `data-mode="fixed"`. `common.js` wires that up
+and fires a `modechange` event on the surrounding `.activity`.
+
+**The broken demos fail WCAG on purpose.** Each one sits in a container labelled as
+such so that anyone using a screen reader knows the barriers are the exercise. Keep
+that labelling on anything new, keep the failures inside the demo, and never build a
+real keyboard trap.
 
 ## Adding a page to the navigation
 

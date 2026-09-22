@@ -1,0 +1,134 @@
+---
+title: Buy three, on a moving bus
+order: 6
+summary: Small targets, crowded together, with a destructive button next door. Then measured against the standard.
+scenario: You are on the top deck of a bus with one hand on the rail. Or you have a tremor, or arthritis in your thumb, or you are holding a sleeping toddler. You have two stops left to order the thing you forgot.
+tasks:
+  - Close the cookie banner, change the quantity to 3, and pay. Use one finger or the hand you do not normally use.
+  - Watch the mis-tap counter as you go. Do not try to be careful &mdash; be as quick as you would really be.
+  - Press <em>Measure the targets</em> and compare the numbers against 24 and 44 pixels.
+time: 8 minutes
+barrier: Targets too small and too close together
+criterion: WCAG 2.2 &mdash; <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (Minimum)</a> at AA, 44 by 44 at AAA
+script: targets.js
+---
+
+<section class="activity" aria-labelledby="activity-heading">
+  <div class="activity__bar">
+    <h2 id="activity-heading">Checkout</h2>
+    <fieldset class="mode-toggle" data-mode-toggle="target-mode">
+      <legend>Version</legend>
+      <div class="mode-toggle__options">
+        <input type="radio" name="target-mode" id="target-mode-broken" value="broken" checked>
+        <label for="target-mode-broken">With the barrier</label>
+        <input type="radio" name="target-mode" id="target-mode-fixed" value="fixed">
+        <label for="target-mode-fixed">Accessible</label>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="activity__body">
+    <p class="visually-hidden" data-mode-status role="status"></p>
+
+    <div data-mode="broken" role="group" aria-label="Version with the barrier. The controls below are deliberately small and crowded.">
+      <div class="demo demo--checkout" id="checkout-broken">
+
+        <div class="cookie-bar" id="cookie-broken">
+          <p>We use cookies to improve your experience. By continuing you agree to our cookie policy.</p>
+          <button type="button" class="cookie-close" id="cookie-broken-close" aria-label="Close" data-target="Close the cookie banner">&times;</button>
+        </div>
+
+        <h3>Brynmill wool socks</h3>
+        <p class="checkout-price">&pound;12.00 a pair</p>
+
+        <div class="qty">
+          <span class="qty__label">Qty</span>
+          <span class="qty__value" id="qty-broken">1</span>
+          <button type="button" class="qty__btn" data-step="-1" data-target="Decrease quantity">&minus;</button>
+          <button type="button" class="qty__btn" data-step="1" data-target="Increase quantity">+</button>
+        </div>
+
+        <p class="checkout-total">Total: <span id="total-broken">&pound;12.00</span></p>
+
+        <div class="checkout-actions">
+          <button type="button" class="checkout-btn checkout-btn--cancel" id="cancel-broken" data-target="Cancel order" data-risk="destructive">Cancel order</button>
+          <button type="button" class="checkout-btn" id="pay-broken" data-target="Pay now">Pay now</button>
+        </div>
+      </div>
+      <p class="tally">Mis-taps: <strong id="broken-mistaps">0</strong></p>
+    </div>
+
+    <div data-mode="fixed" hidden>
+      <div class="demo demo--checkout demo--checkout-fixed" id="checkout-fixed">
+
+        <div class="cookie-bar cookie-bar--fixed" id="cookie-fixed">
+          <p id="cookie-fixed-text">We use cookies to measure how the site is used.</p>
+          <div class="cookie-actions">
+            <button type="button" class="btn" id="cookie-fixed-accept" data-target="Accept cookies">Accept</button>
+            <button type="button" class="btn btn--secondary" id="cookie-fixed-reject" data-target="Reject cookies">Reject</button>
+          </div>
+        </div>
+
+        <h3>Brynmill wool socks</h3>
+        <p class="checkout-price">&pound;12.00 a pair</p>
+
+        <div class="qty qty--fixed">
+          <button type="button" class="btn btn--secondary qty__btn-big" data-step="-1" data-target="Decrease quantity">
+            <span aria-hidden="true">&minus;</span><span class="visually-hidden">Decrease quantity</span>
+          </button>
+          <span class="field">
+            <label for="qty-fixed">Quantity</label>
+            <input type="number" id="qty-fixed" value="1" min="1" max="20" inputmode="numeric" data-target="Quantity">
+          </span>
+          <button type="button" class="btn btn--secondary qty__btn-big" data-step="1" data-target="Increase quantity">
+            <span aria-hidden="true">+</span><span class="visually-hidden">Increase quantity</span>
+          </button>
+        </div>
+
+        <p class="checkout-total">Total: <span id="total-fixed">&pound;12.00</span></p>
+
+        <div class="checkout-actions checkout-actions--fixed">
+          <button type="button" class="btn" id="pay-fixed" data-target="Pay now">Pay now</button>
+          <button type="button" class="checkout-cancel" id="cancel-fixed" data-target="Cancel order" data-risk="destructive">Cancel order</button>
+        </div>
+      </div>
+      <p class="tally">Mis-taps: <strong id="fixed-mistaps">0</strong></p>
+    </div>
+
+    <p>
+      <button type="button" class="btn btn--secondary" id="measure">Measure the targets</button>
+      <button type="button" class="btn btn--secondary" id="targets-reset">Start again</button>
+    </p>
+
+    <div class="result" id="target-result" role="status" aria-live="polite"></div>
+  </div>
+
+  <div class="activity__footer">
+    <p><strong>Try it on a phone.</strong> This exercise lands hardest on a real touchscreen, held one-handed, standing up. If you are running the session in a room, ask everyone to open it on their phone rather than their laptop.</p>
+  </div>
+</section>
+
+<details class="debrief">
+  <summary>What this exercise is showing</summary>
+
+  <p>WCAG 2.2 added <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (Minimum)</a>, which asks for 24 by 24 CSS pixels, or enough spacing around a smaller target that a 24 pixel circle centred on it would not overlap its neighbour. The AAA version, 2.5.5, asks for 44 by 44 &mdash; which is what Apple and Google have both recommended for years, and what most people's thumbs actually need.</p>
+
+  <p>Size is only half of it. The other half is <strong>what sits next to what</strong>. Putting <em>Cancel order</em> beside <em>Pay now</em>, the same size and a few pixels apart, means that every slip is expensive. Good design puts distance, or a different weight, or a confirmation step between a mistake and its consequence.</p>
+
+  <p>This is not only about permanent disability. It is a bus, a cold morning, a cracked screen, a cast on your wrist, a baby on your hip, the last 3% of your battery. Design for the worst moment, not the best one.</p>
+
+  <h3>Questions for the group</h3>
+  <ul>
+    <li>What did the measurements say? Was anything under 24 pixels? Was anything under 44?</li>
+    <li>Where in our product does a destructive or expensive action sit next to a routine one?</li>
+    <li>What is our smallest tap target &mdash; a close button, a checkbox, a pagination link, an icon in a table row?</li>
+  </ul>
+
+  <h3>What good looks like</h3>
+  <ul>
+    <li>44 by 44 as the working minimum for anything you tap, with 24 as the absolute floor.</li>
+    <li>Space between targets, not just size. The gap is part of the target.</li>
+    <li>The dangerous action looks different, sits apart, and ideally asks again.</li>
+    <li>Cookie banners do not cover the thing people came to do, and they can be dismissed with one obvious, full-size control.</li>
+  </ul>
+</details>

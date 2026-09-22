@@ -1,0 +1,141 @@
+---
+title: Find the orders that need action
+order: 4
+summary: A status dashboard that says everything with colour and nothing with words.
+scenario: It is Monday morning on the customer service desk. Your manager wants to know how many orders need chasing before the 10 o'clock stand-up. The dashboard uses a traffic light system that everybody says is obvious.
+tasks:
+  - Count the orders that need action and type the number in. Do not read the table row by row, do it the way you would at 9am.
+  - Now change the colour vision setting and count again without reloading.
+  - Try the greyscale setting, then imagine this printed out or read over the phone.
+time: 8 minutes
+barrier: Colour used as the only way of telling things apart
+criterion: WCAG 2.2 &mdash; <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html">1.4.1 Use of Color</a>
+script: colour.js
+---
+
+<section class="activity" aria-labelledby="activity-heading">
+  <div class="activity__bar">
+    <h2 id="activity-heading">Orders dashboard</h2>
+    <fieldset class="mode-toggle" data-mode-toggle="colour-mode">
+      <legend>Version</legend>
+      <div class="mode-toggle__options">
+        <input type="radio" name="colour-mode" id="colour-mode-broken" value="broken" checked>
+        <label for="colour-mode-broken">With the barrier</label>
+        <input type="radio" name="colour-mode" id="colour-mode-fixed" value="fixed">
+        <label for="colour-mode-fixed">Accessible</label>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="activity__body">
+    <p class="visually-hidden" data-mode-status role="status"></p>
+
+    <div class="field">
+      <label for="colour-filter">Simulate colour vision</label>
+      <span class="hint" id="colour-filter-hint">Applies to the dashboard below only, not the rest of the page.</span>
+      <select id="colour-filter" class="input--medium" aria-describedby="colour-filter-hint">
+        <option value="none">No simulation</option>
+        <option value="deuteranopia">Deuteranopia (red and green, the most common)</option>
+        <option value="protanopia">Protanopia (red and green)</option>
+        <option value="tritanopia">Tritanopia (blue and yellow)</option>
+        <option value="achromatopsia">No colour vision at all</option>
+      </select>
+    </div>
+
+    <div id="colour-stage" class="colour-stage">
+      <div data-mode="broken" role="group" aria-label="Version with the barrier. The status column below has no text, on purpose.">
+        <div class="demo demo--orders">
+          <table class="orders">
+            <caption>Orders, last 7 days</caption>
+            <thead>
+              <tr>
+                <th scope="col">Order</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Value</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody id="orders-broken"></tbody>
+          </table>
+          <p class="orders-key">Key: <span class="dot dot--green"></span> <span class="dot dot--amber"></span> <span class="dot dot--red"></span></p>
+        </div>
+      </div>
+
+      <div data-mode="fixed" hidden>
+        <div class="demo demo--orders">
+          <table class="orders">
+            <caption>Orders, last 7 days</caption>
+            <thead>
+              <tr>
+                <th scope="col">Order</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Value</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody id="orders-fixed"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <form id="colour-form" novalidate>
+      <div class="field">
+        <label for="colour-answer">How many orders need action?</label>
+        <input type="number" id="colour-answer" name="answer" min="0" max="12" class="input--short" autocomplete="off">
+      </div>
+      <p>
+        <button type="submit" class="btn">Check my count</button>
+      </p>
+    </form>
+
+    <div class="result" id="colour-result" role="status" aria-live="polite"></div>
+  </div>
+
+  <div class="activity__footer">
+    <p><strong>An important caveat:</strong> these filters are a rough approximation, not what anybody actually sees. Nobody with a colour vision deficiency wakes up one morning and finds the world has changed; they have always seen it this way and are often very good at working round it. Use the simulation to find the <em>design</em> that fails, not to imagine somebody else's experience.</p>
+  </div>
+</section>
+
+<!-- Colour vision filters. Decorative and never announced. -->
+<svg class="colour-filters" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <filter id="filter-deuteranopia">
+      <feColorMatrix type="matrix" values="0.625 0.375 0 0 0  0.7 0.3 0 0 0  0 0.3 0.7 0 0  0 0 0 1 0"></feColorMatrix>
+    </filter>
+    <filter id="filter-protanopia">
+      <feColorMatrix type="matrix" values="0.567 0.433 0 0 0  0.558 0.442 0 0 0  0 0.242 0.758 0 0  0 0 0 1 0"></feColorMatrix>
+    </filter>
+    <filter id="filter-tritanopia">
+      <feColorMatrix type="matrix" values="0.95 0.05 0 0 0  0 0.433 0.567 0 0  0 0.475 0.525 0 0  0 0 0 1 0"></feColorMatrix>
+    </filter>
+    <filter id="filter-achromatopsia">
+      <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"></feColorMatrix>
+    </filter>
+  </defs>
+</svg>
+
+<details class="debrief">
+  <summary>What this exercise is showing</summary>
+
+  <p>The broken dashboard carries its entire meaning in hue. There is no text, no shape, no position and no label &mdash; so the moment hue is unavailable, the information is gone. That happens for around 1 in 12 men and 1 in 200 women with a colour vision deficiency, for anyone using a screen reader, on a printout, on a cheap projector in a meeting room, on a phone in sunlight, and for anyone reading the number out over the phone.</p>
+
+  <p>Notice what the key does. It lists three coloured dots and never says what any of them mean, which is a surprisingly common pattern once you start looking for it.</p>
+
+  <p>There is a second, quieter failure. Run a screen reader over the broken table and the status column is silent: an empty cell in every row. Colour is not just hard to perceive, it is genuinely absent from the accessibility tree.</p>
+
+  <h3>Questions for the group</h3>
+  <ul>
+    <li>Did anyone's count change between the settings? Did anyone feel confident and still get it wrong?</li>
+    <li>Where do we use red and green together &mdash; validation, charts, status pills, diffs, availability calendars?</li>
+    <li>If someone read our dashboard down the phone to a colleague, what would they lose?</li>
+  </ul>
+
+  <h3>What good looks like</h3>
+  <ul>
+    <li>Colour is the second signal, never the first. Add the word, then colour it.</li>
+    <li>Where labels will not fit, use shape as well as hue &mdash; a tick, a cross, a warning triangle &mdash; and give the icon a text alternative.</li>
+    <li>Charts get direct labels or patterns, not a colour key off to one side.</li>
+    <li>Test it by taking a screenshot and desaturating it. If you cannot read it, neither can a good number of your users.</li>
+  </ul>
+</details>
