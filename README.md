@@ -8,6 +8,7 @@ Karl Goldstraw's personal website and blog, built with [Eleventy (11ty)](https:/
 npm install
 npm start        # dev server at http://localhost:8080, with live reload (shows drafts)
 npm run build    # production build into _site/ (drafts left out)
+npm test         # builds, then checks the accessibility discovery exercises
 ```
 
 ## Where things live
@@ -87,6 +88,35 @@ and fires a `modechange` event on the surrounding `.activity`.
 such so that anyone using a screen reader knows the barriers are the exercise. Keep
 that labelling on anything new, keep the failures inside the demo, and never build a
 real keyboard trap.
+
+## Tests
+
+`npm test` builds the site and runs three suites against `_site/` in a headless
+browser. They cover the accessibility discovery exercises, which are the only part
+of the site with enough behaviour to be worth testing.
+
+```
+test/run.mjs               Serves _site, runs the suites, exits non-zero on failure
+test/axe.test.mjs          axe-core over every exercise page
+test/exercises.test.mjs    Works each exercise the way somebody in a session would
+test/keyboard.test.mjs     Tabs through every page looking for keyboard traps
+```
+
+The axe suite is the important one. Because the exercises break WCAG on purpose, it
+checks two separate things: that **nothing outside a `data-barrier` container has any
+violation**, so the page around the exercise stays exemplary; and that the barriers
+axe can detect are **still** detectable, so tidying up never quietly removes the
+point of an exercise. Colour used as the only cue and a div standing in for a button
+are invisible to axe, which is why `exercises.test.mjs` checks those by hand.
+
+Chromium comes from Playwright. If it has not been downloaded yet:
+
+```bash
+npx playwright install chromium
+```
+
+If that is not possible (a locked-down CI image, say), the tests fall back to any
+Chromium already on the machine, including one under `PLAYWRIGHT_BROWSERS_PATH`.
 
 ## Adding a page to the navigation
 
