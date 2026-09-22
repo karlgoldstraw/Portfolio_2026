@@ -112,6 +112,11 @@ axe can detect are **still** detectable, so tidying up never quietly removes the
 point of an exercise. Colour used as the only cue and a div standing in for a button
 are invisible to axe, which is why `exercises.test.mjs` checks those by hand.
 
+`.github/workflows/test.yml` runs the same thing on every pull request, and can be
+run by hand from the **Actions** tab. It does not gate the deploy: pushing to `master`
+publishes the site whether or not the tests have run, so the checks are there to be
+read on a pull request rather than to block one.
+
 Chromium comes from Playwright. If it has not been downloaded yet:
 
 ```bash
