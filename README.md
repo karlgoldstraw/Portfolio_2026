@@ -60,9 +60,9 @@ Create `src/projects/project-name.md` with `title`, `intro`, `order`, `cardTitle
 ## Accessibility discovery exercises
 
 `/accessibility-discovery/` is a set of hands-on exercises for running accessibility
-discovery sessions with a team. It is deliberately left out of the main navigation so
-it can be linked to from a blog post; add `eleventyNavigation` to
-`src/accessibility-discovery/index.njk` if you ever want it in the nav.
+discovery sessions with a team. It has a card on the home page but is left out of the
+main navigation; add `eleventyNavigation` to `src/accessibility-discovery/index.njk`
+if you ever want it there too.
 
 ```
 src/accessibility-discovery/
@@ -70,7 +70,6 @@ src/accessibility-discovery/
   facilitator-guide.njk      How to run a session
   low-contrast.njk           One file per exercise, ordered by `order`
   ...
-src/css/discovery.css        Styles, loaded only on these pages
 src/js/discovery/            common.js plus one script per exercise
 ```
 
@@ -78,6 +77,10 @@ To add an exercise, create a file in `src/accessibility-discovery/` with `title`
 `order`, `summary`, `scenario`, `tasks`, `time`, `barrier`, `criterion` and `script`
 in the front matter. The `order` value is what puts it in the list, so the hub page
 and the facilitator guide (which have no `order`) stay out of it.
+
+The styles live in `src/css/style.css` with the rest of the site, under their own
+heading at the bottom, so the exercises share the site's colour tokens, typography and
+focus styles.
 
 Each exercise shows a barrier and a working version side by side. The switch between
 them is a `fieldset.mode-toggle` with `data-mode-toggle`, and the two versions are

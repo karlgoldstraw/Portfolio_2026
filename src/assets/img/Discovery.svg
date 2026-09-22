@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="840px" height="660px" viewBox="0 0 840 660" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Accessibility discovery</title>
+    <desc>Six stacked bars, each fainter than the one above it, until the last is barely there.</desc>
+    <g id="Accessibility-discovery" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#E5E5E5" x="0" y="0" width="840" height="660"></rect>
+        <g id="Group" transform="translate(230.800000, 152.350000)" fill-rule="nonzero">
+            <rect fill="#3D3D3D" x="0" y="0" width="378.414578" height="49.0936455" rx="24.5468227"></rect>
+            <rect fill="#5B5B5B" x="0" y="61.241858" width="310.000000" height="49.0936455" rx="24.5468227"></rect>
+            <rect fill="#898989" x="0" y="122.483716" width="352.000000" height="49.0936455" rx="24.5468227"></rect>
+            <rect fill="#ABABAB" x="0" y="183.725574" width="268.000000" height="49.0936455" rx="24.5468227"></rect>
+            <rect fill="#C6C6C6" x="0" y="244.967432" width="324.000000" height="49.0936455" rx="24.5468227"></rect>
+            <rect fill="#DCDCDC" x="0" y="306.209290" width="196.000000" height="49.0936455" rx="24.5468227"></rect>
+        </g>
+    </g>
+</svg>
