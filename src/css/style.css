@@ -543,6 +543,13 @@ footer ul {
   margin: 0;
 }
 
+.footer-legal {
+  flex-basis: 100%;
+  margin-top: 1.5em;
+  font-size: 1em;
+  color: var(--grey);
+}
+
 footer li {
   display: inline-block;
   margin-right: 1em;
