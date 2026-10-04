@@ -11,10 +11,10 @@
     <g id="Accessibility-discovery" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <rect fill="#E5E5E5" x="0" y="0" width="840" height="660"></rect>
         <rect fill="url(#radialGradient-1)" x="0" y="0" width="840" height="660"></rect>
-        <g id="Symbol" transform="translate(420, 330)">
-            <circle id="Ring" stroke="#3D3D3D" stroke-width="26" cx="0" cy="0" r="172"></circle>
-            <circle id="Head" fill="#3D3D3D" cx="0" cy="-100" r="30"></circle>
-            <g id="Body" stroke="#3D3D3D" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Symbol" transform="translate(420, 330) scale(0.7)">
+            <circle id="Ring" stroke="#6B6B6B" stroke-width="24" cx="0" cy="0" r="172"></circle>
+            <circle id="Head" fill="#6B6B6B" cx="0" cy="-100" r="30"></circle>
+            <g id="Body" stroke="#6B6B6B" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
                 <polyline id="Arms" points="-100,-28 0,-46 100,-28"></polyline>
                 <line id="Torso" x1="0" y1="-46" x2="0" y2="44"></line>
                 <line id="Left-leg" x1="0" y1="44" x2="-50" y2="124"></line>
