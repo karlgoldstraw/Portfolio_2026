@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="840px" height="660px" viewBox="0 0 840 660" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Design system working group</title>
+    <desc>Three people side by side, the one in the middle slightly in front.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="74.2971721%" gradientTransform="translate(0.500000,0.500000),scale(0.785714,1.000000),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#F7F7F7" offset="0%"></stop>
+            <stop stop-color="#E2E2E2" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Design-system-working-group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#E5E5E5" x="0" y="0" width="840" height="660"></rect>
+        <rect fill="url(#radialGradient-1)" x="0" y="0" width="840" height="660"></rect>
+        <g id="People" transform="translate(420, 330)">
+            <g id="Left" fill="#ABABAB" transform="translate(-118, 14) scale(0.82)">
+                <circle cx="0" cy="-62" r="40"></circle>
+                <path d="M-68,96 L-68,42 A68,68 0 0 1 68,42 L68,96 Z"></path>
+            </g>
+            <g id="Right" fill="#ABABAB" transform="translate(118, 14) scale(0.82)">
+                <circle cx="0" cy="-62" r="40"></circle>
+                <path d="M-68,96 L-68,42 A68,68 0 0 1 68,42 L68,96 Z"></path>
+            </g>
+            <g id="Middle" fill="#6B6B6B">
+                <circle cx="0" cy="-62" r="40"></circle>
+                <path d="M-68,96 L-68,42 A68,68 0 0 1 68,42 L68,96 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

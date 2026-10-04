@@ -1,7 +1,7 @@
 ---
 title: Citizens Advice
 intro: A redesigned case management system for Citizens Advice
-order: 2
+order: 3
 cardTitle: "Citizens Advice: A case management system redesign"
 cardImage: /assets/img/Citizens-Advice.svg
 cardAlt: Citizens Advice logo

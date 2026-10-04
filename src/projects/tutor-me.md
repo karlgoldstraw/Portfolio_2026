@@ -1,7 +1,7 @@
 ---
 title: TutorMe
 intro: TutorMe - An online classroom for students living remotely
-order: 5
+order: 6
 cardTitle: "TutorMe: A remote classroom for students"
 cardImage: /assets/img/TutorMe.svg
 cardAlt: TutorMe logo

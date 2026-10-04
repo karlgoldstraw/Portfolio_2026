@@ -1,7 +1,7 @@
 ---
 title: Academic Minds
 intro: Academic Minds - A place to connect tutors and students online
-order: 3
+order: 4
 cardTitle: "Academic Minds: A place to connect tutors and students online"
 cardImage: /assets/img/Acadmic-Minds.svg
 cardAlt: Academic Minds logo
