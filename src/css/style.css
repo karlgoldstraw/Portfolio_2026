@@ -316,6 +316,11 @@ a.back-arrow .icon {
   fill: var(--grey);
 }
 
+/* On the yellow focus highlight the arrow goes dark, like the text beside it */
+a.back-arrow:focus .icon {
+  fill: var(--focus-text);
+}
+
 a.back-arrow .arrow-text {
   padding-left: 2em;
 }
@@ -604,6 +609,11 @@ footer li {
 
 .eyebrow a {
   color: inherit;
+}
+
+/* Grey text on the yellow focus highlight is too faint, so it goes dark */
+.eyebrow a:focus {
+  color: var(--focus-text);
 }
 
 header .eyebrow + h1 {
