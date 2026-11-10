@@ -121,4 +121,5 @@ export const PAGES = [
   "/accessibility-discovery/colour-alone/",
   "/accessibility-discovery/screen-reader/",
   "/accessibility-discovery/target-size/",
+  "/accessibility-skills/",
 ];

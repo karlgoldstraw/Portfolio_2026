@@ -92,6 +92,22 @@ such so that anyone using a screen reader knows the barriers are the exercise. K
 that labelling on anything new, keep the failures inside the demo, and never build a
 real keyboard trap.
 
+## Accessibility skills directory
+
+`/accessibility-skills/` lists Claude skills that are about accessibility. The page
+(`src/accessibility-skills.njk`) is built from `src/_data/a11ySkills.json`, which is
+committed, so a build never needs the network.
+
+```bash
+npm run skills   # rebuild the list, takes about a minute
+```
+
+`scripts/fetch-skills.mjs` searches the skills.sh index, reads each skill's `SKILL.md`
+from its GitHub repo for the description, and writes the JSON. The search terms, the
+category rules and the minimum install count are constants at the top of the script.
+Search and the category filter are in `src/js/skills.js`; without JavaScript the page
+shows the full list.
+
 ## Tests
 
 `npm test` builds the site and runs three suites against `_site/` in a headless

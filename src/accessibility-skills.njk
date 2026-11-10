@@ -1,0 +1,53 @@
+---
+layout: layouts/page.njk
+title: Accessibility skills for Claude
+intro: Accessibility skills for Claude
+lead: Claude skills for accessible design and code, gathered from GitHub
+permalink: /accessibility-skills/
+description: A directory of Claude agent skills dedicated to accessibility, covering audits, WCAG, screen reader testing, mobile, design and content, each linked to its source on GitHub.
+---
+{%- set skills = a11ySkills.skills %}
+
+<p class="lede">A skill is a folder of instructions that teaches Claude how to do one job well. These are the ones written for accessibility work.</p>
+
+<p>There are general skill directories, but accessibility skills are scattered through them. This page pulls them into one place: {{ skills.length }} skills, each linked to its source on GitHub, with the description its author wrote.</p>
+
+<p>Being listed here is not a recommendation. Nobody has reviewed these for accuracy, and no skill makes a product accessible on its own. Read the <code>SKILL.md</code> before you install one, and keep testing with real people and real assistive technology.</p>
+
+<form class="skill-filter" role="search" aria-label="Skills" data-skill-filter hidden>
+  <div class="field">
+    <label for="skill-search">Search skills</label>
+    <span class="hint" id="skill-search-hint">For example &ldquo;screen reader&rdquo;, &ldquo;Figma&rdquo; or &ldquo;SwiftUI&rdquo;</span>
+    <input type="text" id="skill-search" name="q" aria-describedby="skill-search-hint" autocomplete="off" spellcheck="false">
+  </div>
+  <div class="field">
+    <label for="skill-category">Category</label>
+    <select id="skill-category" name="category">
+      <option value="">All categories ({{ skills.length }})</option>
+      {%- for group in skills | groupby("category") | dictsort %}
+      <option value="{{ group[0] }}">{{ group[0] }} ({{ group[1].length }})</option>
+      {%- endfor %}
+    </select>
+  </div>
+</form>
+
+<h2 id="skill-list-heading">The skills</h2>
+<p class="skill-count" role="status" data-skill-count>{{ skills.length }} skills, most installed first</p>
+<p class="skill-empty" data-skill-empty hidden>No skills match that. Try a shorter search, or all categories.</p>
+
+<ul class="skill-list" aria-labelledby="skill-list-heading" data-skill-list>
+  {%- for skill in skills %}
+  <li data-category="{{ skill.category }}" data-search="{{ skill.description }}">
+    <p class="skill-category">{{ skill.category }}</p>
+    <h3><a href="{{ skill.url }}">{{ skill.name }}<span class="visually-hidden"> from {{ skill.repo }} on GitHub</span></a></h3>
+    <p class="skill-repo" aria-hidden="true">{{ skill.repo }}</p>
+    <p>{{ skill.description | firstSentence }}</p>
+  </li>
+  {%- endfor %}
+</ul>
+
+<h2>Disclaimer</h2>
+
+<p>The skills belong to their authors, under whatever licence each repository carries. If yours is missing, or you would like it removed, <a href="mailto:{{ site.email }}">email me</a>.</p>
+
+<script src="/js/skills.js" defer></script>

@@ -57,7 +57,25 @@ export default function (eleventyConfig) {
       month: "long",
       year: "numeric",
       timeZone: "UTC",
-    }).format(date)
+    }).format(new Date(date))
+  );
+
+  // The first sentence of a longer description, for the skill cards, capped at
+  // 160 characters. A full
+  // stop only ends the sentence when a capital letter follows it, so
+  // "WCAG 2.2", "Next.js" and "e.g. this" are left alone.
+  eleventyConfig.addFilter("firstSentence", (text = "") => {
+    const match = String(text).match(/^.*?[.!?](?<!\b(?:e\.g|i\.e|vs|etc)\.)(?=["'”’)]*\s+["'“‘(]*[A-Z])/s);
+    const sentence = match ? match[0] : String(text);
+    // Some authors write the whole description as one sentence. Those are cut
+    // at the last whole word that fits.
+    const LIMIT = 160;
+    if (sentence.length <= LIMIT) return sentence;
+    return sentence.slice(0, LIMIT).replace(/\s+\S*$/, "").replace(/[\s,;:(\u2014\u2013\/-]+$/, "") + "\u2026";
+  });
+
+  eleventyConfig.addFilter("number", (value) =>
+    new Intl.NumberFormat("en-GB").format(value)
   );
 
   eleventyConfig.addFilter("htmlDateString", (date) =>

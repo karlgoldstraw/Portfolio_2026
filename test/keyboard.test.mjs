@@ -4,7 +4,10 @@
 // wraps back round to the top.
 import { PAGES } from "./helpers.mjs";
 
-const PRESSES = 70;
+// Enough presses to get all the way round a normal page. A page with a long
+// list of links (the skills directory) gets as many as it has links, plus some.
+const MIN_PRESSES = 70;
+const FOCUSABLE = "a[href], button, input, select, textarea, [tabindex]";
 
 // Each stop is identified by its position in the document as well as its tag,
 // so two adjacent links are never mistaken for the same element twice.
@@ -21,8 +24,11 @@ export default async function run({ context, base, ok }) {
     const page = await context.newPage();
     await page.goto(base + path, { waitUntil: "load" });
 
+    const focusable = await page.evaluate((selector) => document.querySelectorAll(selector).length, FOCUSABLE);
+    const presses = Math.max(MIN_PRESSES, focusable + 20);
+
     const stops = [];
-    for (let i = 0; i < PRESSES; i++) {
+    for (let i = 0; i < presses; i++) {
       await page.keyboard.press("Tab");
       stops.push(await page.evaluate(describeActiveElement));
     }

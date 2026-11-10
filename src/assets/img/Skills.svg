@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="840px" height="660px" viewBox="0 0 840 660" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Accessibility skills</title>
+    <desc>A stack of three cards, the front one showing lines of text and a tick.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="74.2971721%" gradientTransform="translate(0.500000,0.500000),scale(0.785714,1.000000),rotate(90.000000),translate(-0.500000,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#F7F7F7" offset="0%"></stop>
+            <stop stop-color="#E2E2E2" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Accessibility-skills" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#E5E5E5" x="0" y="0" width="840" height="660"></rect>
+        <rect fill="url(#radialGradient-1)" x="0" y="0" width="840" height="660"></rect>
+        <g id="Cards" stroke="#6B6B6B" stroke-width="16" stroke-linejoin="round" stroke-linecap="round">
+            <path id="Back-card" d="M356,206 L356,190 L570,190 L570,400 L554,400"></path>
+            <path id="Middle-card" d="M313,238 L313,222 L527,222 L527,432 L511,432"></path>
+            <rect id="Front-card" fill="#F7F7F7" x="270" y="254" width="214" height="210" rx="6"></rect>
+            <line id="Line-1" x1="308" y1="304" x2="446" y2="304"></line>
+            <line id="Line-2" x1="308" y1="350" x2="400" y2="350"></line>
+            <polyline id="Tick" points="340,410 366,434 418,384"></polyline>
+        </g>
+    </g>
+</svg>

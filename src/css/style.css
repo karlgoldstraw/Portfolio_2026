@@ -1991,3 +1991,134 @@ ul.measure-list li {
   border-top: var(--light-grey) 1px solid;
   padding-top: 0.75em;
 }
+
+/* ---------- Accessibility skills directory ---------- */
+
+.skill-filter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  /* The search field has a hint and the category does not, so the two are
+     lined up along the bottom, where the inputs are */
+  align-items: end;
+  gap: 1.25em 1.5em;
+  margin-top: 2em;
+  padding: 1.25em;
+  background: var(--surface);
+  border: var(--light-grey) 1px solid;
+  border-radius: 0.5em;
+}
+
+.prose > .skill-filter {
+  max-width: 50em;
+}
+
+.skill-filter[hidden] {
+  display: none;
+}
+
+.skill-filter .field {
+  max-width: none;
+  margin-top: 0;
+}
+
+.skill-filter .field input[type="text"],
+.skill-filter .field select {
+  display: block;
+  height: 2.75em;
+}
+
+/* The browser's own arrow sits hard against the border, so the select draws
+   its own: a small triangle made from two gradients, in the text colour so it
+   follows the theme. */
+.skill-filter .field select {
+  appearance: none;
+  padding-right: 2.5em;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--text) 50%),
+    linear-gradient(135deg, var(--text) 50%, transparent 50%);
+  background-position:
+    right 1.2em center,
+    right 0.8em center;
+  background-size: 0.4em 0.4em;
+  background-repeat: no-repeat;
+  text-overflow: ellipsis;
+}
+
+/* Gradients are dropped in forced colours, so hand the arrow back */
+@media (forced-colors: active) {
+  .skill-filter .field select {
+    appearance: auto;
+    background-image: none;
+    padding-right: 0.5em;
+  }
+}
+
+/* One field per row on a phone */
+@media screen and (max-width: 631px) {
+  .skill-filter {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.skill-count {
+  color: var(--grey);
+}
+
+ul.skill-list {
+  list-style: none;
+  margin: 1.5em 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  gap: 1.5em;
+}
+
+ul.skill-list[hidden] {
+  display: none;
+}
+
+.prose > ul.skill-list {
+  max-width: none;
+}
+
+ul.skill-list li {
+  background: var(--surface);
+  border: var(--light-grey) 1px solid;
+  border-radius: 0.5em;
+  padding: 1.25em;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+ul.skill-list li[hidden] {
+  display: none;
+}
+
+ul.skill-list h3 {
+  font-size: 1.3em;
+  margin: 0.75em 0 0 0;
+  overflow-wrap: anywhere;
+}
+
+ul.skill-list li p {
+  font-size: 1.05em;
+  margin-top: 0.6em;
+  overflow-wrap: anywhere;
+}
+
+/* A plain label, styled like the blog's tags. It is not a link or a button. */
+ul.skill-list .skill-category {
+  align-self: flex-start;
+  color: var(--grey);
+  border: var(--light-grey) 1px solid;
+  font-size: 0.95em;
+  line-height: 1.4;
+  padding: 0.2em 0.5em;
+  margin-top: 0;
+}
+
+ul.skill-list .skill-repo {
+  color: var(--grey);
+  font-size: 1em;
+  margin-top: 0.25em;
+}
