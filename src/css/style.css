@@ -29,6 +29,10 @@
 
   /* The exercise demos sit on a fixed light surface whatever the theme, so
      that a contrast ratio is the same for everybody in the room */
+  /* The home page card images are light grey, which glares on a dark page,
+     so dark mode turns them down a little */
+  --card-image-brightness: 1;
+
   --demo-paper: #ffffff;
   --demo-ink: #0b0c0c;
   --demo-line: #c9c9c9;
@@ -54,6 +58,7 @@
     --ok-bg: #1f3a27;
     --bad: #ff9ea3;
     --bad-bg: #3d2224;
+    --card-image-brightness: 0.8;
   }
 }
 
@@ -73,6 +78,7 @@
   --ok-bg: #1f3a27;
   --bad: #ff9ea3;
   --bad-bg: #3d2224;
+  --card-image-brightness: 0.8;
 }
 
 /* Reset */
@@ -327,6 +333,10 @@ ul.cards {
 ul.cards li {
   border: 0;
   position: relative;
+}
+
+ul.cards li img {
+  filter: brightness(var(--card-image-brightness));
 }
 
 ul.cards li h2 {
