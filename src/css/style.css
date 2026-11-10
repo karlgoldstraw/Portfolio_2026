@@ -598,8 +598,6 @@ footer li {
 
 .eyebrow {
   font-size: 1.1em;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--grey);
   margin: 1em 0 0.5em 0;
 }
@@ -679,8 +677,6 @@ header .eyebrow + h1 {
 .brief__meta dt {
   color: var(--grey);
   font-size: 0.95em;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
 .brief__meta dd {
@@ -1103,8 +1099,6 @@ ul.exercise-list li a:focus {
 }
 
 .demo--contrast__kicker {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   font-size: 0.9em !important;
   margin-top: 0 !important;
 }
@@ -1644,8 +1638,6 @@ table.orders tbody th {
   font-size: 1.1em !important;
   margin: 0 0 0.75em 0 !important;
   color: var(--grey);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
 .demo--shop {
@@ -1739,8 +1731,6 @@ table.orders tbody th {
   margin: 0 !important;
   font-size: 0.95em !important;
   color: var(--grey);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
 .sr-utterance {
