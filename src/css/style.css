@@ -981,21 +981,15 @@ ul.exercise-list li {
   padding: 1.25em;
 }
 
-ul.exercise-list li h2 {
+ul.exercise-list li h3 {
   font-size: 1.3em;
-  margin: 0.4em 0 0 0;
+  /* This margin collapses with the paragraph's own, so the larger one wins */
+  margin: 0 0 0.9em 0;
 }
 
 ul.exercise-list li p {
   font-size: 1.05em;
   margin-top: 0.6em;
-}
-
-ul.exercise-list .exercise-number {
-  color: var(--grey);
-  font-size: 0.95em;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
 ul.exercise-list li a::after {
@@ -1009,10 +1003,14 @@ ul.exercise-list li:hover {
   box-shadow: 0 0 0 4px var(--yellow);
 }
 
+/* The card's yellow ring is the focus indicator here, so the link drops the
+   site's yellow highlight and keeps its own colour, with a thicker underline */
 ul.exercise-list li a:focus {
   outline: none;
   background: transparent;
   box-shadow: none;
+  color: var(--text);
+  text-decoration: underline;
   text-decoration-thickness: 4px;
 }
 

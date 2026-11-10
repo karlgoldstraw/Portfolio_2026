@@ -18,8 +18,7 @@ description: A set of hands-on exercises for running accessibility discovery ses
 <ul class="exercise-list">
   {%- for item in collections.exercises %}
   <li>
-    <p class="exercise-number">Exercise {{ loop.index }} &middot; {{ item.data.time }}</p>
-    <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+    <h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
     <p>{{ item.data.summary }}</p>
     <p class="exercise-barrier">{{ item.data.barrier }}</p>
   </li>
