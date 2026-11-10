@@ -1,12 +1,12 @@
 {
-  "generated": "2026-11-09",
+  "generated": "2026-11-10",
   "skills": [
     {
       "name": "accessibility",
       "repo": "addyosmani/web-quality-skills",
       "url": "https://github.com/addyosmani/web-quality-skills/tree/HEAD/skills/accessibility",
       "description": "Audit and improve web accessibility following WCAG 2.2 guidelines. Use when asked to \"improve accessibility\", \"a11y audit\", \"WCAG compliance\", \"screen reader support\", \"keyboard navigation\", or \"make accessible\".",
-      "installs": 68661,
+      "installs": 68991,
       "updated": "2026-08-24",
       "install": "npx skills add addyosmani/web-quality-skills --skill accessibility",
       "category": "Audits and testing"
@@ -16,8 +16,8 @@
       "repo": "jakubkrehel/skills",
       "url": "https://github.com/jakubkrehel/skills/tree/HEAD/skills/better-accessibility",
       "description": "Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom against WCAG 2.2.",
-      "installs": 35079,
-      "updated": "2026-11-08",
+      "installs": 35406,
+      "updated": "2026-11-10",
       "install": "npx skills add jakubkrehel/skills --skill better-accessibility",
       "category": "Building and fixing"
     },
@@ -26,7 +26,7 @@
       "repo": "ibelick/ui-skills",
       "url": "https://github.com/ibelick/ui-skills/tree/HEAD/skills/fixing-accessibility",
       "description": "Audit and fix HTML accessibility issues including ARIA labels, keyboard navigation, focus management, color contrast, and form errors. Use when adding interactive controls, forms, dialogs, or reviewing WCAG compliance.",
-      "installs": 23451,
+      "installs": 23516,
       "updated": "2026-11-07",
       "install": "npx skills add ibelick/ui-skills --skill fixing-accessibility",
       "category": "Audits and testing"
@@ -36,7 +36,7 @@
       "repo": "wshobson/agents",
       "url": "https://github.com/wshobson/agents/tree/HEAD/plugins/ui-design/skills/accessibility-compliance",
       "description": "Implement WCAG 2.2 compliant interfaces with mobile accessibility, inclusive design patterns, and assistive technology support. Use when auditing accessibility, implementing ARIA patterns, building for screen readers, or ensuring inclusive user experiences.",
-      "installs": 15173,
+      "installs": 15194,
       "updated": "2026-11-08",
       "install": "npx skills add wshobson/agents --skill accessibility-compliance",
       "category": "Standards and compliance"
@@ -46,7 +46,7 @@
       "repo": "wshobson/agents",
       "url": "https://github.com/wshobson/agents/tree/HEAD/plugins/accessibility-compliance/skills/wcag-audit-patterns",
       "description": "Conduct WCAG 2.2 accessibility audits with automated testing, manual verification, and remediation guidance. Use when auditing websites for accessibility, fixing WCAG violations, or implementing accessible design patterns.",
-      "installs": 12981,
+      "installs": 13014,
       "updated": "2026-11-08",
       "install": "npx skills add wshobson/agents --skill wcag-audit-patterns",
       "category": "Audits and testing"
@@ -56,7 +56,7 @@
       "repo": "wshobson/agents",
       "url": "https://github.com/wshobson/agents/tree/HEAD/plugins/accessibility-compliance/skills/screen-reader-testing",
       "description": "Test web applications with screen readers including VoiceOver, NVDA, and JAWS. Use when validating screen reader compatibility, debugging accessibility issues, or ensuring assistive technology support.",
-      "installs": 11104,
+      "installs": 11124,
       "updated": "2026-11-08",
       "install": "npx skills add wshobson/agents --skill screen-reader-testing",
       "category": "Audits and testing"
@@ -66,7 +66,7 @@
       "repo": "affaan-m/ecc",
       "url": "https://github.com/affaan-m/ecc/tree/HEAD/skills/accessibility",
       "description": "Design, implement, and audit accessible UI to WCAG 2.2 Level AA across Web, iOS, and Android — semantic ARIA roles and labels, accessibility traits and hints, focus management, contrast, target size, and screen-reader support. Use when building or auditing UI for accessibility compliance, keyboard navigation, or…",
-      "installs": 10408,
+      "installs": 10478,
       "updated": "2026-11-06",
       "install": "npx skills add affaan-m/ecc --skill accessibility",
       "category": "Audits and testing"
@@ -76,7 +76,7 @@
       "repo": "affaan-m/ecc",
       "url": "https://github.com/affaan-m/ecc/tree/HEAD/skills/frontend-a11y",
       "description": "Accessibility patterns for React and Next.js — semantic HTML, ARIA attributes, form labeling, keyboard navigation, focus management, and screen reader support. Use when building or reviewing forms, modals, dropdowns, tooltips, or tabs, fixing a11y lint or code-review findings, or wiring up keyboard navigation and…",
-      "installs": 7310,
+      "installs": 7378,
       "updated": "2026-11-06",
       "install": "npx skills add affaan-m/ecc --skill frontend-a11y",
       "category": "Building and fixing"
@@ -86,7 +86,7 @@
       "repo": "pixijs/pixijs-skills",
       "url": "https://github.com/pixijs/pixijs-skills/tree/HEAD/skills/pixijs-accessibility",
       "description": "Use this skill when adding screen reader and keyboard navigation to PixiJS v8 apps. Covers AccessibilitySystem options (enabledByDefault, debug, activateOnTab, deactivateOnMouseMove), per-container accessibility properties, shadow DOM overlay, mobile touch-hook activation. Triggers on: accessibility, a11y, screen…",
-      "installs": 6568,
+      "installs": 6665,
       "updated": "2026-10-01",
       "install": "npx skills add pixijs/pixijs-skills --skill pixijs-accessibility",
       "category": "Building and fixing"
@@ -106,7 +106,7 @@
       "repo": "dpearson2699/swift-ios-skills",
       "url": "https://github.com/dpearson2699/swift-ios-skills/tree/HEAD/skills/ios-accessibility",
       "description": "Build and audit SwiftUI, UIKit, and AppKit accessibility for VoiceOver, Voice Control, Switch Control, Full Keyboard Access, Dynamic Type, focus restoration, labels/traits/actions, traversal, custom rotors, NSAccessibility, XCTest checks, adaptive system preferences, and App Store accessibility declarations. Use when…",
-      "installs": 5196,
+      "installs": 5204,
       "updated": "2026-07-31",
       "install": "npx skills add dpearson2699/swift-ios-skills --skill ios-accessibility",
       "category": "Mobile and native apps"
@@ -116,7 +116,7 @@
       "repo": "anthropics/knowledge-work-plugins",
       "url": "https://github.com/anthropics/knowledge-work-plugins/tree/HEAD/design/skills/accessibility-review",
       "description": "Run a WCAG 2.1 AA accessibility audit on a design or page. Trigger with \"audit accessibility\", \"check a11y\", \"is this accessible?\", or when reviewing a design for color contrast, keyboard navigation, touch target size, or screen reader behavior before handoff.",
-      "installs": 4312,
+      "installs": 4332,
       "updated": "2026-11-09",
       "install": "npx skills add anthropics/knowledge-work-plugins --skill accessibility-review",
       "category": "Audits and testing"
@@ -126,8 +126,8 @@
       "repo": "chromedevtools/chrome-devtools-mcp",
       "url": "https://github.com/chromedevtools/chrome-devtools-mcp/tree/HEAD/skills/a11y-debugging",
       "description": "Uses Chrome DevTools MCP for accessibility (a11y) debugging and auditing based on web.dev guidelines. Use when testing semantic HTML, ARIA labels, focus states, keyboard navigation, tap targets, and color contrast.",
-      "installs": 3930,
-      "updated": "2026-11-09",
+      "installs": 3951,
+      "updated": "2026-11-10",
       "install": "npx skills add chromedevtools/chrome-devtools-mcp --skill a11y-debugging",
       "category": "Audits and testing"
     },
@@ -136,7 +136,7 @@
       "repo": "iart-ai/web-animation-skills",
       "url": "https://github.com/iart-ai/web-animation-skills/tree/HEAD/skills/accessible-animation",
       "description": "This skill should be used when the user asks to \"respect prefers-reduced-motion\", \"honor reduced motion\", \"make my animations accessible\", \"fix vestibular / motion-sickness issues\", \"add a useReducedMotion hook\", \"gate GSAP / Framer Motion / Lenis for reduced motion\", or \"meet WCAG 2.3.3 / C39\". Provides tiered (not…",
-      "installs": 3494,
+      "installs": 3540,
       "updated": "2026-06-22",
       "install": "npx skills add iart-ai/web-animation-skills --skill accessible-animation",
       "category": "Building and fixing"
@@ -146,8 +146,8 @@
       "repo": "microsoft/vscode",
       "url": "https://github.com/microsoft/vscode/tree/HEAD/.github/skills/accessibility",
       "description": "Primary accessibility skill for VS Code. REQUIRED for new feature and contribution work, and also applies to updates of existing UI. Covers accessibility help dialogs, accessible views, verbosity settings, signals, ARIA announcements, keyboard navigation, and ARIA labels/roles.",
-      "installs": 3189,
-      "updated": "2026-11-09",
+      "installs": 3190,
+      "updated": "2026-11-10",
       "install": "npx skills add microsoft/vscode --skill accessibility",
       "category": "Building and fixing"
     },
@@ -156,7 +156,7 @@
       "repo": "benjaminsehl/liquid-skills",
       "url": "https://github.com/benjaminsehl/liquid-skills/tree/HEAD/skills/liquid-theme-a11y",
       "description": "Implement WCAG 2.2 accessibility patterns in Shopify Liquid themes. Covers e-commerce-specific components including product cards, carousels, cart drawers, price display, forms, filters, and modals. Use when building accessible theme components, fixing accessibility issues, or reviewing ARIA patterns in .liquid files.",
-      "installs": 3019,
+      "installs": 3038,
       "updated": "2026-07-16",
       "install": "npx skills add benjaminsehl/liquid-skills --skill liquid-theme-a11y",
       "category": "Building and fixing"
@@ -166,7 +166,7 @@
       "repo": "mindrally/skills",
       "url": "https://github.com/mindrally/skills/tree/HEAD/accessibility-a11y",
       "description": "Implement web accessibility (a11y) best practices following WCAG guidelines to create inclusive, accessible user interfaces.",
-      "installs": 2789,
+      "installs": 2793,
       "updated": "2026-10-08",
       "install": "npx skills add mindrally/skills --skill accessibility-a11y",
       "category": "Building and fixing"
@@ -176,7 +176,7 @@
       "repo": "owl-listener/designer-skills",
       "url": "https://github.com/owl-listener/designer-skills/tree/HEAD/prototyping-testing/skills/accessibility-test-plan",
       "description": "Plan accessibility testing — assistive technologies, participant criteria, WCAG coverage, and session protocol. Use when scheduling testing with real AT users. Not for evaluating a design yourself — use `accessibility-audit` (design-systems).",
-      "installs": 2273,
+      "installs": 2284,
       "updated": "2026-09-05",
       "install": "npx skills add owl-listener/designer-skills --skill accessibility-test-plan",
       "category": "Audits and testing"
@@ -186,7 +186,7 @@
       "repo": "mastepanoski/claude-skills",
       "url": "https://github.com/mastepanoski/claude-skills/tree/HEAD/skills/wcag-accessibility-audit",
       "description": "Comprehensive web accessibility audit using WCAG 2.1/2.2 guidelines. Evaluate compliance across 4 POUR principles (Perceivable, Operable, Understandable, Robust) with A, AA, AAA conformance levels.",
-      "installs": 1611,
+      "installs": 1615,
       "updated": "2026-10-29",
       "install": "npx skills add mastepanoski/claude-skills --skill wcag-accessibility-audit",
       "category": "Audits and testing"
@@ -196,9 +196,19 @@
       "repo": "petrkindlmann/qa-skills",
       "url": "https://github.com/petrkindlmann/qa-skills/tree/HEAD/skills/accessibility-testing",
       "description": "Test for WCAG 2.2 AA compliance with axe-core + Playwright, keyboard navigation audits, screen reader testing, ARIA pattern validation, and legal compliance mapping (ADA, EAA, Section 508). Automated tools catch 30-40% of issues — this skill covers automated and manual testing together. Use when: \"accessibility,\"…",
-      "installs": 1367,
+      "installs": 1384,
       "updated": "2026-10-22",
       "install": "npx skills add petrkindlmann/qa-skills --skill accessibility-testing",
+      "category": "Audits and testing"
+    },
+    {
+      "name": "accessibility-audit",
+      "repo": "accesslint/skills",
+      "url": "https://github.com/accesslint/skills/tree/HEAD/plugins/accesslint/skills/accessibility-audit",
+      "description": "Whole site or product — a full web accessibility (a11y) audit against WCAG 2.2, following the WCAG-EM methodology. Defines scope, samples representative pages and flows, runs the automated tier (`accessibility-scan`) and the hands-on manual tier (`accessibility-inspect`), and produces one conformance report. Grades…",
+      "installs": 1269,
+      "updated": "2026-08-24",
+      "install": "npx skills add accesslint/skills --skill accessibility-audit",
       "category": "Audits and testing"
     },
     {
@@ -206,27 +216,17 @@
       "repo": "charleswiltgen/axiom",
       "url": "https://github.com/charleswiltgen/axiom/tree/HEAD/axiom-codex/skills/axiom-accessibility",
       "description": "Use when fixing or auditing ANY accessibility issue — VoiceOver, Dynamic Type, color contrast, touch targets, WCAG compliance, App Store accessibility review.",
-      "installs": 1260,
+      "installs": 1264,
       "updated": "2026-11-08",
       "install": "npx skills add charleswiltgen/axiom --skill axiom-accessibility",
       "category": "Standards and compliance"
-    },
-    {
-      "name": "accessibility-audit",
-      "repo": "accesslint/skills",
-      "url": "https://github.com/accesslint/skills/tree/HEAD/plugins/accesslint/skills/accessibility-audit",
-      "description": "Whole site or product — a full web accessibility (a11y) audit against WCAG 2.2, following the WCAG-EM methodology. Defines scope, samples representative pages and flows, runs the automated tier (`accessibility-scan`) and the hands-on manual tier (`accessibility-inspect`), and produces one conformance report. Grades…",
-      "installs": 1259,
-      "updated": "2026-08-24",
-      "install": "npx skills add accesslint/skills --skill accessibility-audit",
-      "category": "Audits and testing"
     },
     {
       "name": "accessibility-scan",
       "repo": "accesslint/skills",
       "url": "https://github.com/accesslint/skills/tree/HEAD/plugins/accesslint/skills/accessibility-scan",
       "description": "One page, automated tier — run the web accessibility (a11y) rule engine against a live page and locate every violation it can detect mechanically. Pass a URL, a config target name (e.g. `accesslint:accessibility-scan dev`), or nothing to use the default target from `accesslint.config.json`. Ensures a debuggable…",
-      "installs": 1206,
+      "installs": 1213,
       "updated": "2026-08-24",
       "install": "npx skills add accesslint/skills --skill accessibility-scan",
       "category": "Audits and testing"
@@ -236,7 +236,7 @@
       "repo": "accesslint/skills",
       "url": "https://github.com/accesslint/skills/tree/HEAD/plugins/accesslint/skills/accessibility-fix",
       "description": "Remediation only — repair web accessibility (a11y) violations against WCAG 2.2 with a baseline, edit, and verify loop. Takes a target (URL, files, directory) or a findings worklist from `accessibility-scan`/`accessibility-inspect`/`accessibility-audit`, applies mechanical fixes as given, leaves TODOs for visual or…",
-      "installs": 1108,
+      "installs": 1114,
       "updated": "2026-08-24",
       "install": "npx skills add accesslint/skills --skill accessibility-fix",
       "category": "Audits and testing"
@@ -246,7 +246,7 @@
       "repo": "accesslint/skills",
       "url": "https://github.com/accesslint/skills/tree/HEAD/plugins/accesslint/skills/accessibility-diff",
       "description": "Regression check — diff a live page's web accessibility (a11y) violations against a baseline. By default it compares your uncommitted changes (stash-based); pass `--branch [<name>]` to compare against a branch. Reports the new WCAG violations introduced, the ones fixed, and the count of pre-existing ones. Use it for…",
-      "installs": 1087,
+      "installs": 1093,
       "updated": "2026-08-24",
       "install": "npx skills add accesslint/skills --skill accessibility-diff",
       "category": "Building and fixing"
@@ -256,7 +256,7 @@
       "repo": "accesslint/skills",
       "url": "https://github.com/accesslint/skills/tree/HEAD/plugins/accesslint/skills/accessibility-inspect",
       "description": "One page, hands-on manual tier — drive a live page through the web accessibility (a11y) checks a rule engine can't decide: keyboard operation and focus order, screen-reader names, roles and states from the accessibility tree, reflow and zoom, reduced motion, form errors, and target size. Grades each finding by…",
-      "installs": 1081,
+      "installs": 1087,
       "updated": "2026-08-24",
       "install": "npx skills add accesslint/skills --skill accessibility-inspect",
       "category": "Audits and testing"
@@ -266,8 +266,8 @@
       "repo": "alirezarezvani/claude-skills",
       "url": "https://github.com/alirezarezvani/claude-skills/tree/HEAD/engineering-team/a11y-audit/skills/a11y-audit",
       "description": "Use for any accessibility audit or a11y fix (WCAG 2.2 A/AA, color contrast, compliance report, CI check) in React, Next.js, Vue, Angular, Svelte or HTML. Scans with a11y_scanner.py and checks contrast with contrast_checker.py, then fixes and re-verifies.",
-      "installs": 998,
-      "updated": "2026-11-05",
+      "installs": 999,
+      "updated": "2026-11-10",
       "install": "npx skills add alirezarezvani/claude-skills --skill a11y-audit",
       "category": "Audits and testing"
     },
@@ -276,7 +276,7 @@
       "repo": "dembrandt/dembrandt-skills",
       "url": "https://github.com/dembrandt/dembrandt-skills/tree/HEAD/skills/wcag-accessibility",
       "description": "WCAG 2.2 AA compliance as required by the European Accessibility Act. Use when designing, building or reviewing any user-facing interface for accessibility.",
-      "installs": 988,
+      "installs": 991,
       "updated": "2026-11-01",
       "install": "npx skills add dembrandt/dembrandt-skills --skill wcag-accessibility",
       "category": "Standards and compliance"
@@ -286,7 +286,7 @@
       "repo": "forcedotcom/sf-skills",
       "url": "https://github.com/forcedotcom/sf-skills/tree/HEAD/skills/experience-lwc-accessibility-jest-run",
       "description": "Use ALWAYS when running Sa11y accessibility Jest tests for an LWC — locally before pushing, producing the command(s), running one file vs a suite, selecting tests by naming convention, saving Sa11y-rendered HTML, or reproducing a Sa11y/A11yBug failure. Covers core (Bazel; `bazel test //<module>:<target>`) and…",
-      "installs": 977,
+      "installs": 979,
       "updated": "2026-11-06",
       "install": "npx skills add forcedotcom/sf-skills --skill experience-lwc-accessibility-jest-run",
       "category": "Building and fixing"
@@ -296,7 +296,7 @@
       "repo": "dadederk/ios-accessibility-agent-skill",
       "url": "https://github.com/dadederk/ios-accessibility-agent-skill/tree/HEAD/ios-accessibility",
       "description": "Expert guidance on iOS accessibility best practices, patterns, and implementation. Use when developers mention: (1) iOS accessibility, VoiceOver, Dynamic Type, or assistive technologies, (2) accessibility labels, traits, hints, or values, (3) automated accessibility testing, auditing, or manual testing, (4) Switch…",
-      "installs": 950,
+      "installs": 951,
       "updated": "2026-03-09",
       "install": "npx skills add dadederk/ios-accessibility-agent-skill --skill ios-accessibility",
       "category": "Mobile and native apps"
@@ -306,7 +306,7 @@
       "repo": "forcedotcom/sf-skills",
       "url": "https://github.com/forcedotcom/sf-skills/tree/HEAD/skills/experience-accessibility-validate",
       "description": "Use this skill to determine whether a Lightning Web Component (LWC) is accessible and meets WCAG accessibility guidelines. TRIGGER when the user asks \"is my component accessible?\", \"does my LWC meet accessibility guidelines?\", \"is this component WCAG compliant?\", \"find accessibility problems in this LWC\", \"is this LWC…",
-      "installs": 919,
+      "installs": 920,
       "updated": "2026-11-06",
       "install": "npx skills add forcedotcom/sf-skills --skill experience-accessibility-validate",
       "category": "Audits and testing"
@@ -316,7 +316,7 @@
       "repo": "sergiodxa/agent-skills",
       "url": "https://github.com/sergiodxa/agent-skills/tree/HEAD/skills/frontend-accessibility-best-practices",
       "description": "Accessibility (a11y) best practices for React components. Use when creating UI components, forms, interactive elements, or reviewing code for accessibility compliance.",
-      "installs": 896,
+      "installs": 897,
       "updated": "2026-02-01",
       "install": "npx skills add sergiodxa/agent-skills --skill frontend-accessibility-best-practices",
       "category": "Standards and compliance"
@@ -326,10 +326,20 @@
       "repo": "dylantarre/animation-principles",
       "url": "https://github.com/dylantarre/animation-principles/tree/HEAD/skills/01-by-domain/accessible-motion",
       "description": "Use when implementing reduced motion alternatives, vestibular-safe animations, WCAG compliance, or designing for users with motion sensitivity.",
-      "installs": 689,
+      "installs": 692,
       "updated": "2025-12-30",
       "install": "npx skills add dylantarre/animation-principles --skill accessible-motion",
       "category": "Standards and compliance"
+    },
+    {
+      "name": "alt-text",
+      "repo": "posit-dev/skills",
+      "url": "https://github.com/posit-dev/skills/tree/HEAD/alt-text",
+      "description": "Generate and improve accessible alt text for data visualizations and images in R packages and Quarto documents. Use when the user wants to add, improve, or audit alt text for figures in a pkgdown site or .qmd files. Activate for requests that mention fig-alt, fig.alt, figure descriptions, or alt text in the context of…",
+      "installs": 649,
+      "updated": "2026-11-09",
+      "install": "npx skills add posit-dev/skills --skill alt-text",
+      "category": "Content and media"
     },
     {
       "name": "w-a11y",
@@ -342,21 +352,11 @@
       "category": "Audits and testing"
     },
     {
-      "name": "alt-text",
-      "repo": "posit-dev/skills",
-      "url": "https://github.com/posit-dev/skills/tree/HEAD/alt-text",
-      "description": "Generate and improve accessible alt text for data visualizations and images in R packages and Quarto documents. Use when the user wants to add, improve, or audit alt text for figures in a pkgdown site or .qmd files. Activate for requests that mention fig-alt, fig.alt, figure descriptions, or alt text in the context of…",
-      "installs": 644,
-      "updated": "2026-11-02",
-      "install": "npx skills add posit-dev/skills --skill alt-text",
-      "category": "Content and media"
-    },
-    {
       "name": "accessibility-inclusive-design",
       "repo": "hueyexe/frontend-agent-skills",
       "url": "https://github.com/hueyexe/frontend-agent-skills/tree/HEAD/accessibility-inclusive-design",
       "description": "Use when designing, critiquing, implementing, or revising UI/UX/frontend work for accessibility and inclusion.",
-      "installs": 637,
+      "installs": 641,
       "updated": "2026-08-02",
       "install": "npx skills add hueyexe/frontend-agent-skills --skill accessibility-inclusive-design",
       "category": "Design"
@@ -366,7 +366,7 @@
       "repo": "aladicf/better-web-ui",
       "url": "https://github.com/aladicf/better-web-ui/tree/HEAD/skills/a11y",
       "description": "Systematically audit and remediate accessibility issues in UI, focusing on keyboard navigation, screen reader support, color contrast, semantic HTML, ARIA usage, and motion sensitivity. Use when the user wants to improve accessibility, make a component accessible, fix WCAG violations, add keyboard support, or ensure…",
-      "installs": 614,
+      "installs": 617,
       "updated": "2026-05-21",
       "install": "npx skills add aladicf/better-web-ui --skill a11y",
       "category": "Audits and testing"
@@ -377,7 +377,7 @@
       "url": "https://github.com/plugin87/ux-ui-agent-skills/tree/HEAD/.claude/skills/a11y-audit",
       "description": "Audit a UI or design against WCAG 2.2 AA/AAA and ARIA patterns, returning criterion-referenced findings with severity and specific fixes. Use when the user wants an accessibility check, contrast verification, keyboard/screen-reader review, or wants to confirm a component meets POUR.",
       "installs": 598,
-      "updated": "2026-10-27",
+      "updated": "2026-11-10",
       "install": "npx skills add plugin87/ux-ui-agent-skills --skill a11y-audit",
       "category": "Audits and testing"
     },
@@ -386,7 +386,7 @@
       "repo": "dylantarre/animation-principles",
       "url": "https://github.com/dylantarre/animation-principles/tree/HEAD/skills/03-by-role-persona/accessibility-advocate",
       "description": "Use when designing inclusive animations, addressing vestibular disorders and motion sensitivity, or ensuring animation accessibility compliance.",
-      "installs": 576,
+      "installs": 579,
       "updated": "2025-12-30",
       "install": "npx skills add dylantarre/animation-principles --skill accessibility-advocate",
       "category": "Standards and compliance"
@@ -396,7 +396,7 @@
       "repo": "spencerpauly/awesome-cursor-skills",
       "url": "https://github.com/spencerpauly/awesome-cursor-skills/tree/HEAD/resources/accessibility-auditing",
       "description": "Use Cursor's browser aria snapshots to audit a page for accessibility issues — missing labels, broken tab order, contrast, and ARIA misuse.",
-      "installs": 535,
+      "installs": 541,
       "updated": "2026-08-01",
       "install": "npx skills add spencerpauly/awesome-cursor-skills --skill accessibility-auditing",
       "category": "Audits and testing"
@@ -406,9 +406,19 @@
       "repo": "dylantarre/animation-principles",
       "url": "https://github.com/dylantarre/animation-principles/tree/HEAD/skills/12-by-problem-type/accessibility-issues",
       "description": "Use when animation excludes users with vestibular disorders, cognitive disabilities, or assistive technology needs",
-      "installs": 525,
+      "installs": 528,
       "updated": "2025-12-30",
       "install": "npx skills add dylantarre/animation-principles --skill accessibility-issues",
+      "category": "Building and fixing"
+    },
+    {
+      "name": "threejs-accessibility",
+      "repo": "cesartevisual/threejs-skills",
+      "url": "https://github.com/cesartevisual/threejs-skills/tree/HEAD/skills/threejs-accessibility",
+      "description": "Make Three.js interactions usable with keyboards, assistive technology, reduced motion, and non-3D fallbacks.",
+      "installs": 493,
+      "updated": "2026-09-10",
+      "install": "npx skills add cesartevisual/threejs-skills --skill threejs-accessibility",
       "category": "Building and fixing"
     },
     {
@@ -420,16 +430,6 @@
       "updated": "2026-10-29",
       "install": "npx skills add webflow/webflow-skills --skill accessibility-audit",
       "category": "Audits and testing"
-    },
-    {
-      "name": "threejs-accessibility",
-      "repo": "cesartevisual/threejs-skills",
-      "url": "https://github.com/cesartevisual/threejs-skills/tree/HEAD/skills/threejs-accessibility",
-      "description": "Make Three.js interactions usable with keyboards, assistive technology, reduced motion, and non-3D fallbacks.",
-      "installs": 474,
-      "updated": "2026-09-10",
-      "install": "npx skills add cesartevisual/threejs-skills --skill threejs-accessibility",
-      "category": "Building and fixing"
     },
     {
       "name": "web-accessibility",
@@ -447,7 +447,7 @@
       "url": "https://github.com/davila7/claude-code-templates/tree/HEAD/cli-tool/components/skills/creative-design/accessibility-auditor",
       "description": "Web accessibility specialist for WCAG compliance, ARIA implementation, and inclusive design. Use when auditing websites for accessibility issues, implementing WCAG 2.1 AA/AAA standards, testing with screen readers, or ensuring ADA compliance. Expert in semantic HTML, keyboard navigation, and assistive technology…",
       "installs": 438,
-      "updated": "2026-11-09",
+      "updated": "2026-11-10",
       "install": "npx skills add davila7/claude-code-templates --skill accessibility-auditor",
       "category": "Audits and testing"
     },
@@ -456,7 +456,7 @@
       "repo": "osmontero/opencode-skills",
       "url": "https://github.com/osmontero/opencode-skills/tree/HEAD/skills/building-accessible-interfaces",
       "description": "Use when building or auditing any web UI for accessibility — keyboard navigation, screen readers, focus management, ARIA, color contrast, form labels and error announcements, reduced motion, or touch target size. Triggers include \"is this accessible\", \"WCAG\", \"a11y\", \"screen reader\", \"keyboard navigation\", \"focus…",
-      "installs": 408,
+      "installs": 412,
       "updated": "2026-10-28",
       "install": "npx skills add osmontero/opencode-skills --skill building-accessible-interfaces",
       "category": "Building and fixing"
@@ -466,8 +466,8 @@
       "repo": "adobe/skills",
       "url": "https://github.com/adobe/skills/tree/HEAD/plugins/aem/edge-delivery-services-content-ops/skills/accessibility-fix",
       "description": "Scan an AEM Edge Delivery Services page for WCAG 2.1 AA accessibility violations and generate specific fixes. Identifies missing alt text, heading hierarchy issues, link text problems, color contrast concerns, and EDS-specific accessibility patterns. Use when fixing accessibility issues, preparing for compliance…",
-      "installs": 387,
-      "updated": "2026-11-09",
+      "installs": 388,
+      "updated": "2026-11-10",
       "install": "npx skills add adobe/skills --skill accessibility-fix",
       "category": "Audits and testing"
     },
@@ -476,7 +476,7 @@
       "repo": "cuellarfr/design-skills",
       "url": "https://github.com/cuellarfr/design-skills/tree/HEAD/skills/accessibility-audit",
       "description": "Conduct accessibility audits against WCAG 2.2 guidelines. Evaluate pages, components, and flows for conformance at A, AA, and AAA levels. Identify issues, assess severity, provide code fixes, and generate audit reports. Covers automated testing, manual testing, keyboard navigation, screen reader compatibility, color…",
-      "installs": 380,
+      "installs": 385,
       "updated": "2026-09-30",
       "install": "npx skills add cuellarfr/design-skills --skill accessibility-audit",
       "category": "Audits and testing"
@@ -486,7 +486,7 @@
       "repo": "patricio0312rev/skills",
       "url": "https://github.com/patricio0312rev/skills/tree/HEAD/frontend/accessibility-auditor",
       "description": "Audits and implements web accessibility (a11y) following WCAG 2.1 guidelines with ARIA patterns, keyboard navigation, screen reader support, and contrast checking. Use when users request \"accessibility audit\", \"a11y review\", \"WCAG compliance\", \"screen reader support\", or \"keyboard navigation\".",
-      "installs": 366,
+      "installs": 369,
       "updated": "2026-01-11",
       "install": "npx skills add patricio0312rev/skills --skill accessibility-auditor",
       "category": "Audits and testing"
@@ -507,7 +507,7 @@
       "url": "https://github.com/davila7/claude-code-templates/tree/HEAD/cli-tool/components/skills/development/accessibility",
       "description": "Audit and improve web accessibility following WCAG 2.1 guidelines. Use when asked to \"improve accessibility\", \"a11y audit\", \"WCAG compliance\", \"screen reader support\", \"keyboard navigation\", or \"make accessible\".",
       "installs": 362,
-      "updated": "2026-11-09",
+      "updated": "2026-11-10",
       "install": "npx skills add davila7/claude-code-templates --skill accessibility",
       "category": "Audits and testing"
     },
@@ -516,9 +516,19 @@
       "repo": "onewave-ai/claude-skills",
       "url": "https://github.com/onewave-ai/claude-skills/tree/HEAD/accessibility-auditor",
       "description": "Audit websites for accessibility issues and WCAG compliance. Use when checking accessibility, fixing a11y issues, or ensuring WCAG compliance.",
-      "installs": 338,
+      "installs": 339,
       "updated": "2026-10-19",
       "install": "npx skills add onewave-ai/claude-skills --skill accessibility-auditor",
+      "category": "Audits and testing"
+    },
+    {
+      "name": "accessibility-audit",
+      "repo": "rampstackco/claude-skills",
+      "url": "https://github.com/rampstackco/claude-skills/tree/HEAD/skills/accessibility-audit",
+      "description": "Run a comprehensive WCAG accessibility audit covering perceivable, operable, understandable, and robust principles. Use this skill whenever the user wants to audit accessibility, review WCAG compliance, fix accessibility issues, prepare for accessibility certification, address an accessibility lawsuit risk, or…",
+      "installs": 339,
+      "updated": "2026-11-08",
+      "install": "npx skills add rampstackco/claude-skills --skill accessibility-audit",
       "category": "Audits and testing"
     },
     {
@@ -526,20 +536,10 @@
       "repo": "rgmez/apple-accessibility-skills",
       "url": "https://github.com/rgmez/apple-accessibility-skills/tree/HEAD/skills/appkit-accessibility-auditor",
       "description": "Audits macOS AppKit interfaces for VoiceOver, keyboard navigation, focus order, and semantic structure issues. Use when reviewing or fixing AppKit accessibility — returns P0/P1/P2 findings with patch-ready fixes and manual verification steps.",
-      "installs": 338,
+      "installs": 339,
       "updated": "2026-10-26",
       "install": "npx skills add rgmez/apple-accessibility-skills --skill appkit-accessibility-auditor",
       "category": "Mobile and native apps"
-    },
-    {
-      "name": "accessibility-audit",
-      "repo": "rampstackco/claude-skills",
-      "url": "https://github.com/rampstackco/claude-skills/tree/HEAD/skills/accessibility-audit",
-      "description": "Run a comprehensive WCAG accessibility audit covering perceivable, operable, understandable, and robust principles. Use this skill whenever the user wants to audit accessibility, review WCAG compliance, fix accessibility issues, prepare for accessibility certification, address an accessibility lawsuit risk, or…",
-      "installs": 337,
-      "updated": "2026-11-08",
-      "install": "npx skills add rampstackco/claude-skills --skill accessibility-audit",
-      "category": "Audits and testing"
     },
     {
       "name": "swift-accessibility-skill",
@@ -566,7 +566,7 @@
       "repo": "sushegaad/claude-skills-governance-risk-and-compliance",
       "url": "https://github.com/sushegaad/claude-skills-governance-risk-and-compliance/tree/HEAD/plugins/wcag/skills/wcag",
       "description": "Expert WCAG (Web Content Accessibility Guidelines) advisor covering WCAG 2.0, 2.1, and 2.2 — the W3C international accessibility standards. Use this skill whenever a user asks about WCAG success criteria, conformance levels (A/AA/AAA), accessibility audits, POUR principles, accessibility statements, ARIA patterns,…",
-      "installs": 267,
+      "installs": 269,
       "updated": "2026-11-06",
       "install": "npx skills add sushegaad/claude-skills-governance-risk-and-compliance --skill wcag",
       "category": "Standards and compliance"
@@ -576,7 +576,7 @@
       "repo": "community-access/accessibility-agents",
       "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/cognitive-accessibility",
       "description": "Plain language, WCAG 2.2 cognitive criteria, COGA guidance and auth UX.",
-      "installs": 266,
+      "installs": 268,
       "updated": "2026-11-07",
       "install": "npx skills add community-access/accessibility-agents --skill cognitive-accessibility",
       "category": "Building and fixing"
@@ -586,7 +586,7 @@
       "repo": "skills-il/localization",
       "url": "https://github.com/skills-il/localization/tree/HEAD/israeli-accessibility-compliance",
       "description": "Not an accessibility surveyor's opinion and not legal advice. Implement Israeli web accessibility compliance per IS 5568 standard, which is WCAG 2.0 AA plus Israeli national changes, for Hebrew RTL applications. Use when user asks about Israeli accessibility law, \"negishot\" (accessibility), IS 5568, \"teken negishot\"…",
-      "installs": 264,
+      "installs": 266,
       "updated": "2026-11-08",
       "install": "npx skills add skills-il/localization --skill israeli-accessibility-compliance",
       "category": "Standards and compliance"
@@ -596,8 +596,8 @@
       "repo": "ui5/webcomponents",
       "url": "https://github.com/ui5/webcomponents/tree/HEAD/skills/accessibility",
       "description": "How to make UI5 Web Components applications accessible. Covers accessibility APIs (accessibleName, accessibleNameRef, accessibleDescription, accessibleRole, accessibilityAttributes), label-input relationships, invisible messaging, keyboard handling, high contrast themes, and screen reader support. Use when the user…",
-      "installs": 255,
-      "updated": "2026-11-06",
+      "installs": 256,
+      "updated": "2026-11-10",
       "install": "npx skills add ui5/webcomponents --skill accessibility",
       "category": "Building and fixing"
     },
@@ -606,7 +606,7 @@
       "repo": "curiositech/some_claude_skills",
       "url": "https://github.com/curiositech/some_claude_skills/tree/HEAD/.claude/skills/color-contrast-auditor",
       "description": "Detects and fixes color contrast violations using WCAG 2.1 guidelines and perceptual analysis. Expert in contrast ratio calculation, color blindness simulation, and providing accessible alternatives. Activate on \"check contrast\", \"color accessibility\", \"WCAG audit\", \"readability check\", \"contrast ratio\", \"hard to…",
-      "installs": 253,
+      "installs": 254,
       "updated": "2026-11-05",
       "install": "npx skills add curiositech/some_claude_skills --skill color-contrast-auditor",
       "category": "Audits and testing"
@@ -616,10 +616,20 @@
       "repo": "rohitg00/awesome-claude-code-toolkit",
       "url": "https://github.com/rohitg00/awesome-claude-code-toolkit/tree/HEAD/skills/accessibility-wcag",
       "description": "Web accessibility patterns for WCAG 2.2 compliance including ARIA, keyboard navigation, screen readers, and testing",
-      "installs": 228,
+      "installs": 229,
       "updated": "2026-05-12",
       "install": "npx skills add rohitg00/awesome-claude-code-toolkit --skill accessibility-wcag",
       "category": "Standards and compliance"
+    },
+    {
+      "name": "accessibility",
+      "repo": "evanca/flutter-ai-rules",
+      "url": "https://github.com/evanca/flutter-ai-rules/tree/HEAD/skills/accessibility",
+      "description": "Use when working on accessibility, a11y, WCAG, ARIA, screen readers, keyboard nav, focus order, contrast, alt text, captions, reduced motion, or target sizes; not language/culture/device (see inclusive-design).",
+      "installs": 228,
+      "updated": "2026-11-05",
+      "install": "npx skills add evanca/flutter-ai-rules --skill accessibility",
+      "category": "Content and media"
     },
     {
       "name": "wcag-ai-skill",
@@ -642,24 +652,24 @@
       "category": "Audits and testing"
     },
     {
-      "name": "accessibility",
-      "repo": "evanca/flutter-ai-rules",
-      "url": "https://github.com/evanca/flutter-ai-rules/tree/HEAD/skills/accessibility",
-      "description": "Use when working on accessibility, a11y, WCAG, ARIA, screen readers, keyboard nav, focus order, contrast, alt text, captions, reduced motion, or target sizes; not language/culture/device (see inclusive-design).",
-      "installs": 225,
-      "updated": "2026-11-05",
-      "install": "npx skills add evanca/flutter-ai-rules --skill accessibility",
-      "category": "Content and media"
-    },
-    {
       "name": "inclusive-design",
       "repo": "evanca/flutter-ai-rules",
       "url": "https://github.com/evanca/flutter-ai-rules/tree/HEAD/skills/inclusive-design",
       "description": "Use when working on inclusion, i18n/localization, global name/address forms, low-end devices, slow/metered networks, affordability, or first-time/low-confidence users; not WCAG/screen readers (see accessibility).",
-      "installs": 212,
+      "installs": 216,
       "updated": "2026-11-05",
       "install": "npx skills add evanca/flutter-ai-rules --skill inclusive-design",
       "category": "Design"
+    },
+    {
+      "name": "canvas-accessibility-auditor",
+      "repo": "vishalsachdev/canvas-mcp",
+      "url": "https://github.com/vishalsachdev/canvas-mcp/tree/HEAD/skills/canvas-accessibility-auditor",
+      "description": "Accessibility audit and remediation for Canvas LMS courses. Scans content for WCAG-oriented issues, generates prioritized reports, guides fixes, and verifies remediation. Use when asked to \"audit accessibility\", \"check WCAG\", \"fix accessibility issues\", or \"run accessibility review\".",
+      "installs": 209,
+      "updated": "2026-11-10",
+      "install": "npx skills add vishalsachdev/canvas-mcp --skill canvas-accessibility-auditor",
+      "category": "Audits and testing"
     },
     {
       "name": "web-accessibility-audit",
@@ -677,7 +687,7 @@
       "url": "https://github.com/yonatangross/orchestkit/tree/HEAD/src/skills/accessibility",
       "description": "Accessibility patterns for WCAG 2.2 compliance, keyboard focus management, React Aria component patterns, cognitive inclusion, native HTML-first philosophy, and user preference honoring. Use when implementing screen reader support, keyboard navigation, ARIA patterns, focus traps, accessible component libraries,…",
       "installs": 209,
-      "updated": "2026-11-09",
+      "updated": "2026-11-10",
       "install": "npx skills add yonatangross/orchestkit --skill accessibility",
       "category": "Standards and compliance"
     },
@@ -690,16 +700,6 @@
       "updated": "2026-11-02",
       "install": "npx skills add promovaweb/specsfy --skill specsfy-specialist-web-accessibility",
       "category": "Building and fixing"
-    },
-    {
-      "name": "canvas-accessibility-auditor",
-      "repo": "vishalsachdev/canvas-mcp",
-      "url": "https://github.com/vishalsachdev/canvas-mcp/tree/HEAD/skills/canvas-accessibility-auditor",
-      "description": "Accessibility audit and remediation for Canvas LMS courses. Scans content for WCAG-oriented issues, generates prioritized reports, guides fixes, and verifies remediation. Use when asked to \"audit accessibility\", \"check WCAG\", \"fix accessibility issues\", or \"run accessibility review\".",
-      "installs": 208,
-      "updated": "2026-11-09",
-      "install": "npx skills add vishalsachdev/canvas-mcp --skill canvas-accessibility-auditor",
-      "category": "Audits and testing"
     },
     {
       "name": "wcag-audit-patterns",
@@ -716,7 +716,7 @@
       "repo": "zakariaf/flutter-skills",
       "url": "https://github.com/zakariaf/flutter-skills/tree/HEAD/skills/accessibility-as-code",
       "description": "Enforces accessibility as a correctness property authored into each widget — Semantics(button/label) or ExcludeSemantics on every node, a11y state read from MediaQuery not app state, never MediaQuery.withClampedTextScaling / textScaleFactor / FittedBox / TextOverflow.ellipsis to fit a label, non-color redundant…",
-      "installs": 200,
+      "installs": 202,
       "updated": "2026-09-23",
       "install": "npx skills add zakariaf/flutter-skills --skill accessibility-as-code",
       "category": "Building and fixing"
@@ -726,7 +726,7 @@
       "repo": "zakariaf/flutter-skills",
       "url": "https://github.com/zakariaf/flutter-skills/tree/HEAD/skills/widget-golden-and-a11y-testing",
       "description": "Enforces a disciplined widget/layout/golden/a11y test surface — one pumpApp harness that pins tester.view.physicalSize x devicePixelRatio and layers MediaQuery (textScaler/boldText/accessibleNavigation) above MaterialApp, an overflow net that never suppresses (one testWidgets per device x scale x bold tuple because…",
-      "installs": 196,
+      "installs": 198,
       "updated": "2026-09-23",
       "install": "npx skills add zakariaf/flutter-skills --skill widget-golden-and-a11y-testing",
       "category": "Audits and testing"
@@ -756,7 +756,7 @@
       "repo": "mgifford/accessibility-skills",
       "url": "https://github.com/mgifford/accessibility-skills/tree/HEAD/skills/image-alt-text",
       "description": "Load this skill whenever the project contains <img> elements, inline SVGs used as content images, CSS background images that convey meaning, or icon fonts. Under no circumstances omit alt text on meaningful images. Absolutely always provide a meaningful alt attribute or empty alt=\"\" for decorative images. Apply WCAG…",
-      "installs": 172,
+      "installs": 173,
       "updated": "2026-09-15",
       "install": "npx skills add mgifford/accessibility-skills --skill image-alt-text",
       "category": "Content and media"
@@ -766,9 +766,19 @@
       "repo": "community-access/accessibility-agents",
       "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/data-visualization-accessibility",
       "description": "Charts, graphs and dashboards: SVG ARIA, table alternatives, safe palettes.",
-      "installs": 167,
+      "installs": 169,
       "updated": "2026-11-07",
       "install": "npx skills add community-access/accessibility-agents --skill data-visualization-accessibility",
+      "category": "Building and fixing"
+    },
+    {
+      "name": "aria-live-regions",
+      "repo": "mgifford/accessibility-skills",
+      "url": "https://github.com/mgifford/accessibility-skills/tree/HEAD/skills/aria-live-regions",
+      "description": "Load this skill whenever the project contains dynamic content updates, status messages, alerts, notifications, loading indicators, or any use of aria-live, role=\"status\", role=\"alert\", or role=\"log\". Under no circumstances add or modify live-region markup without applying these rules. Prioritize correct politeness…",
+      "installs": 167,
+      "updated": "2026-09-15",
+      "install": "npx skills add mgifford/accessibility-skills --skill aria-live-regions",
       "category": "Building and fixing"
     },
     {
@@ -782,14 +792,14 @@
       "category": "Audits and testing"
     },
     {
-      "name": "aria-live-regions",
-      "repo": "mgifford/accessibility-skills",
-      "url": "https://github.com/mgifford/accessibility-skills/tree/HEAD/skills/aria-live-regions",
-      "description": "Load this skill whenever the project contains dynamic content updates, status messages, alerts, notifications, loading indicators, or any use of aria-live, role=\"status\", role=\"alert\", or role=\"log\". Under no circumstances add or modify live-region markup without applying these rules. Prioritize correct politeness…",
-      "installs": 166,
-      "updated": "2026-09-15",
-      "install": "npx skills add mgifford/accessibility-skills --skill aria-live-regions",
-      "category": "Building and fixing"
+      "name": "media-accessibility",
+      "repo": "community-access/accessibility-agents",
+      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/media-accessibility",
+      "description": "Captions, transcripts, audio description and accessible media players.",
+      "installs": 157,
+      "updated": "2026-11-07",
+      "install": "npx skills add community-access/accessibility-agents --skill media-accessibility",
+      "category": "Content and media"
     },
     {
       "name": "accessibility-a11y",
@@ -797,29 +807,29 @@
       "url": "https://github.com/travisjneuman/.claude/tree/HEAD/skills/accessibility-a11y",
       "description": "WCAG 2.2 compliance, ARIA patterns, keyboard navigation, screen readers, automated testing",
       "installs": 157,
-      "updated": "2026-11-09",
+      "updated": "2026-11-10",
       "install": "npx skills add travisjneuman/.claude --skill accessibility-a11y",
       "category": "Audits and testing"
-    },
-    {
-      "name": "media-accessibility",
-      "repo": "community-access/accessibility-agents",
-      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/media-accessibility",
-      "description": "Captions, transcripts, audio description and accessible media players.",
-      "installs": 156,
-      "updated": "2026-11-07",
-      "install": "npx skills add community-access/accessibility-agents --skill media-accessibility",
-      "category": "Content and media"
     },
     {
       "name": "accessibility-engineer",
       "repo": "mae616/design-skills",
       "url": "https://github.com/mae616/design-skills/tree/HEAD/skills/accessibility-engineer",
       "description": "Apply semantic HTML/JSX and WAI-ARIA correctly and minimally. Apply when implementing any UI, especially forms, interactive components, or when accessibility is mentioned.",
-      "installs": 153,
+      "installs": 156,
       "updated": "2026-01-30",
       "install": "npx skills add mae616/design-skills --skill accessibility-engineer",
       "category": "Building and fixing"
+    },
+    {
+      "name": "design-accessibility-auditor",
+      "repo": "curiositech/some_claude_skills",
+      "url": "https://github.com/curiositech/some_claude_skills/tree/HEAD/.claude/skills/design-accessibility-auditor",
+      "description": "Audit designs, color palettes, and UI components for WCAG 2.1 accessibility compliance, providing specific fixes for contrast, touch targets, focus indicators, and screen reader support. NOT for color harmony aesthetics or design system creation.",
+      "installs": 152,
+      "updated": "2026-11-05",
+      "install": "npx skills add curiositech/some_claude_skills --skill design-accessibility-auditor",
+      "category": "Audits and testing"
     },
     {
       "name": "figma-audit-accessibility",
@@ -832,21 +842,11 @@
       "category": "Audits and testing"
     },
     {
-      "name": "design-accessibility-auditor",
-      "repo": "curiositech/some_claude_skills",
-      "url": "https://github.com/curiositech/some_claude_skills/tree/HEAD/.claude/skills/design-accessibility-auditor",
-      "description": "Audit designs, color palettes, and UI components for WCAG 2.1 accessibility compliance, providing specific fixes for contrast, touch targets, focus indicators, and screen reader support. NOT for color harmony aesthetics or design system creation.",
-      "installs": 151,
-      "updated": "2026-11-05",
-      "install": "npx skills add curiositech/some_claude_skills --skill design-accessibility-auditor",
-      "category": "Audits and testing"
-    },
-    {
       "name": "Accessibility & Inclusive Design",
       "repo": "phazurlabs/sumi",
       "url": "https://github.com/phazurlabs/sumi/tree/HEAD/skills/accessibility-inclusive-design",
       "description": "WCAG 2.2 compliance, ARIA authoring patterns, screen reader and keyboard navigation, color contrast, and cognitive/neurodiversity accommodations. Use when auditing accessibility, fixing a11y violations, choosing ARIA roles, checking contrast ratios, or designing for ADHD, dyslexia, autism, or motor impairment.",
-      "installs": 148,
+      "installs": 150,
       "updated": "2026-10-24",
       "install": "npx skills add phazurlabs/sumi --skill accessibility-inclusive-design",
       "category": "Design"
@@ -896,7 +896,7 @@
       "repo": "garethmanning/education-agent-skills",
       "url": "https://github.com/garethmanning/education-agent-skills/tree/HEAD/skills/original-frameworks/inclusive-design-orchestrator",
       "description": "Coordinates UDL and differentiation tools through a universal-first hierarchy: barrier removal before targeted differentiation before individualised accommodation. Use when planning accessible learning.",
-      "installs": 116,
+      "installs": 117,
       "updated": "2026-10-22",
       "install": "npx skills add garethmanning/education-agent-skills --skill inclusive-design-orchestrator",
       "category": "Design"
@@ -912,6 +912,16 @@
       "category": "Standards and compliance"
     },
     {
+      "name": "web-accessibility-web-accessibility",
+      "repo": "agents-inc/skills",
+      "url": "https://github.com/agents-inc/skills/tree/HEAD/src/skills/web-accessibility-web-accessibility",
+      "description": "WCAG, ARIA, keyboard navigation",
+      "installs": 105,
+      "updated": "2026-10-27",
+      "install": "npx skills add agents-inc/skills --skill web-accessibility-web-accessibility",
+      "category": "Building and fixing"
+    },
+    {
       "name": "ui-a11y",
       "repo": "sickn33/agentic-awesome-skills",
       "url": "https://github.com/sickn33/agentic-awesome-skills/tree/HEAD/skills/ui-a11y",
@@ -922,21 +932,11 @@
       "category": "Audits and testing"
     },
     {
-      "name": "web-accessibility-web-accessibility",
-      "repo": "agents-inc/skills",
-      "url": "https://github.com/agents-inc/skills/tree/HEAD/src/skills/web-accessibility-web-accessibility",
-      "description": "WCAG, ARIA, keyboard navigation",
-      "installs": 104,
-      "updated": "2026-10-27",
-      "install": "npx skills add agents-inc/skills --skill web-accessibility-web-accessibility",
-      "category": "Building and fixing"
-    },
-    {
       "name": "behavioral-a11y",
       "repo": "mgifford/accessibility-skills",
       "url": "https://github.com/mgifford/accessibility-skills/tree/HEAD/skills/behavioral-a11y",
       "description": "Load this skill when writing, reviewing, or interpreting behavioral accessibility automation — tests that manipulate a rendered page (resizing the viewport, pressing real keys, capturing and comparing screenshots) rather than only inspecting static markup or a single computed accessibility tree. Covers Reflow risk (SC…",
-      "installs": 102,
+      "installs": 103,
       "updated": "2026-09-15",
       "install": "npx skills add mgifford/accessibility-skills --skill behavioral-a11y",
       "category": "Building and fixing"
@@ -946,10 +946,20 @@
       "repo": "ovid/paad",
       "url": "https://github.com/ovid/paad/tree/HEAD/plugins/paad/skills/agentic-a11y",
       "description": "Use when auditing a user-facing app — web, mobile (iOS/Android/React Native/Flutter), desktop, CLI, or games — for accessibility barriers or WCAG 2.2 conformance, before shipping UI changes, or in response to concerns about screen-reader, keyboard, low-vision, motor, cognitive, or photosensitive users. Not for general…",
-      "installs": 98,
-      "updated": "2026-11-09",
+      "installs": 99,
+      "updated": "2026-11-10",
       "install": "npx skills add ovid/paad --skill agentic-a11y",
       "category": "Standards and compliance"
+    },
+    {
+      "name": "accessibility-testing",
+      "repo": "naodeng/awesome-qa-skills",
+      "url": "https://github.com/naodeng/awesome-qa-skills/tree/HEAD/skills/en/testing-types/accessibility-testing",
+      "description": "Use this skill when you need to design accessibility testing against WCAG, keyboard navigation, and assistive technology scenarios; triggers include accessibility testing and a11y testing.",
+      "installs": 95,
+      "updated": "2026-11-06",
+      "install": "npx skills add naodeng/awesome-qa-skills --skill accessibility-testing",
+      "category": "Audits and testing"
     },
     {
       "name": "accessibility-commerce",
@@ -972,31 +982,31 @@
       "category": "Building and fixing"
     },
     {
-      "name": "accessibility-testing",
-      "repo": "naodeng/awesome-qa-skills",
-      "url": "https://github.com/naodeng/awesome-qa-skills/tree/HEAD/skills/en/testing-types/accessibility-testing",
-      "description": "Use this skill when you need to design accessibility testing against WCAG, keyboard navigation, and assistive technology scenarios; triggers include accessibility testing and a11y testing.",
-      "installs": 93,
-      "updated": "2026-11-06",
-      "install": "npx skills add naodeng/awesome-qa-skills --skill accessibility-testing",
-      "category": "Audits and testing"
-    },
-    {
       "name": "responsive-accessibility",
       "repo": "owl-listener/inclusive-design-skills",
       "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/adaptive-interfaces/skills/responsive-accessibility",
       "description": "Design responsive layouts that maintain accessibility across screen sizes, zoom levels, and orientations. Use when designing responsive interfaces, testing zoom behaviour, or reviewing layouts across devices. Triggers on: responsive, zoom, reflow, breakpoint, mobile accessibility, screen size, orientation, viewport,…",
-      "installs": 88,
+      "installs": 89,
       "updated": "2026-06-09",
       "install": "npx skills add owl-listener/inclusive-design-skills --skill responsive-accessibility",
       "category": "Audits and testing"
+    },
+    {
+      "name": "superior-accessibility",
+      "repo": "kodekateam/superior-skills",
+      "url": "https://github.com/kodekateam/superior-skills/tree/HEAD/skills/superior-accessibility",
+      "description": "Review or implement interface accessibility for semantics, keyboard operation, focus, contrast, status communication, zoom, and assistive technology. Use when accessibility is explicitly requested, required by the product contract, or a changed interaction creates substantial accessibility risk. Do not activate for…",
+      "installs": 87,
+      "updated": "2026-11-08",
+      "install": "npx skills add kodekateam/superior-skills --skill superior-accessibility",
+      "category": "Building and fixing"
     },
     {
       "name": "table-accessibility",
       "repo": "owl-listener/inclusive-design-skills",
       "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/accessible-content/skills/table-accessibility",
       "description": "Design data tables that work for screen readers and cognitive accessibility. Use when creating or reviewing tables, data grids, comparison tables, pricing tables, or any tabular data. Triggers on: table, data table, grid, spreadsheet, comparison table, pricing table, screen reader table, table headers, scope, caption,…",
-      "installs": 86,
+      "installs": 87,
       "updated": "2026-06-09",
       "install": "npx skills add owl-listener/inclusive-design-skills --skill table-accessibility",
       "category": "Building and fixing"
@@ -1026,10 +1036,30 @@
       "repo": "owl-listener/inclusive-design-skills",
       "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/accessibility-decisions/skills/accessibility-testing-strategy",
       "description": "Plan what to test, how to test, and who should test for accessibility. Use when defining a testing approach, planning QA, setting up automated and manual testing, or deciding what level of accessibility testing a project needs. Triggers on: accessibility testing, how to test, test plan, automated testing, manual…",
-      "installs": 84,
+      "installs": 85,
       "updated": "2026-06-09",
       "install": "npx skills add owl-listener/inclusive-design-skills --skill accessibility-testing-strategy",
       "category": "Audits and testing"
+    },
+    {
+      "name": "alt-text-design",
+      "repo": "owl-listener/inclusive-design-skills",
+      "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/accessible-content/skills/alt-text-design",
+      "description": "Write meaningful alternative text for images, charts, diagrams, and visual content. Use when creating or reviewing alt text, image descriptions, chart summaries, or any visual content that needs a text equivalent. Triggers on: alt text, image description, alternative text, screen reader, decorative image, chart…",
+      "installs": 84,
+      "updated": "2026-06-09",
+      "install": "npx skills add owl-listener/inclusive-design-skills --skill alt-text-design",
+      "category": "Content and media"
+    },
+    {
+      "name": "disability-inclusive-personas",
+      "repo": "owl-listener/inclusive-design-skills",
+      "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/inclusive-personas/skills/disability-inclusive-personas",
+      "description": "Create user personas that include disability as a natural dimension of human diversity — not as a separate 'accessibility persona'. Use when creating personas, user profiles, proto-personas, or any representation of target users. Triggers on: persona, user persona, proto-persona, user profile, target user, who is the…",
+      "installs": 84,
+      "updated": "2026-06-09",
+      "install": "npx skills add owl-listener/inclusive-design-skills --skill disability-inclusive-personas",
+      "category": "Design"
     },
     {
       "name": "qe-a11y-ally",
@@ -1042,54 +1072,54 @@
       "category": "Audits and testing"
     },
     {
-      "name": "superior-accessibility",
-      "repo": "kodekateam/superior-skills",
-      "url": "https://github.com/kodekateam/superior-skills/tree/HEAD/skills/superior-accessibility",
-      "description": "Review or implement interface accessibility for semantics, keyboard operation, focus, contrast, status communication, zoom, and assistive technology. Use when accessibility is explicitly requested, required by the product contract, or a changed interaction creates substantial accessibility risk. Do not activate for…",
-      "installs": 83,
-      "updated": "2026-11-08",
-      "install": "npx skills add kodekateam/superior-skills --skill superior-accessibility",
-      "category": "Building and fixing"
-    },
-    {
-      "name": "alt-text-design",
-      "repo": "owl-listener/inclusive-design-skills",
-      "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/accessible-content/skills/alt-text-design",
-      "description": "Write meaningful alternative text for images, charts, diagrams, and visual content. Use when creating or reviewing alt text, image descriptions, chart summaries, or any visual content that needs a text equivalent. Triggers on: alt text, image description, alternative text, screen reader, decorative image, chart…",
-      "installs": 83,
-      "updated": "2026-06-09",
-      "install": "npx skills add owl-listener/inclusive-design-skills --skill alt-text-design",
-      "category": "Content and media"
-    },
-    {
-      "name": "disability-inclusive-personas",
-      "repo": "owl-listener/inclusive-design-skills",
-      "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/inclusive-personas/skills/disability-inclusive-personas",
-      "description": "Create user personas that include disability as a natural dimension of human diversity — not as a separate 'accessibility persona'. Use when creating personas, user profiles, proto-personas, or any representation of target users. Triggers on: persona, user persona, proto-persona, user profile, target user, who is the…",
-      "installs": 83,
-      "updated": "2026-06-09",
-      "install": "npx skills add owl-listener/inclusive-design-skills --skill disability-inclusive-personas",
-      "category": "Design"
+      "name": "flutter-accessibility",
+      "repo": "thienqo/flutter-skills",
+      "url": "https://github.com/thienqo/flutter-skills/tree/HEAD/skills/flutter-accessibility",
+      "description": "Build or audit Flutter accessibility for semantics, screen readers, focus, keyboard access, text scaling, contrast, target size, and motion preferences. Pair with flutter-responsive-layout when large text causes reflow, clipping, or overflow across constraints.",
+      "installs": 84,
+      "updated": "2026-11-10",
+      "install": "npx skills add thienqo/flutter-skills --skill flutter-accessibility",
+      "category": "Mobile and native apps"
     },
     {
       "name": "keyboard-review",
       "repo": "owl-listener/inclusive-design-skills",
       "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/inclusive-interaction/skills/keyboard-review",
       "description": "Review keyboard navigation and focus management in an existing interface. Chains: keyboard-navigation, feedback-and-status. Use when testing or reviewing keyboard accessibility specifically, before a release, or when users report keyboard issues.",
-      "installs": 81,
+      "installs": 82,
       "updated": "2026-06-09",
       "install": "npx skills add owl-listener/inclusive-design-skills --skill keyboard-review",
       "category": "Audits and testing"
     },
     {
-      "name": "flutter-accessibility",
-      "repo": "thienqo/flutter-skills",
-      "url": "https://github.com/thienqo/flutter-skills/tree/HEAD/skills/flutter-accessibility",
-      "description": "Build or audit Flutter accessibility for semantics, screen readers, focus, keyboard access, text scaling, contrast, target size, and motion preferences. Pair with flutter-responsive-layout when large text causes reflow, clipping, or overflow across constraints.",
+      "name": "inclusive-user-stories",
+      "repo": "owl-listener/inclusive-design-skills",
+      "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/inclusive-personas/skills/inclusive-user-stories",
+      "description": "Write user stories that account for disability and diverse abilities from the start. Use when writing user stories, acceptance criteria, jobs to be done, or requirements. Triggers on: user story, user stories, acceptance criteria, jobs to be done, JTBD, requirements, as a user I want, definition of done, story writing.",
       "installs": 81,
-      "updated": "2026-11-09",
-      "install": "npx skills add thienqo/flutter-skills --skill flutter-accessibility",
-      "category": "Mobile and native apps"
+      "updated": "2026-06-09",
+      "install": "npx skills add owl-listener/inclusive-design-skills --skill inclusive-user-stories",
+      "category": "Building and fixing"
+    },
+    {
+      "name": "multimedia-accessibility",
+      "repo": "owl-listener/inclusive-design-skills",
+      "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/accessible-content/skills/multimedia-accessibility",
+      "description": "Design accessible video, audio, and multimedia content with captions, transcripts, and audio descriptions. Use when creating or reviewing video, audio, podcasts, webinars, animations, or any time-based media. Triggers on: captions, subtitles, transcript, audio description, video accessibility, podcast accessibility,…",
+      "installs": 81,
+      "updated": "2026-06-09",
+      "install": "npx skills add owl-listener/inclusive-design-skills --skill multimedia-accessibility",
+      "category": "Content and media"
+    },
+    {
+      "name": "accessibility-debt-tracking",
+      "repo": "owl-listener/inclusive-design-skills",
+      "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/accessibility-decisions/skills/accessibility-debt-tracking",
+      "description": "Track and manage accessibility debt — known accessibility issues that have been deferred. Use when managing a backlog of accessibility issues, planning remediation, or when accessibility problems are accumulating faster than they're being fixed. Triggers on: accessibility debt, tech debt, known issues, backlog,…",
+      "installs": 81,
+      "updated": "2026-06-09",
+      "install": "npx skills add owl-listener/inclusive-design-skills --skill accessibility-debt-tracking",
+      "category": "Building and fixing"
     },
     {
       "name": "Accessibility",
@@ -1102,34 +1132,14 @@
       "category": "Building and fixing"
     },
     {
-      "name": "inclusive-user-stories",
-      "repo": "owl-listener/inclusive-design-skills",
-      "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/inclusive-personas/skills/inclusive-user-stories",
-      "description": "Write user stories that account for disability and diverse abilities from the start. Use when writing user stories, acceptance criteria, jobs to be done, or requirements. Triggers on: user story, user stories, acceptance criteria, jobs to be done, JTBD, requirements, as a user I want, definition of done, story writing.",
-      "installs": 80,
-      "updated": "2026-06-09",
-      "install": "npx skills add owl-listener/inclusive-design-skills --skill inclusive-user-stories",
-      "category": "Building and fixing"
-    },
-    {
-      "name": "multimedia-accessibility",
-      "repo": "owl-listener/inclusive-design-skills",
-      "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/accessible-content/skills/multimedia-accessibility",
-      "description": "Design accessible video, audio, and multimedia content with captions, transcripts, and audio descriptions. Use when creating or reviewing video, audio, podcasts, webinars, animations, or any time-based media. Triggers on: captions, subtitles, transcript, audio description, video accessibility, podcast accessibility,…",
-      "installs": 80,
-      "updated": "2026-06-09",
-      "install": "npx skills add owl-listener/inclusive-design-skills --skill multimedia-accessibility",
+      "name": "bevy-a11y",
+      "repo": "chrisgliddon/bevy-skills",
+      "url": "https://github.com/chrisgliddon/bevy-skills/tree/HEAD/skills/bevy-a11y",
+      "description": "Use when designing or auditing high-standard video-game accessibility in Bevy 0.20, integrating screen readers and focus navigation, supporting adaptive controllers and complete remapping, implementing captions or audio description, checking contrast and motion safety, or building disabled-player test evidence.",
+      "installs": 76,
+      "updated": "2026-11-03",
+      "install": "npx skills add chrisgliddon/bevy-skills --skill bevy-a11y",
       "category": "Content and media"
-    },
-    {
-      "name": "accessibility-debt-tracking",
-      "repo": "owl-listener/inclusive-design-skills",
-      "url": "https://github.com/owl-listener/inclusive-design-skills/tree/HEAD/accessibility-decisions/skills/accessibility-debt-tracking",
-      "description": "Track and manage accessibility debt — known accessibility issues that have been deferred. Use when managing a backlog of accessibility issues, planning remediation, or when accessibility problems are accumulating faster than they're being fixed. Triggers on: accessibility debt, tech debt, known issues, backlog,…",
-      "installs": 80,
-      "updated": "2026-06-09",
-      "install": "npx skills add owl-listener/inclusive-design-skills --skill accessibility-debt-tracking",
-      "category": "Building and fixing"
     },
     {
       "name": "accessibility-excellence",
@@ -1146,7 +1156,7 @@
       "repo": "bholmesdev/skills",
       "url": "https://github.com/bholmesdev/skills/tree/HEAD/skills/alt-text",
       "description": "Write concise alt text for a local image file. Use this when the user asks for alt text, accessibility text, or a brief image description for a specific local image path. Pass the target image path as `$0`.",
-      "installs": 74,
+      "installs": 75,
       "updated": "2026-10-18",
       "install": "npx skills add bholmesdev/skills --skill alt-text",
       "category": "Content and media"
@@ -1162,22 +1172,12 @@
       "category": "Audits and testing"
     },
     {
-      "name": "bevy-a11y",
-      "repo": "chrisgliddon/bevy-skills",
-      "url": "https://github.com/chrisgliddon/bevy-skills/tree/HEAD/skills/bevy-a11y",
-      "description": "Use when designing or auditing high-standard video-game accessibility in Bevy 0.20, integrating screen readers and focus navigation, supporting adaptive controllers and complete remapping, implementing captions or audio description, checking contrast and motion safety, or building disabled-player test evidence.",
-      "installs": 74,
-      "updated": "2026-11-03",
-      "install": "npx skills add chrisgliddon/bevy-skills --skill bevy-a11y",
-      "category": "Content and media"
-    },
-    {
       "name": "review-a11y",
       "repo": "gtrabanco/agentic-workflow",
       "url": "https://github.com/gtrabanco/agentic-workflow/tree/HEAD/skills/review-a11y",
       "description": "Internal accessibility review pass of the agentic-workflow review pack — composed in-turn by review-change and product-audit; not a menu entry. Checks the changed user-facing surface for accessibility: semantics, keyboard, focus, contrast, and ARIA correctness — applies only to user-facing surfaces. Findings only;…",
       "installs": 73,
-      "updated": "2026-11-09",
+      "updated": "2026-11-10",
       "install": "npx skills add gtrabanco/agentic-workflow --skill review-a11y",
       "category": "Audits and testing"
     },
@@ -1187,7 +1187,7 @@
       "url": "https://github.com/bbeierle12/skill-mcp-claude/tree/HEAD/skills/form-accessibility",
       "description": "WCAG 2.2 AA compliance for forms, ARIA patterns, focus management, keyboard navigation, and screen reader support. Use when implementing accessible forms in any framework. The compliance foundation that ensures forms work for everyone.",
       "installs": 72,
-      "updated": "2026-11-09",
+      "updated": "2026-11-10",
       "install": "npx skills add bbeierle12/skill-mcp-claude --skill form-accessibility",
       "category": "Standards and compliance"
     },
@@ -1202,6 +1202,16 @@
       "category": "Audits and testing"
     },
     {
+      "name": "awesome-accessibility-audit",
+      "repo": "khasky/awesome-agent-skills",
+      "url": "https://github.com/khasky/awesome-agent-skills/tree/HEAD/skills/awesome-accessibility-audit",
+      "description": "Read-only WCAG audit of UI and markup with a concrete fix per finding. Use when asked to check accessibility, a11y, keyboard or screen-reader support, or contrast.",
+      "installs": 69,
+      "updated": "2026-10-19",
+      "install": "npx skills add khasky/awesome-agent-skills --skill awesome-accessibility-audit",
+      "category": "Audits and testing"
+    },
+    {
       "name": "accessibility",
       "repo": "flitzrrr/frontend-design-skills",
       "url": "https://github.com/flitzrrr/frontend-design-skills/tree/HEAD/skills-src/accessibility",
@@ -1212,22 +1222,12 @@
       "category": "Standards and compliance"
     },
     {
-      "name": "awesome-accessibility-audit",
-      "repo": "khasky/awesome-agent-skills",
-      "url": "https://github.com/khasky/awesome-agent-skills/tree/HEAD/skills/awesome-accessibility-audit",
-      "description": "Read-only WCAG audit of UI and markup with a concrete fix per finding. Use when asked to check accessibility, a11y, keyboard or screen-reader support, or contrast.",
-      "installs": 65,
-      "updated": "2026-10-19",
-      "install": "npx skills add khasky/awesome-agent-skills --skill awesome-accessibility-audit",
-      "category": "Audits and testing"
-    },
-    {
       "name": "accessibility-implementation",
       "repo": "laurigates/claude-plugins",
       "url": "https://github.com/laurigates/claude-plugins/tree/HEAD/accessibility-plugin/skills/accessibility-implementation",
       "description": "WCAG 2.1/2.2 compliance, ARIA patterns, keyboard nav, focus management, a11y testing. Use when implementing accessible components or user mentions WCAG/ARIA/screen readers.",
       "installs": 63,
-      "updated": "2026-11-09",
+      "updated": "2026-11-10",
       "install": "npx skills add laurigates/claude-plugins --skill accessibility-implementation",
       "category": "Audits and testing"
     },
@@ -1236,7 +1236,7 @@
       "repo": "divyanshu-iitian/agent-website-design-skills",
       "url": "https://github.com/divyanshu-iitian/agent-website-design-skills/tree/HEAD/conversion-accessibility-polish",
       "description": "Improve an existing website or web app's decision clarity, trust, forms, UX copy, and accessibility without dark patterns. Use when an agent must polish CTAs, navigation, pricing, onboarding, empty or error states, keyboard behavior, semantic HTML, focus, contrast, or the end-to-end conversion path.",
-      "installs": 60,
+      "installs": 61,
       "updated": "2026-08-22",
       "install": "npx skills add divyanshu-iitian/agent-website-design-skills --skill conversion-accessibility-polish",
       "category": "Building and fixing"
@@ -1246,7 +1246,7 @@
       "repo": "musabekisakov-imj/flutter-design-engineer",
       "url": "https://github.com/musabekisakov-imj/flutter-design-engineer/tree/HEAD/skills/flutter-accessibility",
       "description": "Audit and improve Flutter accessibility, inclusive interaction, localization safety, and RTL behavior. Use for screen-reader semantics, focus and keyboard navigation, text scaling, contrast, touch targets, reduced motion, form errors, RTL, localization, or accessibility acceptance checks.",
-      "installs": 60,
+      "installs": 61,
       "updated": "2026-07-23",
       "install": "npx skills add musabekisakov-imj/flutter-design-engineer --skill flutter-accessibility",
       "category": "Mobile and native apps"
@@ -1256,7 +1256,7 @@
       "repo": "neha/check-fix-accessibility",
       "url": "https://github.com/neha/check-fix-accessibility/tree/HEAD/check-fix-accessibility",
       "description": "Check and fix accessibility (a11y) on front-end projects (web and mobile web), including Next.js, React, Vue, Angular. Use when the user asks about accessibility, a11y, WCAG, screen readers, voice control, Voice View, keyboard navigation, focus management, ARIA, semantic HTML, color contrast, or fixing accessibility…",
-      "installs": 60,
+      "installs": 61,
       "updated": "2026-10-01",
       "install": "npx skills add neha/check-fix-accessibility --skill check-fix-accessibility",
       "category": "Audits and testing"
@@ -1272,6 +1272,16 @@
       "category": "Standards and compliance"
     },
     {
+      "name": "a11y",
+      "repo": "paragonhq/stealth-skills",
+      "url": "https://github.com/paragonhq/stealth-skills/tree/HEAD/skills/a11y",
+      "description": "Accessibility as part of building, not a pass afterwards. Semantic HTML first, keyboard order and focus management, visible focus, names for every control, ARIA only where HTML cannot, live regions, reduced motion, contrast, hit sizes, forms with linked labels and errors, headings and landmarks, inert layers, zoom to…",
+      "installs": 58,
+      "updated": "2026-09-24",
+      "install": "npx skills add paragonhq/stealth-skills --skill a11y",
+      "category": "Building and fixing"
+    },
+    {
       "name": "accessibility-compliance-accessibility-audit",
       "repo": "rmyndharis/antigravity-skills",
       "url": "https://github.com/rmyndharis/antigravity-skills/tree/HEAD/skills/accessibility-compliance-accessibility-audit",
@@ -1282,21 +1292,11 @@
       "category": "Audits and testing"
     },
     {
-      "name": "a11y",
-      "repo": "paragonhq/stealth-skills",
-      "url": "https://github.com/paragonhq/stealth-skills/tree/HEAD/skills/a11y",
-      "description": "Accessibility as part of building, not a pass afterwards. Semantic HTML first, keyboard order and focus management, visible focus, names for every control, ARIA only where HTML cannot, live regions, reduced motion, contrast, hit sizes, forms with linked labels and errors, headings and landmarks, inert layers, zoom to…",
-      "installs": 57,
-      "updated": "2026-09-24",
-      "install": "npx skills add paragonhq/stealth-skills --skill a11y",
-      "category": "Building and fixing"
-    },
-    {
       "name": "ultra11y",
       "repo": "maxgfr/ultra11y",
       "url": "https://github.com/maxgfr/ultra11y/tree/HEAD/skills/ultra11y",
       "description": "Use to AUDIT a site, repository, or page against RGAA 4.1.2, the French State's accessibility standard (référentiel de l'État), on a WCAG 2.2 AA core (other country standards as packs); produce a dated conformance report, criterion grid, PRD backlog, or tickets; AUTHOR accessible markup; fix accessibility; or wire a…",
-      "installs": 56,
+      "installs": 57,
       "updated": "2026-11-03",
       "install": "npx skills add maxgfr/ultra11y --skill ultra11y",
       "category": "Audits and testing"
@@ -1332,6 +1332,16 @@
       "category": "Building and fixing"
     },
     {
+      "name": "typo3-accessibility",
+      "repo": "dirnbauer/webconsulting-skills",
+      "url": "https://github.com/dirnbauer/webconsulting-skills/tree/HEAD/skills/typo3-accessibility",
+      "description": "Audits and implements TYPO3 accessibility patterns for WCAG 2.2 AA, including Fluid templates, PHP helpers, JavaScript widgets, forms, focus states, ARIA, and go-live checks. Use when building or reviewing TYPO3 templates, content elements, extensions, or frontend code for accessibility, keyboard support, screen…",
+      "installs": 50,
+      "updated": "2026-07-27",
+      "install": "npx skills add dirnbauer/webconsulting-skills --skill typo3-accessibility",
+      "category": "Audits and testing"
+    },
+    {
       "name": "accessibility",
       "repo": "tranz007/ux-skills",
       "url": "https://github.com/tranz007/ux-skills/tree/HEAD/skills/accessibility",
@@ -1340,16 +1350,6 @@
       "updated": "2026-09-04",
       "install": "npx skills add tranz007/ux-skills --skill accessibility",
       "category": "Design"
-    },
-    {
-      "name": "typo3-accessibility",
-      "repo": "dirnbauer/webconsulting-skills",
-      "url": "https://github.com/dirnbauer/webconsulting-skills/tree/HEAD/skills/typo3-accessibility",
-      "description": "Audits and implements TYPO3 accessibility patterns for WCAG 2.2 AA, including Fluid templates, PHP helpers, JavaScript widgets, forms, focus states, ARIA, and go-live checks. Use when building or reviewing TYPO3 templates, content elements, extensions, or frontend code for accessibility, keyboard support, screen…",
-      "installs": 49,
-      "updated": "2026-07-27",
-      "install": "npx skills add dirnbauer/webconsulting-skills --skill typo3-accessibility",
-      "category": "Audits and testing"
     },
     {
       "name": "shopify-alt-text",
@@ -1427,7 +1427,7 @@
       "url": "https://github.com/thebushidocollective/han/tree/HEAD/plugins/frameworks/gluestack/skills/gluestack-accessibility",
       "description": "Use when ensuring accessible gluestack-ui implementations. Covers WAI-ARIA patterns, screen reader support, keyboard navigation, focus management, and WCAG 2.1 AA compliance.",
       "installs": 44,
-      "updated": "2026-11-06",
+      "updated": "2026-11-10",
       "install": "npx skills add thebushidocollective/han --skill gluestack-accessibility",
       "category": "Standards and compliance"
     },
@@ -1462,6 +1462,16 @@
       "category": "Building and fixing"
     },
     {
+      "name": "accessibility",
+      "repo": "tartinerlabs/skills",
+      "url": "https://github.com/tartinerlabs/skills/tree/HEAD/plugins/design/skills/accessibility",
+      "description": "Use when building or reviewing UI for accessibility — screen readers (VoiceOver, TalkBack), keyboard and focus, colour contrast, Dynamic Type and text scaling, reduced motion, touch targets, accessible forms, captions — or when auditing against WCAG 2.2, the European Accessibility Act, or before an App Store or…",
+      "installs": 43,
+      "updated": "2026-11-11",
+      "install": "npx skills add tartinerlabs/skills --skill accessibility",
+      "category": "Content and media"
+    },
+    {
       "name": "11-accessibility",
       "repo": "justinebijupaul/frontend-ai-skills",
       "url": "https://github.com/justinebijupaul/frontend-ai-skills/tree/HEAD/skills/11-accessibility",
@@ -1482,16 +1492,6 @@
       "category": "Audits and testing"
     },
     {
-      "name": "accessibility",
-      "repo": "tartinerlabs/skills",
-      "url": "https://github.com/tartinerlabs/skills/tree/HEAD/plugins/design/skills/accessibility",
-      "description": "Use when building or reviewing UI for accessibility — screen readers (VoiceOver, TalkBack), keyboard and focus, colour contrast, Dynamic Type and text scaling, reduced motion, touch targets, accessible forms, captions — or when auditing against WCAG 2.2, the European Accessibility Act, or before an App Store or…",
-      "installs": 42,
-      "updated": "2026-11-07",
-      "install": "npx skills add tartinerlabs/skills --skill accessibility",
-      "category": "Content and media"
-    },
-    {
       "name": "stitch-a11y",
       "repo": "gabelul/stitch-kit",
       "url": "https://github.com/gabelul/stitch-kit/tree/HEAD/skills/stitch-a11y",
@@ -1500,6 +1500,16 @@
       "updated": "2026-07-20",
       "install": "npx skills add gabelul/stitch-kit --skill stitch-a11y",
       "category": "Audits and testing"
+    },
+    {
+      "name": "markdown-img-alt-text",
+      "repo": "richtabor/agent-skills",
+      "url": "https://github.com/richtabor/agent-skills/tree/HEAD/skills/markdown-img-alt-text",
+      "description": "Adds detailed alt text to markdown image embeds that are missing it. Supports both Obsidian wiki-style (![[image]]) and standard markdown (![](path)) formats. Reads each image, describes its content thoroughly, and updates the embed inline. Triggers on \"add alt text\", \"update alt text\", \"describe images\", \"missing alt…",
+      "installs": 39,
+      "updated": "2026-04-05",
+      "install": "npx skills add richtabor/agent-skills --skill markdown-img-alt-text",
+      "category": "Content and media"
     },
     {
       "name": "accessibility-per-component",
@@ -1512,14 +1522,24 @@
       "category": "Audits and testing"
     },
     {
-      "name": "markdown-img-alt-text",
-      "repo": "richtabor/agent-skills",
-      "url": "https://github.com/richtabor/agent-skills/tree/HEAD/skills/markdown-img-alt-text",
-      "description": "Adds detailed alt text to markdown image embeds that are missing it. Supports both Obsidian wiki-style (![[image]]) and standard markdown (![](path)) formats. Reads each image, describes its content thoroughly, and updates the embed inline. Triggers on \"add alt text\", \"update alt text\", \"describe images\", \"missing alt…",
-      "installs": 38,
-      "updated": "2026-04-05",
-      "install": "npx skills add richtabor/agent-skills --skill markdown-img-alt-text",
-      "category": "Content and media"
+      "name": "a11y-core",
+      "repo": "community-access/accessibility-agents",
+      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/a11y-core",
+      "description": "Shared contract for the Accessibility Agents skills - dispatch, findings schema, report rules. Read by skills, never dispatched on its own.",
+      "installs": 37,
+      "updated": "2026-11-07",
+      "install": "npx skills add community-access/accessibility-agents --skill a11y-core",
+      "category": "Building and fixing"
+    },
+    {
+      "name": "accessibility-expert",
+      "repo": "duck4nh/antigravity-kit",
+      "url": "https://github.com/duck4nh/antigravity-kit/tree/HEAD/templates/.agent/skills/accessibility-expert",
+      "description": "WCAG 2.1/2.2 compliance, WAI-ARIA implementation, screen reader optimization, keyboard navigation, and accessibility testing expert. Use PROACTIVELY for accessibility violations, ARIA errors, keyboard navigation issues, screen reader compatibility problems, or accessibility testing automation needs.",
+      "installs": 37,
+      "updated": "2026-02-10",
+      "install": "npx skills add duck4nh/antigravity-kit --skill accessibility-expert",
+      "category": "Audits and testing"
     },
     {
       "name": "aria-attribute-helper",
@@ -1556,20 +1576,30 @@
       "repo": "effeilo/claude-code-frontend-skills",
       "url": "https://github.com/effeilo/claude-code-frontend-skills/tree/HEAD/front-a11y",
       "description": "Audit or fix accessibility issues (WCAG 2.1 AA) in HTML, Vue, Svelte, or Astro files. Checks images, ARIA, keyboard navigation, forms, and semantic HTML. Usage: /front-a11y [fix]",
-      "installs": 34,
+      "installs": 35,
       "updated": "2026-05-03",
       "install": "npx skills add effeilo/claude-code-frontend-skills --skill front-a11y",
       "category": "Audits and testing"
     },
     {
-      "name": "a11y-core",
+      "name": "aria-specialist",
       "repo": "community-access/accessibility-agents",
-      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/a11y-core",
-      "description": "Shared contract for the Accessibility Agents skills - dispatch, findings schema, report rules. Read by skills, never dispatched on its own.",
-      "installs": 33,
+      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/aria-specialist",
+      "description": "ARIA roles, states and properties for custom widgets and dynamic content.",
+      "installs": 32,
       "updated": "2026-11-07",
-      "install": "npx skills add community-access/accessibility-agents --skill a11y-core",
+      "install": "npx skills add community-access/accessibility-agents --skill aria-specialist",
       "category": "Building and fixing"
+    },
+    {
+      "name": "a11y-maxxing",
+      "repo": "lukeberrypi/skills",
+      "url": "https://github.com/lukeberrypi/skills/tree/HEAD/skills/a11y-maxxing",
+      "description": "Audit or remediate web accessibility barriers, optimizing accessible task completion against a WCAG 2.2 AA floor.",
+      "installs": 32,
+      "updated": "2026-08-11",
+      "install": "npx skills add lukeberrypi/skills --skill a11y-maxxing",
+      "category": "Audits and testing"
     },
     {
       "name": "accessibility-audit",
@@ -1592,14 +1622,14 @@
       "category": "Building and fixing"
     },
     {
-      "name": "a11y-maxxing",
-      "repo": "lukeberrypi/skills",
-      "url": "https://github.com/lukeberrypi/skills/tree/HEAD/skills/a11y-maxxing",
-      "description": "Audit or remediate web accessibility barriers, optimizing accessible task completion against a WCAG 2.2 AA floor.",
-      "installs": 31,
-      "updated": "2026-08-11",
-      "install": "npx skills add lukeberrypi/skills --skill a11y-maxxing",
-      "category": "Audits and testing"
+      "name": "alt-text-headings",
+      "repo": "community-access/accessibility-agents",
+      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/alt-text-headings",
+      "description": "Alt text, SVGs, figures, charts, heading order, page titles and landmarks.",
+      "installs": 30,
+      "updated": "2026-11-07",
+      "install": "npx skills add community-access/accessibility-agents --skill alt-text-headings",
+      "category": "Content and media"
     },
     {
       "name": "react-aria-components",
@@ -1629,16 +1659,6 @@
       "installs": 30,
       "updated": "2026-11-09",
       "install": "npx skills add zivtech/accessibility-skills --skill drupal-a11y-patch-eval",
-      "category": "Building and fixing"
-    },
-    {
-      "name": "aria-specialist",
-      "repo": "community-access/accessibility-agents",
-      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/aria-specialist",
-      "description": "ARIA roles, states and properties for custom widgets and dynamic content.",
-      "installs": 29,
-      "updated": "2026-11-07",
-      "install": "npx skills add community-access/accessibility-agents --skill aria-specialist",
       "category": "Building and fixing"
     },
     {
@@ -1672,6 +1692,16 @@
       "category": "Audits and testing"
     },
     {
+      "name": "kb-github-a11y-scanner",
+      "repo": "community-access/accessibility-agents",
+      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/kb-github-a11y-scanner",
+      "description": "Reference data, not a reviewer. Integrate GitHub Accessibility Scanner. Detects configuration, parses scanner issues, correlates with local scans, and tracks Copilot-assigned fixes.",
+      "installs": 28,
+      "updated": "2026-11-07",
+      "install": "npx skills add community-access/accessibility-agents --skill kb-github-a11y-scanner",
+      "category": "Audits and testing"
+    },
+    {
       "name": "a11y-audit",
       "repo": "helderberto/agent-skills",
       "url": "https://github.com/helderberto/agent-skills/tree/HEAD/skills/a11y-audit",
@@ -1692,33 +1722,63 @@
       "category": "Audits and testing"
     },
     {
-      "name": "alt-text-headings",
+      "name": "a11y-tool-builder",
       "repo": "community-access/accessibility-agents",
-      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/alt-text-headings",
-      "description": "Alt text, SVGs, figures, charts, heading order, page titles and landmarks.",
+      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/a11y-tool-builder",
+      "description": "Build accessibility scanners, rule engines, parsers and report generators.",
       "installs": 27,
       "updated": "2026-11-07",
-      "install": "npx skills add community-access/accessibility-agents --skill alt-text-headings",
-      "category": "Content and media"
+      "install": "npx skills add community-access/accessibility-agents --skill a11y-tool-builder",
+      "category": "Building and fixing"
     },
     {
       "name": "markdown-a11y-assistant",
       "repo": "community-access/accessibility-agents",
       "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/markdown-a11y-assistant",
       "description": "Guided WCAG audit of markdown docs: link text, alt text, heading order, tables, emoji, diagrams and anchors.",
-      "installs": 26,
+      "installs": 27,
       "updated": "2026-11-07",
       "install": "npx skills add community-access/accessibility-agents --skill markdown-a11y-assistant",
       "category": "Content and media"
     },
     {
-      "name": "kb-github-a11y-scanner",
+      "name": "insiders-a11y-tracker",
       "repo": "community-access/accessibility-agents",
-      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/kb-github-a11y-scanner",
-      "description": "Reference data, not a reviewer. Integrate GitHub Accessibility Scanner. Detects configuration, parses scanner issues, correlates with local scans, and tracks Copilot-assigned fixes.",
+      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/insiders-a11y-tracker",
+      "description": "Track accessibility changes in VS Code and other repos you follow.",
+      "installs": 27,
+      "updated": "2026-11-07",
+      "install": "npx skills add community-access/accessibility-agents --skill insiders-a11y-tracker",
+      "category": "Building and fixing"
+    },
+    {
+      "name": "screen-reader-lab",
+      "repo": "community-access/accessibility-agents",
+      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/screen-reader-lab",
+      "description": "Simulate screen reader narration of HTML or JSX, step by step.",
+      "installs": 27,
+      "updated": "2026-11-07",
+      "install": "npx skills add community-access/accessibility-agents --skill screen-reader-lab",
+      "category": "Building and fixing"
+    },
+    {
+      "name": "desktop-a11y-specialist",
+      "repo": "community-access/accessibility-agents",
+      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/desktop-a11y-specialist",
+      "description": "Desktop a11y APIs: UI Automation, MSAA/IAccessible2, NSAccessibility, Qt Widgets.",
       "installs": 26,
       "updated": "2026-11-07",
-      "install": "npx skills add community-access/accessibility-agents --skill kb-github-a11y-scanner",
+      "install": "npx skills add community-access/accessibility-agents --skill desktop-a11y-specialist",
+      "category": "Building and fixing"
+    },
+    {
+      "name": "powerpoint-accessibility",
+      "repo": "community-access/accessibility-agents",
+      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/powerpoint-accessibility",
+      "description": "Scan and fix .pptx files: slide titles, alt text and reading order.",
+      "installs": 26,
+      "updated": "2026-11-07",
+      "install": "npx skills add community-access/accessibility-agents --skill powerpoint-accessibility",
       "category": "Audits and testing"
     },
     {
@@ -1732,43 +1792,13 @@
       "category": "Content and media"
     },
     {
-      "name": "insiders-a11y-tracker",
+      "name": "word-accessibility",
       "repo": "community-access/accessibility-agents",
-      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/insiders-a11y-tracker",
-      "description": "Track accessibility changes in VS Code and other repos you follow.",
+      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/word-accessibility",
+      "description": "Scan and fix .docx files: title, headings, alt text, table headers.",
       "installs": 25,
       "updated": "2026-11-07",
-      "install": "npx skills add community-access/accessibility-agents --skill insiders-a11y-tracker",
-      "category": "Building and fixing"
-    },
-    {
-      "name": "desktop-a11y-specialist",
-      "repo": "community-access/accessibility-agents",
-      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/desktop-a11y-specialist",
-      "description": "Desktop a11y APIs: UI Automation, MSAA/IAccessible2, NSAccessibility, Qt Widgets.",
-      "installs": 25,
-      "updated": "2026-11-07",
-      "install": "npx skills add community-access/accessibility-agents --skill desktop-a11y-specialist",
-      "category": "Building and fixing"
-    },
-    {
-      "name": "screen-reader-lab",
-      "repo": "community-access/accessibility-agents",
-      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/screen-reader-lab",
-      "description": "Simulate screen reader narration of HTML or JSX, step by step.",
-      "installs": 25,
-      "updated": "2026-11-07",
-      "install": "npx skills add community-access/accessibility-agents --skill screen-reader-lab",
-      "category": "Building and fixing"
-    },
-    {
-      "name": "powerpoint-accessibility",
-      "repo": "community-access/accessibility-agents",
-      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/powerpoint-accessibility",
-      "description": "Scan and fix .pptx files: slide titles, alt text and reading order.",
-      "installs": 24,
-      "updated": "2026-11-07",
-      "install": "npx skills add community-access/accessibility-agents --skill powerpoint-accessibility",
+      "install": "npx skills add community-access/accessibility-agents --skill word-accessibility",
       "category": "Audits and testing"
     },
     {
@@ -1776,7 +1806,7 @@
       "repo": "community-access/accessibility-agents",
       "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/excel-accessibility",
       "description": "Scan and fix .xlsx files: sheet names, table headers, alt text, merges.",
-      "installs": 24,
+      "installs": 25,
       "updated": "2026-11-07",
       "install": "npx skills add community-access/accessibility-agents --skill excel-accessibility",
       "category": "Audits and testing"
@@ -1786,19 +1816,9 @@
       "repo": "jeffabailey/skills",
       "url": "https://github.com/jeffabailey/skills/tree/HEAD/skills/review-accessibility",
       "description": "Reviews frontend code for accessibility and usability fitness, scoring across semantic HTML, keyboard navigation, screen reader support, color/contrast, progressive enhancement, responsive design, and usability heuristics. Computes WCAG contrast ratios with a bundled script that resolves CSS custom properties per…",
-      "installs": 24,
-      "updated": "2026-11-07",
+      "installs": 25,
+      "updated": "2026-11-10",
       "install": "npx skills add jeffabailey/skills --skill review-accessibility",
-      "category": "Audits and testing"
-    },
-    {
-      "name": "word-accessibility",
-      "repo": "community-access/accessibility-agents",
-      "url": "https://github.com/community-access/accessibility-agents/tree/HEAD/skills/word-accessibility",
-      "description": "Scan and fix .docx files: title, headings, alt text, table headers.",
-      "installs": 23,
-      "updated": "2026-11-07",
-      "install": "npx skills add community-access/accessibility-agents --skill word-accessibility",
       "category": "Audits and testing"
     },
     {
@@ -1867,9 +1887,19 @@
       "url": "https://github.com/flutter/flutter-intellij/tree/HEAD/.agents/skills/audit-accessibility",
       "description": "Ensure the plugin's custom UI components are accessible to users with screen readers and other assistive technologies.",
       "installs": 15,
-      "updated": "2026-11-09",
+      "updated": "2026-11-10",
       "install": "npx skills add flutter/flutter-intellij --skill audit-accessibility",
       "category": "Audits and testing"
+    },
+    {
+      "name": "web-accessibility",
+      "repo": "quegenx/agent-skills",
+      "url": "https://github.com/quegenx/agent-skills/tree/HEAD/skills/web-ui/web-accessibility",
+      "description": "Builds and reviews accessible web interfaces against WCAG 2.2 and the ARIA Authoring Practices: focus rings, skip links, tabindex, roving focus, dialogs and focus restore, APG key maps, SPA route changes, native elements and the rules of ARIA, landmarks, page and passage language, accessible names, disabled states,…",
+      "installs": 15,
+      "updated": "2026-11-05",
+      "install": "npx skills add quegenx/agent-skills --skill web-accessibility",
+      "category": "Building and fixing"
     },
     {
       "name": "alt-text",
@@ -1907,18 +1937,8 @@
       "url": "https://github.com/audacioustux/agents/tree/HEAD/.agents/skills/building-accessible-interfaces",
       "description": "Use when implementing or reviewing accessibility, keyboard behavior, focus management, forms, validation, icon-only controls, reduced motion, target sizes, announcements, and assistive-technology semantics. Stack-agnostic.",
       "installs": 12,
-      "updated": "2026-11-09",
+      "updated": "2026-11-11",
       "install": "npx skills add audacioustux/agents --skill building-accessible-interfaces",
-      "category": "Building and fixing"
-    },
-    {
-      "name": "web-accessibility",
-      "repo": "quegenx/agent-skills",
-      "url": "https://github.com/quegenx/agent-skills/tree/HEAD/skills/web-ui/web-accessibility",
-      "description": "Builds and reviews accessible web interfaces against WCAG 2.2 and the ARIA Authoring Practices: focus rings, skip links, tabindex, roving focus, dialogs and focus restore, APG key maps, SPA route changes, native elements and the rules of ARIA, landmarks, page and passage language, accessible names, disabled states,…",
-      "installs": 12,
-      "updated": "2026-11-05",
-      "install": "npx skills add quegenx/agent-skills --skill web-accessibility",
       "category": "Building and fixing"
     },
     {
@@ -1940,6 +1960,16 @@
       "updated": "2026-02-05",
       "install": "npx skills add itsimonfredlingjack/codex-dev-plugin --skill accessibility-expert",
       "category": "Audits and testing"
+    },
+    {
+      "name": "social-model-of-disability",
+      "repo": "designerzen/a11y-skills",
+      "url": "https://github.com/designerzen/a11y-skills/tree/HEAD/social-model-of-disability",
+      "description": "Applies the social model of disability to write, review and rewrite content so that language and design remove barriers.",
+      "installs": 0,
+      "category": "Content and media",
+      "updated": "2026-05-06",
+      "install": "npx skills add designerzen/a11y-skills --skill social-model-of-disability"
     }
   ]
 }

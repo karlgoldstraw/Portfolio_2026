@@ -105,6 +105,10 @@ npm run skills   # rebuild the list, takes about a minute
 `scripts/fetch-skills.mjs` searches the skills.sh index, reads each skill's `SKILL.md`
 from its GitHub repo for the description, and writes the JSON. The search terms, the
 category rules and the minimum install count are constants at the top of the script.
+
+To list a skill the search does not find, add it to `EXTRA_SKILLS` in the same script
+with its `repo` and `skillId` (the skill's folder name), then run `npm run skills`. A
+hand-picked skill is always listed, and can carry its own `description` and `category`.
 Search and the category filter are in `src/js/skills.js`; without JavaScript the page
 shows the full list.
 

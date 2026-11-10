@@ -78,6 +78,20 @@ const DEFAULT_CATEGORY = "Building and fixing";
 // Skills almost nobody has installed are mostly experiments and copies.
 const MIN_INSTALLS = 10;
 
+// Skills added by hand. These are always listed, whatever the search index
+// knows about them and however few installs they have. `repo` and `skillId`
+// (the skill's folder name) are needed; `description` and `category` replace
+// what the script would otherwise work out for itself.
+const EXTRA_SKILLS = [
+  {
+    repo: "designerzen/a11y-skills",
+    skillId: "social-model-of-disability",
+    description:
+      "Applies the social model of disability to write, review and rewrite content so that language and design remove barriers.",
+    category: "Content and media",
+  },
+];
+
 const GITHUB_REPO = /^[\w.-]+\/[\w.-]+$/;
 const CONCURRENCY = 6;
 
@@ -155,14 +169,16 @@ async function readRepo(repo, wanted, tmp) {
         continue;
       }
       const data = frontMatter(text);
-      if (typeof data.description !== "string") continue;
+      const description = skill.description ?? data.description;
+      if (typeof description !== "string") continue;
       const folder = path.dirname(file);
       found.push({
         name: skill.name,
         repo,
         url: `https://github.com/${repo}/tree/HEAD/${folder === "." ? "" : folder.split("/").map(encodeURIComponent).join("/")}`,
-        description: tidy(data.description),
+        description: tidy(description),
         installs: skill.installs,
+        ...(skill.extra ? { extra: true, category: skill.category } : {}),
         updated,
         install: `npx skills add ${repo} --skill ${skill.skillId}`,
       });
@@ -181,6 +197,22 @@ for (const query of QUERIES) {
     if (!NAME.test(skill.skillId) && !NAME.test(skill.name)) continue;
     candidates.set(skill.id, skill);
   }
+}
+
+// Hand-picked skills join the queue, taking their install count from the
+// search index if it has one.
+for (const extra of EXTRA_SKILLS) {
+  const id = `${extra.repo}/${extra.skillId}`.toLowerCase();
+  const indexed = [...candidates.values()].find((skill) => skill.id.toLowerCase() === id);
+  if (indexed) candidates.delete(indexed.id);
+  candidates.set(id, {
+    id,
+    source: extra.repo,
+    name: extra.skillId,
+    installs: indexed?.installs ?? 0,
+    ...extra,
+    extra: true,
+  });
 }
 
 const byRepo = new Map();
@@ -213,7 +245,9 @@ await fs.rm(tmp, { recursive: true, force: true });
 // Keep the relevant ones, most installed first, and drop mirrored copies.
 const seen = new Set();
 const kept = skills
-  .filter((skill) => skill.installs >= MIN_INSTALLS && DESCRIPTION.test(skill.description))
+  .filter(
+    (skill) => skill.extra || (skill.installs >= MIN_INSTALLS && DESCRIPTION.test(skill.description))
+  )
   .sort((a, b) => b.installs - a.installs || a.repo.localeCompare(b.repo))
   .filter((skill) => {
     const key = skill.description.toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 160);
@@ -221,7 +255,13 @@ const kept = skills
     seen.add(key);
     return true;
   })
-  .map((skill) => ({ ...skill, category: categorise(skill) }));
+  .map(({ extra, ...skill }) => ({ ...skill, category: skill.category ?? categorise(skill) }));
+
+for (const extra of EXTRA_SKILLS) {
+  if (!kept.some((skill) => skill.repo === extra.repo && skill.name === extra.skillId)) {
+    console.warn(`  could not read the hand-picked skill ${extra.repo}/${extra.skillId}`);
+  }
+}
 
 await fs.writeFile(
   OUT,
