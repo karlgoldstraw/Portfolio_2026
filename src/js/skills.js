@@ -1,15 +1,22 @@
-// Search and category filter for /accessibility-skills/.
+// Search, category filter and "show more" for /accessibility-skills/.
 // The full list is in the HTML, so the page works without this. The filter
-// form starts hidden and is only shown once the script is running.
+// form and the show more button start hidden and only appear once the script
+// is running.
 (function () {
   var form = document.querySelector("[data-skill-filter]");
   var list = document.querySelector("[data-skill-list]");
   if (!form || !list) return;
 
+  // How many skills are shown at a time. A longer list gets a button to
+  // show the next batch.
+  var BATCH = 100;
+
   var search = form.querySelector("#skill-search");
   var category = form.querySelector("#skill-category");
   var count = document.querySelector("[data-skill-count]");
   var empty = document.querySelector("[data-skill-empty]");
+  var more = document.querySelector("[data-skill-more]");
+  var moreButton = more && more.querySelector("button");
   var items = Array.prototype.map.call(list.children, function (item) {
     return {
       element: item,
@@ -18,12 +25,27 @@
       text: (item.textContent + " " + (item.dataset.search || "")).toLowerCase().replace(/\s+/g, " "),
     };
   });
+  var limit = BATCH;
   var announce;
 
-  function apply() {
+  function status(shown, matches, filtered) {
+    if (shown < matches) {
+      return filtered
+        ? "Showing " + shown + " of " + matches + " matching skills"
+        : "Showing " + shown + " of " + matches + " skills, most installed first";
+    }
+    return filtered
+      ? "Showing " + matches + " of " + items.length + " skills"
+      : matches + " skills, most installed first";
+  }
+
+  // Shows the skills that match the filter, up to the limit. Returns the
+  // first skill that this call revealed, if there is one.
+  function apply(immediately) {
     var words = search.value.toLowerCase().split(/\s+/).filter(Boolean);
     var chosen = category.value;
-    var shown = 0;
+    var matches = 0;
+    var firstRevealed = null;
 
     items.forEach(function (item) {
       var match =
@@ -31,21 +53,35 @@
         words.every(function (word) {
           return item.text.indexOf(word) !== -1;
         });
-      item.element.hidden = !match;
-      if (match) shown += 1;
+      if (match) matches += 1;
+      var show = match && matches <= limit;
+      if (show && item.element.hidden && !firstRevealed) firstRevealed = item.element;
+      item.element.hidden = !show;
     });
 
-    empty.hidden = shown !== 0;
-    list.hidden = shown === 0;
+    var shown = Math.min(matches, limit);
+    empty.hidden = matches !== 0;
+    list.hidden = matches === 0;
+
+    if (more) {
+      var remaining = matches - shown;
+      more.hidden = remaining <= 0;
+      if (remaining > 0) {
+        var next = Math.min(BATCH, remaining);
+        moreButton.textContent = "Show " + next + " more skill" + (next === 1 ? "" : "s");
+      }
+    }
 
     // Wait for a pause in typing, so a screen reader hears one count, not five
+    var text = status(shown, matches, Boolean(chosen || words.length));
     clearTimeout(announce);
-    announce = setTimeout(function () {
-      count.textContent =
-        shown === items.length
-          ? shown + " skills, most installed first"
-          : "Showing " + shown + " of " + items.length + " skills";
-    }, 400);
+    if (immediately) {
+      count.textContent = text;
+    } else {
+      announce = setTimeout(function () {
+        count.textContent = text;
+      }, 400);
+    }
 
     // Keep the filter in the address, so a filtered list can be shared
     var params = new URLSearchParams();
@@ -53,6 +89,14 @@
     if (chosen) params.set("category", chosen);
     var query = params.toString();
     history.replaceState(null, "", query ? "?" + query : location.pathname);
+
+    return firstRevealed;
+  }
+
+  // A new search or category starts again from the first batch
+  function filter() {
+    limit = BATCH;
+    apply();
   }
 
   var initial = new URLSearchParams(location.search);
@@ -64,7 +108,20 @@
   form.addEventListener("submit", function (event) {
     event.preventDefault();
   });
-  search.addEventListener("input", apply);
-  category.addEventListener("change", apply);
-  if (search.value || category.value) apply();
+  search.addEventListener("input", filter);
+  category.addEventListener("change", filter);
+
+  if (moreButton) {
+    moreButton.addEventListener("click", function () {
+      limit += BATCH;
+      var first = apply();
+      // The button may now be gone, and what was asked for is further down the
+      // list. Move focus to the first new skill so a keyboard or screen reader
+      // user carries on from there instead of being dropped at the top.
+      var link = first && first.querySelector("a");
+      if (link) link.focus();
+    });
+  }
+
+  apply(true);
 })();

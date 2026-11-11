@@ -2094,6 +2094,25 @@ ul.skill-list[hidden] {
   max-width: none;
 }
 
+/* The "show more" bar under a long list */
+.skill-more {
+  margin-top: 1.5em;
+}
+
+.prose > .skill-more {
+  max-width: none;
+}
+
+.skill-more[hidden] {
+  display: none;
+}
+
+.skill-more .btn {
+  width: 100%;
+  font-size: 1em;
+  padding: 0.9em 1.2em;
+}
+
 ul.skill-list li {
   background: var(--surface);
   border: var(--light-grey) 1px solid;
