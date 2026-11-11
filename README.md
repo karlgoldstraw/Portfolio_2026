@@ -108,7 +108,12 @@ category rules and the minimum install count are constants at the top of the scr
 
 `EXTRA_REPOS` in the same script lists repos that are about accessibility or inclusive
 design from top to bottom. Every on-topic skill in them is listed, whatever its
-install count. Add a repo there as `owner/name` to bring in all of its skills.
+install count. Add a repo there as `owner/name` to bring in all of its skills, then
+read just that repo, which takes seconds where a full run takes several minutes:
+
+```bash
+npm run skills -- --only owner/name
+```
 
 To list a single skill the search does not find, add it to `EXTRA_SKILLS` in the same script
 with its `repo` and `skillId` (the skill's folder name), then run `npm run skills`. A

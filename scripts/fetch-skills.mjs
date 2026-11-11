@@ -1,6 +1,7 @@
 // Rebuilds src/_data/a11ySkills.json, the list behind /accessibility-skills/.
 //
 //   npm run skills
+//   npm run skills -- --only owner/repo   (re-read just these repos; quick)
 //
 // 1. Asks the skills.sh search index for accessibility-related skills. That
 //    gives the skill name, the GitHub repo it lives in, and an install count.
@@ -143,6 +144,7 @@ const EXTRA_REPOS = [
   "MTeelokee/rgaa-accessibility-audit",
   "owl-listener/inclusive-design-skills",
   "smukh/a11y-agent-skills",
+  "stark-contrast/skills",
   "tomaszboloz/WCAG-Accessibility-Skills",
   "weAAAre/a11y-agents-kit",
 ];
@@ -303,10 +305,19 @@ async function readRepo(repo, wanted, tmp, whole) {
   return found;
 }
 
+// With `--only owner/repo ...` just those repos are read again and everything
+// else in the list is kept as it is. A full run takes several minutes; this
+// takes seconds, which is what adding one repo needs.
+const onlyAt = process.argv.indexOf("--only");
+const only = onlyAt === -1 ? null : new Set(process.argv.slice(onlyAt + 1).map((repo) => repo.toLowerCase()));
+if (only && !only.size) throw new Error("--only needs at least one owner/repo");
+
 const candidates = new Map();
-for (const query of QUERIES) {
+// In an --only run the owner's name is searched for, to pick up install counts
+for (const query of only ? [...only].map((repo) => repo.split("/")[0]) : QUERIES) {
   for (const skill of await search(query)) {
     if (!GITHUB_REPO.test(skill.source)) continue;
+    if (only && !only.has(skill.source.toLowerCase())) continue;
     if (!NAME.test(skill.skillId) && !NAME.test(skill.name)) continue;
     candidates.set(skill.id, skill);
   }
@@ -337,6 +348,14 @@ const wholeRepos = new Map(EXTRA_REPOS.map((repo) => [repo.toLowerCase(), repo])
 for (const [key, repo] of wholeRepos) {
   if (![...byRepo.keys()].some((known) => known.toLowerCase() === key)) byRepo.set(repo, []);
 }
+if (only) {
+  for (const repo of [...byRepo.keys()]) if (!only.has(repo.toLowerCase())) byRepo.delete(repo);
+  for (const repo of only) {
+    if (![...byRepo.keys()].some((known) => known.toLowerCase() === repo)) {
+      throw new Error(`${repo} is not in EXTRA_REPOS or EXTRA_SKILLS. Add it there first.`);
+    }
+  }
+}
 console.log(`${candidates.size} candidate skills in ${byRepo.size} repos`);
 
 const tmp = await fs.mkdtemp(path.join(os.tmpdir(), "a11y-skills-"));
@@ -362,6 +381,16 @@ await Promise.all(
 );
 await fs.rm(tmp, { recursive: true, force: true });
 
+// An --only run keeps every skill already listed from the other repos
+if (only) {
+  const existing = JSON.parse(await fs.readFile(OUT, "utf8")).skills;
+  skills.push(
+    ...existing
+      .filter((skill) => !only.has(skill.repo.toLowerCase()))
+      .map((skill) => ({ ...skill, extra: true }))
+  );
+}
+
 // Keep the relevant ones, most installed first, and drop mirrored copies.
 const seen = new Set();
 const kept = skills
@@ -377,7 +406,7 @@ const kept = skills
   })
   .map(({ extra, ...skill }) => ({ ...skill, category: skill.category ?? categorise(skill) }));
 
-for (const extra of EXTRA_SKILLS) {
+for (const extra of only ? [] : EXTRA_SKILLS) {
   if (!kept.some((skill) => skill.repo === extra.repo && skill.name === extra.skillId)) {
     console.warn(`  could not read the hand-picked skill ${extra.repo}/${extra.skillId}`);
   }

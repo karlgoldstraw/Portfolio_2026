@@ -4332,6 +4332,56 @@
       "category": "Audits and testing"
     },
     {
+      "name": "stark-backend",
+      "repo": "stark-contrast/skills",
+      "url": "https://github.com/stark-contrast/skills/tree/HEAD/skills/stark-backend",
+      "description": "This skill should be used for server-side accessibility work — whenever the user is dealing with accessibility concerns that originate on the back end: missing or wrong `lang` / document metadata, server-rendered (SSR / template / transactional email) markup semantics, API error and validation payload shape,…",
+      "installs": 0,
+      "updated": "2026-07-30",
+      "install": "npx skills add stark-contrast/skills --skill stark-backend",
+      "category": "Building and fixing"
+    },
+    {
+      "name": "stark-design",
+      "repo": "stark-contrast/skills",
+      "url": "https://github.com/stark-contrast/skills/tree/HEAD/skills/stark-design",
+      "description": "This skill should be used for design-stage accessibility work in Figma or Sketch — whenever the user mentions \"contrast\", \"color contrast\", \"color blindness\", \"design accessibility\", \"Figma accessibility\", \"target size\", \"reading order\", \"alt text\" at design time, or wants to fix Stark violations on a Figma/design…",
+      "installs": 0,
+      "updated": "2026-07-30",
+      "install": "npx skills add stark-contrast/skills --skill stark-design",
+      "category": "Design"
+    },
+    {
+      "name": "stark-frontend",
+      "repo": "stark-contrast/skills",
+      "url": "https://github.com/stark-contrast/skills/tree/HEAD/skills/stark-frontend",
+      "description": "This skill should be used for web front-end accessibility work — whenever the user mentions \"accessibility\", \"a11y\", \"WCAG\", \"ARIA\", \"screen reader\", \"keyboard navigation\", \"focus management\", or \"semantic HTML\", asks to fix accessibility violations on a web / URL / code / Storybook asset in Stark, or wants to set up…",
+      "installs": 0,
+      "updated": "2026-07-30",
+      "install": "npx skills add stark-contrast/skills --skill stark-frontend",
+      "category": "Building and fixing"
+    },
+    {
+      "name": "stark-mobile",
+      "repo": "stark-contrast/skills",
+      "url": "https://github.com/stark-contrast/skills/tree/HEAD/skills/stark-mobile",
+      "description": "This skill should be used for native mobile accessibility work — iOS (UIKit/SwiftUI), Android (Views/Compose), and cross-platform frameworks (React Native, Flutter). Use it whenever the user mentions \"VoiceOver\", \"TalkBack\", \"accessibilityLabel\", \"contentDescription\", \"Dynamic Type\", \"Compose semantics\", \"touch…",
+      "installs": 0,
+      "updated": "2026-07-30",
+      "install": "npx skills add stark-contrast/skills --skill stark-mobile",
+      "category": "Mobile and native apps"
+    },
+    {
+      "name": "stark-pm",
+      "repo": "stark-contrast/skills",
+      "url": "https://github.com/stark-contrast/skills/tree/HEAD/skills/stark-pm",
+      "description": "This skill should be used for accessibility program and project management — whenever the user asks where they stand on accessibility, about compliance status against WCAG / Section 508 / EAA, how to prioritize a violation backlog, what to put in a status update or audit summary, or how to plan remediation across a…",
+      "installs": 0,
+      "updated": "2026-07-30",
+      "install": "npx skills add stark-contrast/skills --skill stark-pm",
+      "category": "Audits and testing"
+    },
+    {
       "name": "wcag-accessibility-skills",
       "repo": "tomaszboloz/WCAG-Accessibility-Skills",
       "url": "https://github.com/tomaszboloz/WCAG-Accessibility-Skills/tree/HEAD/",
