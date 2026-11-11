@@ -183,6 +183,11 @@ a.active {
   text-decoration-thickness: 4px;
 }
 
+/* The focus style draws its own underline, so drop the current-page one */
+a.active:focus {
+  text-decoration: none;
+}
+
 .prose ul:not([class]),
 .prose ol:not([class]) {
   margin-left: 1em;
