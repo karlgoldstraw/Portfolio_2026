@@ -237,9 +237,12 @@ nav.navigation {
   column-gap: 8em;
 }
 
-.site-name {
+/* Site name doubles as the home link. Underlined like the other nav links;
+   bold weight wins over a.active (same specificity, later in the file) */
+a.site-name {
   margin-top: 1em;
   font-size: 1.3em;
+  line-height: 1.5em;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -577,7 +580,7 @@ footer li {
   nav.navigation ul { margin-bottom: 2em; }
   h2 { font-size: 1.5em; }
   h3 { font-size: 1.2em; }
-  p, .prose ul:not([class]), .prose ol:not([class]), a.back-arrow, nav.navigation ul, .site-name { font-size: 1.125em; }
+  p, .prose ul:not([class]), .prose ol:not([class]), a.back-arrow, nav.navigation ul, a.site-name { font-size: 1.125em; }
   header { margin: 0; }
   body { border: 0; }
   .wrapper { padding: 1em; }
