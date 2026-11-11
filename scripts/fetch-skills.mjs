@@ -40,17 +40,42 @@ const QUERIES = [
   "voiceover",
   "alt text",
   "assistive technology",
+  // Inclusive design
+  "inclusive language",
+  "neurodiversity",
+  "cognitive accessibility",
+  "plain language",
+  "easy read",
+  "dyslexia",
+  "color blind",
+  "reduced motion",
+  "focus management",
+  "semantic html",
+  "disability",
+  "universal design",
+  "section 508",
+  "accessible pdf",
+  "low vision",
+  "accessible forms",
+  "accessible components",
 ];
 
 // A skill has to look like an accessibility skill by name...
-const NAME = /accessib|a11y|wcag|aria|screen-?reader|contrast|keyboard|inclusive|voiceover|talkback|alt-?text|axe/i;
+const NAME =
+  /accessib|a11y|wcag|rgaa|aria|screen-?reader|contrast|keyboard|inclusive|voiceover|talkback|alt-?text|axe|neurodiv|dyslex|cognitive|plain-?language|easy-?read|colou?r-?blind|reduced-?motion|focus-management|semantic-html|disab|assistive|508|vpat|low-vision|universal-design/i;
 // ...and say so in its own description.
-const DESCRIPTION = /accessib|a11y|wcag|screen.?reader|assistive|disab|alt.?text|aria\b/i;
+const DESCRIPTION =
+  /accessib|a11y|wcag|rgaa|screen.?reader|assistive|disab|alt.?text|aria\b|inclusive design|neurodiver|plain language|colou?r.?blind|cognitive load|dyslex/i;
 
 // Each category has a pattern for the skill's name and a stricter one for its
 // description. Names are tried first, because a description tends to mention
 // everything ("...with VoiceOver, alt text and contrast checks").
 const CATEGORIES = [
+  [
+    "Inclusive design",
+    /inclus|neurodiv|cognitive|plain-?language|easy-?read|dyslex|readable|persona|disab|universal-design|iso-24495/i,
+    /inclusive design|neurodiver|plain language|social model/i,
+  ],
   [
     "Mobile and native apps",
     /\bios\b|swift|android|flutter|react-native|mobile|appkit|uikit|compose|capacitor|macos|expo/i,
@@ -88,8 +113,38 @@ const EXTRA_SKILLS = [
     skillId: "social-model-of-disability",
     description:
       "Applies the social model of disability to write, review and rewrite content so that language and design remove barriers.",
-    category: "Content and media",
+    category: "Inclusive design",
   },
+];
+
+// Repos that are about accessibility or inclusive design from top to bottom.
+// Every skill in them that is on topic is listed, whether or not the search
+// index knows it and however few installs it has. Found by searching GitHub.
+const EXTRA_REPOS = [
+  "accesslint/skills",
+  "Binclusive/Binclusive-Accessibility-Skills",
+  "CFLW-AI/wcag-audit-claude-skill",
+  "Community-Access/accessibility-agents",
+  "danyuchn/iso-24495-skill",
+  "geoffreycrofte/luxembourg-accessibility-skillset",
+  "ginader/born-accessible-ui",
+  "humbleteam/accessibility-audit",
+  "ianho7/ai-friendly-web-design-skill",
+  "intopia/intopia-web-accessibility-skill",
+  "JackReis/neurodivergent-visual-org",
+  "jkense/agent-skills-wcag",
+  "kgelster/ecom-a11y-audit",
+  "klovaaxel/web-a11y-agent-skills",
+  "KreerC/ACCESSIBILITY.md",
+  "masuP9/a11y-specialist-skills",
+  "mattobee/skills",
+  "mgifford/accessibility-skills",
+  "mrKanoh/wcag-accessibility-audit-skill",
+  "MTeelokee/rgaa-accessibility-audit",
+  "owl-listener/inclusive-design-skills",
+  "smukh/a11y-agent-skills",
+  "tomaszboloz/WCAG-Accessibility-Skills",
+  "weAAAre/a11y-agents-kit",
 ];
 
 const GITHUB_REPO = /^[\w.-]+\/[\w.-]+$/;
@@ -99,15 +154,36 @@ async function search(query) {
   const url = new URL("https://skills.sh/api/search");
   url.searchParams.set("q", query);
   url.searchParams.set("limit", "100");
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`skills.sh search failed for "${query}": ${response.status}`);
-  return (await response.json()).skills ?? [];
+  // The index is sometimes slow. Try a few times before giving up, and give
+  // up loudly: a list built from half the searches would quietly drop skills.
+  let lastError;
+  for (let attempt = 1; attempt <= 4; attempt += 1) {
+    // A plain timer, not AbortSignal.timeout: that one does not keep Node
+    // alive, so a stalled request could end the script without an error.
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 30_000);
+    try {
+      const response = await fetch(url, { signal: controller.signal });
+      if (!response.ok) throw new Error(`status ${response.status}`);
+      return (await response.json()).skills ?? [];
+    } catch (error) {
+      lastError = error;
+      await new Promise((resolve) => setTimeout(resolve, attempt * 3000));
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+  throw new Error(`skills.sh search failed for "${query}": ${lastError.message}`);
 }
 
 async function git(dir, ...args) {
+  // Reading a file fetches it from GitHub, and a stalled fetch would otherwise
+  // hang the whole run
   const { stdout } = await run("git", ["-C", dir, ...args], {
     maxBuffer: 64 * 1024 * 1024,
     env: { ...process.env, GIT_TERMINAL_PROMPT: "0" },
+    timeout: 30_000,
+    killSignal: "SIGKILL",
   });
   return stdout;
 }
@@ -132,16 +208,18 @@ function categorise(skill) {
   return DEFAULT_CATEGORY;
 }
 
-// Reads the wanted skills out of one repo.
-async function readRepo(repo, wanted, tmp) {
+// Reads the wanted skills out of one repo. With `whole`, every other skill in
+// the repo that is on topic is read too.
+async function readRepo(repo, wanted, tmp, whole) {
   const dir = path.join(tmp, repo.replace("/", "__"));
   try {
     await run(
       "git",
       ["clone", "--quiet", "--depth", "1", "--filter=blob:none", "--no-checkout", `https://github.com/${repo}.git`, dir],
-      { env: { ...process.env, GIT_TERMINAL_PROMPT: "0" }, timeout: 120_000 }
+      { env: { ...process.env, GIT_TERMINAL_PROMPT: "0" }, timeout: 120_000, killSignal: "SIGKILL" }
     );
   } catch {
+    if (whole) console.warn(`  could not clone ${repo}`);
     return [];
   }
 
@@ -150,6 +228,18 @@ async function readRepo(repo, wanted, tmp) {
     .filter((file) => /(^|\/)SKILL\.md$/i.test(file));
   const updated = (await git(dir, "log", "-1", "--format=%cs", "HEAD")).trim();
   const found = [];
+  const used = new Set();
+  const folderUrl = (file) => {
+    const folder = path.dirname(file);
+    return `https://github.com/${repo}/tree/HEAD/${folder === "." ? "" : folder.split("/").map(encodeURIComponent).join("/")}`;
+  };
+  const read = async (file) => {
+    try {
+      return frontMatter(await git(dir, "show", `HEAD:${file}`));
+    } catch {
+      return null;
+    }
+  };
 
   for (const skill of wanted) {
     const id = skill.skillId.toLowerCase();
@@ -159,23 +249,25 @@ async function readRepo(repo, wanted, tmp) {
       .sort((a, b) => a.length - b.length);
     // A repo that is one skill keeps SKILL.md at the top.
     if (!candidates.length && files.includes("SKILL.md")) candidates = ["SKILL.md"];
-    if (!candidates.length) continue;
+    // Otherwise the folder has another name. Look inside the likely files for
+    // the one whose own `name` matches.
+    let byName = false;
+    if (!candidates.length) {
+      byName = true;
+      candidates = files.filter((file) => NAME.test(file)).slice(0, 20);
+    }
 
-    for (const file of candidates.slice(0, 3)) {
-      let text;
-      try {
-        text = await git(dir, "show", `HEAD:${file}`);
-      } catch {
-        continue;
-      }
-      const data = frontMatter(text);
+    for (const file of byName ? candidates : candidates.slice(0, 3)) {
+      const data = await read(file);
+      if (!data) continue;
+      if (byName && String(data.name ?? "").toLowerCase() !== id) continue;
       const description = skill.description ?? data.description;
       if (typeof description !== "string") continue;
-      const folder = path.dirname(file);
+      used.add(file);
       found.push({
         name: skill.name,
         repo,
-        url: `https://github.com/${repo}/tree/HEAD/${folder === "." ? "" : folder.split("/").map(encodeURIComponent).join("/")}`,
+        url: folderUrl(file),
         description: tidy(description),
         installs: skill.installs,
         ...(skill.extra ? { extra: true, category: skill.category } : {}),
@@ -183,6 +275,27 @@ async function readRepo(repo, wanted, tmp) {
         install: `npx skills add ${repo} --skill ${skill.skillId}`,
       });
       break;
+    }
+  }
+
+  // The rest of a hand-picked repo: anything on topic by name or description
+  if (whole) {
+    for (const file of files.filter((file) => !used.has(file)).slice(0, 150)) {
+      const data = await read(file);
+      if (!data || typeof data.description !== "string") continue;
+      const folder = path.basename(path.dirname(file));
+      const name = String(data.name ?? (folder === "." ? repo.split("/")[1] : folder));
+      if (!NAME.test(name) && !DESCRIPTION.test(data.description)) continue;
+      found.push({
+        name,
+        repo,
+        url: folderUrl(file),
+        description: tidy(data.description),
+        installs: 0,
+        extra: true,
+        updated,
+        install: `npx skills add ${repo} --skill ${name}`,
+      });
     }
   }
 
@@ -220,6 +333,10 @@ for (const skill of candidates.values()) {
   if (!byRepo.has(skill.source)) byRepo.set(skill.source, []);
   byRepo.get(skill.source).push(skill);
 }
+const wholeRepos = new Map(EXTRA_REPOS.map((repo) => [repo.toLowerCase(), repo]));
+for (const [key, repo] of wholeRepos) {
+  if (![...byRepo.keys()].some((known) => known.toLowerCase() === key)) byRepo.set(repo, []);
+}
 console.log(`${candidates.size} candidate skills in ${byRepo.size} repos`);
 
 const tmp = await fs.mkdtemp(path.join(os.tmpdir(), "a11y-skills-"));
@@ -231,7 +348,10 @@ await Promise.all(
     while (queue.length) {
       const [repo, wanted] = queue.shift();
       try {
-        skills.push(...(await readRepo(repo, wanted, tmp)));
+        const whole = wholeRepos.has(repo.toLowerCase());
+        const read = await readRepo(repo, wanted, tmp, whole);
+        // In a hand-picked repo the install threshold does not apply
+        skills.push(...(whole ? read.map((skill) => ({ ...skill, extra: true })) : read));
       } catch (error) {
         console.warn(`  skipped ${repo}: ${error.message.split("\n")[0]}`);
       }
